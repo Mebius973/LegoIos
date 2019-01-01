@@ -1,2 +1,5 @@
 LegoIos.xcodeproj/
-LegoIos/Config.xcconfig
+LegoIos/AppConfig.swift
+Podfile.lock
+Pods/
+LegoIos.xcworkspace/
