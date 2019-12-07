@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 
 class LegoTableViewController: UITableViewController {
     var sets = [Set]()
@@ -39,7 +38,7 @@ class LegoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> LegoTableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? LegoTableViewCell)!
 
-        if let url = URL(string: sets[indexPath.row].imgUrl) {
+        if let url = URL(string: sets[indexPath.row].set_img_url!) {
         if let data = try? Data(contentsOf: url) {
              //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
 
@@ -101,14 +100,21 @@ class LegoTableViewController: UITableViewController {
         let request = "https://rebrickable.com/api/v3/lego/sets?ordering=-year%2C-set_num&page_size=10&\(authorization)"
         
         Alamofire.request(request).responseJSON { response in
-            if let reqResult = response.value {
-                let json = JSON(reqResult)
-                print(json)
-                for setJson in json["results"] {
-                    let set = Set(json: setJson.1)
-                    self.sets.append(set)
+            do {
+                if response.result.isSuccess {
+                    if let reqResult = response.value {
+                        let jsonData = try JSONSerialization.data(withJSONObject: reqResult, options: .prettyPrinted)
+                        let reqJSONStr = String(data: jsonData, encoding: .utf8)
+                        let data = reqJSONStr!.data(using: .utf8)
+                        let jsonDecoder = JSONDecoder()
+                        let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data!)
+                        self.sets = setsQueryResult.results
+                        self.tableView.reloadData()
+                    }
                 }
-                self.tableView.reloadData()
+            }
+            catch{
+                print("error")
             }
         }
     }
