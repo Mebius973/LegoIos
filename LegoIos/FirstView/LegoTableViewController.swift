@@ -16,6 +16,7 @@ class LegoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         retrieveSets()
+        //self.tableView.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20);
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,7 +30,6 @@ class LegoTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -37,16 +37,18 @@ class LegoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> LegoTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? LegoTableViewCell
-        
-        let url = URL(string: sets[indexPath.row].imgUrl)
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        
-        // Configure the cell...
-        cell!.mainLabel.text = sets[indexPath.row].name
-        cell!.mainImage.image = UIImage(data: data!)
-        
-        return cell!
+        let cell = (tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? LegoTableViewCell)!
+
+        if let url = URL(string: sets[indexPath.row].imgUrl) {
+        if let data = try? Data(contentsOf: url) {
+             //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+
+            // Configure the cell...
+            cell.mainLabel.text = sets[indexPath.row].name
+            cell.mainImage.image = UIImage(data: data)?.resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit)
+            }
+        }
+        return cell
     }
 
     /*
@@ -96,15 +98,14 @@ class LegoTableViewController: UITableViewController {
 
     private func retrieveSets() {
         let authorization = "key=\(AppConfig.LEGO_API_KEY)"
-        let request = "https://rebrickable.com/api/v3/lego/sets?page=last&page_size=10&ordering=year&\(authorization)"
+        let request = "https://rebrickable.com/api/v3/lego/sets?ordering=-year%2C-set_num&page_size=10&\(authorization)"
         
         Alamofire.request(request).responseJSON { response in
             if let reqResult = response.value {
                 let json = JSON(reqResult)
-
+                print(json)
                 for setJson in json["results"] {
                     let set = Set(json: setJson.1)
-                    print(set.imgUrl)
                     self.sets.append(set)
                 }
                 self.tableView.reloadData()
