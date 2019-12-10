@@ -12,9 +12,21 @@ import Alamofire
 class LegoTableViewController: UITableViewController {
     var sets = [Set]()
     
+
+    @IBOutlet weak var mainActivity: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        retrieveSets()
+        mainActivity.hidesWhenStopped = true
+        if sets.count < 1 {
+            mainActivity.startAnimating()
+        } else {
+            mainActivity.stopAnimating()
+        }
+        DispatchQueue.main.async {
+            self.retrieveSets()
+        }
+         
         //self.tableView.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20);
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -99,18 +111,15 @@ class LegoTableViewController: UITableViewController {
         let authorization = "key=\(AppConfig.LEGO_API_KEY)"
         let request = "https://rebrickable.com/api/v3/lego/sets?ordering=-year%2C-set_num&page_size=10&\(authorization)"
         
-        Alamofire.request(request).responseJSON { response in
+        Alamofire.request(request).responseData { response in
             do {
                 if response.result.isSuccess {
-                    if let reqResult = response.value {
-                        let jsonData = try JSONSerialization.data(withJSONObject: reqResult, options: .prettyPrinted)
-                        let reqJSONStr = String(data: jsonData, encoding: .utf8)
-                        let data = reqJSONStr!.data(using: .utf8)
-                        let jsonDecoder = JSONDecoder()
-                        let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data!)
-                        self.sets = setsQueryResult.results
-                        self.tableView.reloadData()
-                    }
+                    let data = response.data!
+                    let jsonDecoder = JSONDecoder()
+                    let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
+                    self.sets = setsQueryResult.results
+                    self.mainActivity.stopAnimating()
+                    self.tableView.reloadData()
                 }
             }
             catch{
