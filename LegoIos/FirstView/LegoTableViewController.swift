@@ -7,17 +7,24 @@
 //
 
 import UIKit
-import Alamofire
 
 class LegoTableViewController: UITableViewController {
-    var sets = [Set]()
+    var _sets = [Set]()
+    var sets:[Set] {
+        get {
+            return _sets
+        }
+        set(newValue) {
+            setsUpdated()
+            _sets = newValue
+        }
+    }
     
 
     @IBOutlet weak var mainActivity: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainActivity.hidesWhenStopped = true
         if sets.count < 1 {
             mainActivity.startAnimating()
         } else {
@@ -110,21 +117,31 @@ class LegoTableViewController: UITableViewController {
     private func retrieveSets() {
         let authorization = "key=\(AppConfig.LEGO_API_KEY)"
         let request = "https://rebrickable.com/api/v3/lego/sets?ordering=-year%2C-set_num&page_size=10&\(authorization)"
+        let url:URL = URL(string: request)!
         
-        Alamofire.request(request).responseData { response in
+        let session = URLSession.shared
+        let task = session.dataTask(with: url) { (data, response, error) in
             do {
-                if response.result.isSuccess {
-                    let data = response.data!
-                    let jsonDecoder = JSONDecoder()
-                    let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
-                    self.sets = setsQueryResult.results
-                    self.mainActivity.stopAnimating()
-                    self.tableView.reloadData()
+                if response is HTTPURLResponse {
+                    let httprep = response as! HTTPURLResponse
+                    if httprep.statusCode == 200 {
+                        let data = data!
+                        let jsonDecoder = JSONDecoder()
+                        let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
+                        self.sets = setsQueryResult.results
+                    }
                 }
             }
             catch{
                 print("error")
             }
+        }
+        task.resume()
+    }
+    private func setsUpdated(){
+        DispatchQueue.main.async {
+            self.mainActivity.stopAnimating()
+            self.tableView.reloadData()
         }
     }
 }

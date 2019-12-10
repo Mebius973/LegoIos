@@ -6,7 +6,6 @@ target 'LegoIos' do
   use_frameworks!
 
   # Pods for LegoIos
-    pod 'Alamofire'
 
   target 'LegoIosTests' do
     inherit! :search_paths
