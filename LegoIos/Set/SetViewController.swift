@@ -1,5 +1,5 @@
 //
-//  SetTabBarViewController.swift
+//  SetViewController.swift
 //  LegoIos
 //
 //  Created by Mebius on 12/12/2019.
@@ -8,26 +8,21 @@
 
 import UIKit
 
-protocol SetTabBarDelegate: class {
-    func getSetNum() -> String?
-}
-
-class SetTabBarViewController: UITabBarController, SetTabBarDelegate {
-    func getSetNum() -> String? {
-        return setNum
-    }
-
+class SetViewController: UIViewController {
+    weak var setTabBarController: SetTabBarViewController?
+    @IBOutlet weak var mainLabel: UILabel!
     var setNum: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let controllers = self.viewControllers {
-            for controller in controllers where controller is SetViewController {
-                (controller as? SetViewController)!.setTabBarController = self
-            }
-        }
+
         // Do any additional setup after loading the view.
+        setNum = setTabBarController!.getSetNum()
+        if let num = setNum {
+            mainLabel.text = "Set Num: \(num)"
+        }
     }
+
     /*
     // MARK: - Navigation
 
@@ -37,4 +32,5 @@ class SetTabBarViewController: UITabBarController, SetTabBarDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+
 }

@@ -73,7 +73,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-zG-Guf">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-zG-Guf" customClass="SetsButton" customModule="LegoIos" customModuleProvider="target">
                                                     <rect key="frame" x="38" y="234" width="73" height="23"/>
                                                     <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -84,11 +84,8 @@
                                                     <color key="tintColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                                     <state key="normal" title="Buy Button"/>
-                                                    <connections>
-                                                        <action selector="buyButton:" destination="V5I-Mu-vWQ" eventType="touchUpInside" id="Jaf-Bx-oZO"/>
-                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39v-hJ-wVH">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39v-hJ-wVH" customClass="SetsButton" customModule="LegoIos" customModuleProvider="target">
                                                     <rect key="frame" x="211" y="234" width="80" height="23"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -96,7 +93,6 @@
                                                     <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                                     <state key="normal" title="View Details"/>
                                                     <connections>
-                                                        <action selector="detailsButton:" destination="V5I-Mu-vWQ" eventType="touchUpInside" id="dUM-dF-Bug"/>
                                                         <segue destination="JW8-pe-7qz" kind="show" identifier="SetDetails" id="Kh3-7y-PK1"/>
                                                     </connections>
                                                 </button>
@@ -129,6 +125,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="buyButton" destination="8Yh-zG-Guf" id="XNs-Td-caA"/>
+                                    <outlet property="detailButton" destination="39v-hJ-wVH" id="3Di-Lv-a3a"/>
                                     <outlet property="mainImage" destination="eEF-E5-CVS" id="48v-EZ-Hve"/>
                                     <outlet property="mainLabel" destination="NlZ-5L-NVg" id="7tR-dI-7eP"/>
                                 </connections>

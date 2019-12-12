@@ -43,6 +43,9 @@
                         <viewLayoutGuide key="safeArea" id="wRC-oB-RFL"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="hNe-eP-PrA"/>
+                    <connections>
+                        <outlet property="mainLabel" destination="oco-pq-N8G" id="uiD-G6-Fuq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ows-iH-TDW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,21 +9,23 @@
 import Foundation
 
 class Set: Codable {
-    let lastModifiedDt: String? = nil
-    let name: String? = nil
-    let numParts: Int? = nil
-    let setImgUrl: String? = nil
-    let setNum: String? = nil
-    let setUrl: String? = nil
-    let themeId: Int? = nil
-    let year: Int? = nil
+    let lastModifiedDt: String?
+    let name: String?
+    let numParts: Int?
+    let setImgUrl: String?
+    let setNum: String?
+    let setUrl: String?
+    let themeId: Int?
+    let year: Int?
 
     enum CodingKeys: String, CodingKey {
         case lastModifiedDt = "last_modified_dt"
+        case name = "name"
         case numParts = "num_parts"
         case setImgUrl = "set_img_url"
         case setNum = "set_num"
         case setUrl = "set_url"
         case themeId = "theme_id"
+        case year = "year"
     }
 }

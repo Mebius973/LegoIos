@@ -59,15 +59,19 @@ class SetsTableViewController: UITableViewController {
             withIdentifier: "reuseIdentifier",
             for: indexPath) as? SetsTableViewCell)!
 
-        if let url = URL(string: sets[indexPath.row].setImgUrl!) {
-        if let data = try? Data(contentsOf: url) {
-             //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        if let urlString = sets[indexPath.row].setImgUrl {
+            if let url = URL(string: urlString) {
+                if let data = try? Data(contentsOf: url) {
+                     //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
 
-            // Configure the cell...
-            cell.mainLabel.text = sets[indexPath.row].name
-            cell.mainImage.image = UIImage(data: data)?.resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit)
+                    // Configure the cell...
+                    cell.mainImage.image = UIImage(data: data)?
+                        .resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit)
+                    }
+                }
             }
-        }
+        cell.mainLabel.text = sets[indexPath.row].name
+        cell.setNum = sets[indexPath.row].setNum
         return cell
     }
 
@@ -116,7 +120,9 @@ class SetsTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier != nil && segue.identifier! == "SetDetails" {
-            let nvc = segue.destination
+            let nvc = (segue.destination as? SetTabBarViewController)!
+            let setNum = (sender as? SetsButton)!.setNum
+            nvc.setNum = setNum
         }
     }
 
