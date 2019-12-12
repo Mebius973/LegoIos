@@ -20,10 +20,10 @@ class LegoTableViewController: UITableViewController {
         }
     }
     
-
-    @IBOutlet weak var mainActivity: UIActivityIndicatorView!
+    var mainActivity = UIActivityIndicatorView()
     
     override func viewDidLoad() {
+        addActivityIndicator()
         super.viewDidLoad()
         if sets.count < 1 {
             mainActivity.startAnimating()
@@ -138,10 +138,20 @@ class LegoTableViewController: UITableViewController {
         }
         task.resume()
     }
+    
     private func setsUpdated(){
         DispatchQueue.main.async {
             self.mainActivity.stopAnimating()
             self.tableView.reloadData()
         }
+    }
+
+    private func addActivityIndicator() {
+        mainActivity = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        mainActivity.style = UIActivityIndicatorView.Style.large
+        mainActivity.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 50)
+        mainActivity.backgroundColor = .white
+        mainActivity.hidesWhenStopped = true
+        self.view.addSubview(mainActivity)
     }
 }
