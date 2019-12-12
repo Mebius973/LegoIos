@@ -103,8 +103,7 @@ class LegoTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -112,7 +111,6 @@ class LegoTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
 
     private func retrieveSets() {
         let authorization = "key=\(AppConfig.LEGO_API_KEY)"
