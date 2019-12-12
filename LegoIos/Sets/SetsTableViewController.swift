@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LegoTableViewController: UITableViewController {
+class SetsTableViewController: UITableViewController {
     var _sets = [Set]()
     var sets:[Set] {
         get {
@@ -54,8 +54,8 @@ class LegoTableViewController: UITableViewController {
         return sets.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> LegoTableViewCell {
-        let cell = (tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? LegoTableViewCell)!
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SetsTableViewCell {
+        let cell = (tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? SetsTableViewCell)!
 
         if let url = URL(string: sets[indexPath.row].set_img_url!) {
         if let data = try? Data(contentsOf: url) {
@@ -110,6 +110,9 @@ class LegoTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier != nil && segue.identifier! == "SetDetails" {
+            let nvc = segue.destination
+        }
     }
 
     private func retrieveSets() {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,17 +11,17 @@
 		22F1D50BD96B7E36F60EEBF2 /* Pods_LegoIosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEE6353E0177B18B2D2FFB4 /* Pods_LegoIosUITests.framework */; };
 		6DF97E7F06B77AC4E945BE3C /* Pods_LegoIosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F090BE5F53D3DE0240D36437 /* Pods_LegoIosTests.framework */; };
 		E951C2E0239830AD00EF90CC /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2DF239830AD00EF90CC /* Set.swift */; };
-		E951C2E22398310D00EF90CC /* LegoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2E12398310D00EF90CC /* LegoTableViewCell.swift */; };
+		E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */; };
 		E97620362177B1A4009257E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97620352177B1A4009257E8 /* AppDelegate.swift */; };
 		E976203D2177B1A4009257E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E976203B2177B1A4009257E8 /* Main.storyboard */; };
 		E976203F2177B1A7009257E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E976203E2177B1A7009257E8 /* Assets.xcassets */; };
 		E97620422177B1A7009257E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97620402177B1A7009257E8 /* LaunchScreen.storyboard */; };
 		E976204D2177B1A7009257E8 /* LegoIosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976204C2177B1A7009257E8 /* LegoIosTests.swift */; };
 		E97620582177B1A7009257E8 /* LegoIosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97620572177B1A7009257E8 /* LegoIosUITests.swift */; };
-		E988FF68239852F0006272FD /* LegoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF67239852F0006272FD /* LegoTableViewController.swift */; };
-		E988FF6B239870F7006272FD /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF6A239870F7006272FD /* TestTableViewController.swift */; };
-		E988FF6D2398711B006272FD /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF6C2398711B006272FD /* TestTableViewCell.swift */; };
+		E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF67239852F0006272FD /* SetsTableViewController.swift */; };
 		E988FF73239A2BFF006272FD /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF72239A2BFF006272FD /* UIImageExtensions.swift */; };
+		E9960ACF23A26E0800E2FE18 /* SetDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */; };
+		E9960AD623A2714D00E2FE18 /* SetTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */; };
 		E9BACB5321DB834500F1D3B6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E9BACB5221DB834500F1D3B6 /* Podfile */; };
 		E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BACB5421DB899300F1D3B6 /* AppConfig.swift */; };
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
@@ -53,7 +53,7 @@
 		C461035A2A89219698A5911E /* Pods-LegoIosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIosUITests/Pods-LegoIosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E1478521606E8CEA106FD96F /* Pods-LegoIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIos.release.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIos/Pods-LegoIos.release.xcconfig"; sourceTree = "<group>"; };
 		E951C2DF239830AD00EF90CC /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
-		E951C2E12398310D00EF90CC /* LegoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoTableViewCell.swift; sourceTree = "<group>"; };
+		E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewCell.swift; sourceTree = "<group>"; };
 		E97620322177B1A4009257E8 /* LegoIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97620352177B1A4009257E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E976203C2177B1A4009257E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,10 +66,10 @@
 		E97620532177B1A7009257E8 /* LegoIosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoIosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97620572177B1A7009257E8 /* LegoIosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoIosUITests.swift; sourceTree = "<group>"; };
 		E97620592177B1A7009257E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E988FF67239852F0006272FD /* LegoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoTableViewController.swift; sourceTree = "<group>"; };
-		E988FF6A239870F7006272FD /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
-		E988FF6C2398711B006272FD /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		E988FF67239852F0006272FD /* SetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewController.swift; sourceTree = "<group>"; };
 		E988FF72239A2BFF006272FD /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetDetails.storyboard; sourceTree = "<group>"; };
+		E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTabBarViewController.swift; sourceTree = "<group>"; };
 		E9BACB5221DB834500F1D3B6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E9BACB5421DB899300F1D3B6 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
@@ -154,14 +154,13 @@
 		E97620342177B1A4009257E8 /* LegoIos */ = {
 			isa = PBXGroup;
 			children = (
-				E9CF82FE239C013400DB309F /* Models */,
+				E9960AD023A2704600E2FE18 /* Set */,
+				E9B5254D2396F64300C50B5E /* Sets */,
 				E988FF71239A2BDC006272FD /* Extensions */,
-				E988FF69239870CD006272FD /* TestTableView */,
-				E9B5254D2396F64300C50B5E /* FirstView */,
+				E9CF82FE239C013400DB309F /* Models */,
+				E9960ACB23A26DBE00E2FE18 /* StoryBoards */,
 				E97620352177B1A4009257E8 /* AppDelegate.swift */,
-				E976203B2177B1A4009257E8 /* Main.storyboard */,
 				E976203E2177B1A7009257E8 /* Assets.xcassets */,
-				E97620402177B1A7009257E8 /* LaunchScreen.storyboard */,
 				E97620432177B1A7009257E8 /* Info.plist */,
 				E9BACB5421DB899300F1D3B6 /* AppConfig.swift */,
 			);
@@ -186,15 +185,6 @@
 			path = LegoIosUITests;
 			sourceTree = "<group>";
 		};
-		E988FF69239870CD006272FD /* TestTableView */ = {
-			isa = PBXGroup;
-			children = (
-				E988FF6A239870F7006272FD /* TestTableViewController.swift */,
-				E988FF6C2398711B006272FD /* TestTableViewCell.swift */,
-			);
-			path = TestTableView;
-			sourceTree = "<group>";
-		};
 		E988FF71239A2BDC006272FD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,13 +193,31 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E9B5254D2396F64300C50B5E /* FirstView */ = {
+		E9960ACB23A26DBE00E2FE18 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				E951C2E12398310D00EF90CC /* LegoTableViewCell.swift */,
-				E988FF67239852F0006272FD /* LegoTableViewController.swift */,
+				E976203B2177B1A4009257E8 /* Main.storyboard */,
+				E97620402177B1A7009257E8 /* LaunchScreen.storyboard */,
+				E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */,
 			);
-			path = FirstView;
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		E9960AD023A2704600E2FE18 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		E9B5254D2396F64300C50B5E /* Sets */ = {
+			isa = PBXGroup;
+			children = (
+				E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */,
+				E988FF67239852F0006272FD /* SetsTableViewController.swift */,
+			);
+			path = Sets;
 			sourceTree = "<group>";
 		};
 		E9CF82FE239C013400DB309F /* Models */ = {
@@ -335,6 +343,7 @@
 				E97620422177B1A7009257E8 /* LaunchScreen.storyboard in Resources */,
 				E976203F2177B1A7009257E8 /* Assets.xcassets in Resources */,
 				E976203D2177B1A4009257E8 /* Main.storyboard in Resources */,
+				E9960ACF23A26E0800E2FE18 /* SetDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +428,11 @@
 				E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */,
 				E951C2E0239830AD00EF90CC /* Set.swift in Sources */,
 				E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */,
-				E951C2E22398310D00EF90CC /* LegoTableViewCell.swift in Sources */,
+				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
 				E988FF73239A2BFF006272FD /* UIImageExtensions.swift in Sources */,
-				E988FF68239852F0006272FD /* LegoTableViewController.swift in Sources */,
+				E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */,
 				E97620362177B1A4009257E8 /* AppDelegate.swift in Sources */,
-				E988FF6D2398711B006272FD /* TestTableViewCell.swift in Sources */,
-				E988FF6B239870F7006272FD /* TestTableViewController.swift in Sources */,
+				E9960AD623A2714D00E2FE18 /* SetTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
