@@ -8,13 +8,22 @@
 
 import Foundation
 
-class Set : Codable {
-    let last_modified_dt:String?
-    let name:String?
-    let num_parts:Int?
-    let set_img_url:String?
-    let set_num:String?
-    let set_url:String?
-    let theme_id:Int?
-    let year:Int?
+class Set: Codable {
+    let lastModifiedDt: String? = nil
+    let name: String? = nil
+    let numParts: Int? = nil
+    let setImgUrl: String? = nil
+    let setNum: String? = nil
+    let setUrl: String? = nil
+    let themeId: Int? = nil
+    let year: Int? = nil
+
+    enum CodingKeys: String, CodingKey {
+        case lastModifiedDt = "last_modified_dt"
+        case numParts = "num_parts"
+        case setImgUrl = "set_img_url"
+        case setNum = "set_num"
+        case setUrl = "set_url"
+        case themeId = "theme_id"
+    }
 }

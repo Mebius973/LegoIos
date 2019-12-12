@@ -8,9 +8,9 @@
 
 import Foundation
 
-class SetsQueryResult : Codable {
-    let count:Int?
-    let next:String?
-    let previous:String?
-    let results:[Set]
+class SetsQueryResult: Codable {
+    let count: Int?
+    let next: String?
+    let previous: String?
+    let results: [Set]
 }

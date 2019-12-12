@@ -11,10 +11,12 @@ extension UIImage {
     /// Resize image with ScaleAspectFit mode and given size.
     ///
     /// - Parameter dimension: width or length of the image output.
-    /// - Parameter resizeFramework: Technique for image resizing: UIKit / CoreImage / CoreGraphics / ImageIO / Accelerate.
+    /// - Parameter resizeFramework:
+    /// Technique for image resizing: UIKit / CoreImage / CoreGraphics / ImageIO / Accelerate.
     /// - Returns: Resized image.
 
-    func resizeWithScaleAspectFitMode(to dimension: CGFloat, resizeFramework: ResizeFramework = .coreGraphics) -> UIImage? {
+    func resizeWithScaleAspectFitMode(to dimension: CGFloat,
+                                      resizeFramework: ResizeFramework = .coreGraphics) -> UIImage? {
 
         if max(size.width, size.height) <= dimension { return self }
 
@@ -35,24 +37,19 @@ extension UIImage {
     /// Resize image from given size.
     ///
     /// - Parameter newSize: Size of the image output.
-    /// - Parameter resizeFramework: Technique for image resizing: UIKit / CoreImage / CoreGraphics / ImageIO / Accelerate.
+    /// - Parameter resizeFramework:
+    /// Technique for image resizing: UIKit / CoreImage / CoreGraphics / ImageIO / Accelerate.
     /// - Returns: Resized image.
     public func resize(to newSize: CGSize, with resizeFramework: ResizeFramework = .coreGraphics) -> UIImage? {
         switch resizeFramework {
-            case .uikit: return resizeWithUIKit(to: newSize)
-            case .coreGraphics: return resizeWithCoreGraphics(to: newSize)
-            case .coreImage: return resizeWithCoreImage(to: newSize)
-            case .imageIO: return resizeWithImageIO(to: newSize)
-            case .accelerate: return resizeWithAccelerate(to: newSize)
+        case .uikit: return resizeWithUIKit(to: newSize)
+        case .coreGraphics: return resizeWithCoreGraphics(to: newSize)
+        case .coreImage: return resizeWithCoreImage(to: newSize)
+        case .imageIO: return resizeWithImageIO(to: newSize)
+        case .accelerate: return resizeWithAccelerate(to: newSize)
         }
     }
 
-    // MARK: - UIKit
-
-    /// Resize image from given size.
-    ///
-    /// - Parameter newSize: Size of the image output.
-    /// - Returns: Resized image.
     private func resizeWithUIKit(to newSize: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(newSize, true, 1.0)
         self.draw(in: CGRect(origin: .zero, size: newSize))
@@ -60,13 +57,6 @@ extension UIImage {
         return UIGraphicsGetImageFromCurrentImageContext()
     }
 
-    // MARK: - CoreImage
-
-    /// Resize CI image from given size.
-    ///
-    /// - Parameter newSize: Size of the image output.
-    /// - Returns: Resized image.
-    // https://developer.apple.com/library/archive/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html
     private func resizeWithCoreImage(to newSize: CGSize) -> UIImage? {
         guard let cgImage = cgImage, let filter = CIFilter(name: "CILanczosScaleTransform") else { return nil }
 
@@ -74,7 +64,7 @@ extension UIImage {
         let scale = (Double)(newSize.width) / (Double)(ciImage.extent.size.width)
 
         filter.setValue(ciImage, forKey: kCIInputImageKey)
-        filter.setValue(NSNumber(value:scale), forKey: kCIInputScaleKey)
+        filter.setValue(NSNumber(value: scale), forKey: kCIInputScaleKey)
         filter.setValue(1.0, forKey: kCIInputAspectRatioKey)
         guard let outputImage = filter.value(forKey: kCIOutputImageKey) as? CIImage else { return nil }
         let context = CIContext(options: [.useSoftwareRenderer: false])
@@ -82,12 +72,6 @@ extension UIImage {
         return UIImage(cgImage: resultCGImage)
     }
 
-    // MARK: - CoreGraphics
-
-    /// Resize image from given size.
-    ///
-    /// - Parameter newSize: Size of the image output.
-    /// - Returns: Resized image.
     private func resizeWithCoreGraphics(to newSize: CGSize) -> UIImage? {
         guard let cgImage = cgImage, let colorSpace = cgImage.colorSpace else { return nil }
 
@@ -108,12 +92,6 @@ extension UIImage {
         return context.makeImage().flatMap { UIImage(cgImage: $0) }
     }
 
-    // MARK: - ImageIO
-
-    /// Resize image from given size.
-    ///
-    /// - Parameter newSize: Size of the image output.
-    /// - Returns: Resized image.
     private func resizeWithImageIO(to newSize: CGSize) -> UIImage? {
         var resultImage = self
 
@@ -131,12 +109,6 @@ extension UIImage {
         return resultImage
     }
 
-    // MARK: - Accelerate
-
-    /// Resize image from given size.
-    ///
-    /// - Parameter newSize: Size of the image output.
-    /// - Returns: Resized image.
     private func resizeWithAccelerate(to newSize: CGSize) -> UIImage? {
         var resultImage = self
 
@@ -167,14 +139,22 @@ extension UIImage {
         defer {
             destData.deallocate()
         }
-        var destBuffer = vImage_Buffer(data: destData, height: vImagePixelCount(destHeight), width: vImagePixelCount(destWidth), rowBytes: destBytesPerRow)
+        var destBuffer = vImage_Buffer(data: destData,
+                                       height: vImagePixelCount(destHeight),
+                                       width: vImagePixelCount(destWidth),
+                                       rowBytes: destBytesPerRow)
 
         // scale the image
         error = vImageScale_ARGB8888(&sourceBuffer, &destBuffer, nil, numericCast(kvImageHighQualityResampling))
         guard error == kvImageNoError else { return resultImage }
 
         // create a CGImage from vImage_Buffer
-        let destCGImage = vImageCreateCGImageFromBuffer(&destBuffer, &format, nil, nil, numericCast(kvImageNoFlags), &error)?.takeRetainedValue()
+        let destCGImage = vImageCreateCGImageFromBuffer(&destBuffer,
+                                                        &format,
+                                                        nil,
+                                                        nil,
+                                                        numericCast(kvImageNoFlags),
+                                                        &error)?.takeRetainedValue()
         guard error == kvImageNoError else { return resultImage }
 
         // create a UIImage

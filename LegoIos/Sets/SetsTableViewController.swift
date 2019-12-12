@@ -9,8 +9,8 @@
 import UIKit
 
 class SetsTableViewController: UITableViewController {
-    var _sets = [Set]()
-    var sets:[Set] {
+    private var _sets = [Set]()
+    var sets: [Set] {
         get {
             return _sets
         }
@@ -19,9 +19,9 @@ class SetsTableViewController: UITableViewController {
             _sets = newValue
         }
     }
-    
+
     var mainActivity = UIActivityIndicatorView()
-    
+
     override func viewDidLoad() {
         addActivityIndicator()
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class SetsTableViewController: UITableViewController {
         DispatchQueue.main.async {
             self.retrieveSets()
         }
-         
+
         //self.tableView.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20);
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,16 +48,18 @@ class SetsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return sets.count
     }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SetsTableViewCell {
-        let cell = (tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? SetsTableViewCell)!
 
-        if let url = URL(string: sets[indexPath.row].set_img_url!) {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SetsTableViewCell {
+        let cell = (tableView.dequeueReusableCell(
+            withIdentifier: "reuseIdentifier",
+            for: indexPath) as? SetsTableViewCell)!
+
+        if let url = URL(string: sets[indexPath.row].setImgUrl!) {
         if let data = try? Data(contentsOf: url) {
              //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
 
@@ -79,12 +81,15 @@ class SetsTableViewController: UITableViewController {
 
     /*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView,
+                            commit editingStyle: UITableViewCell.EditingStyle,
+                            forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            // Create a new instance of the appropriate class, insert it into the array,
+            // and add a new row to the table view
         }    
     }
     */
@@ -103,7 +108,7 @@ class SetsTableViewController: UITableViewController {
         return true
     }
     */
-    
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -116,15 +121,15 @@ class SetsTableViewController: UITableViewController {
     }
 
     private func retrieveSets() {
-        let authorization = "key=\(AppConfig.LEGO_API_KEY)"
+        let authorization = "key=\(AppConfig.LegoApiKey)"
         let request = "https://rebrickable.com/api/v3/lego/sets?ordering=-year%2C-set_num&page_size=10&\(authorization)"
-        let url:URL = URL(string: request)!
-        
+        let url: URL = URL(string: request)!
+
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data, response, error) in
             do {
                 if response is HTTPURLResponse {
-                    let httprep = response as! HTTPURLResponse
+                    let httprep = (response as? HTTPURLResponse)!
                     if httprep.statusCode == 200 {
                         let data = data!
                         let jsonDecoder = JSONDecoder()
@@ -132,15 +137,14 @@ class SetsTableViewController: UITableViewController {
                         self.sets = setsQueryResult.results
                     }
                 }
-            }
-            catch{
-                print("error")
+            } catch {
+                print("error: \(error)")
             }
         }
         task.resume()
     }
-    
-    private func setsUpdated(){
+
+    private func setsUpdated() {
         DispatchQueue.main.async {
             self.mainActivity.stopAnimating()
             self.tableView.reloadData()
