@@ -27,6 +27,7 @@
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
 		E9FBC1BE23A2F4D8003D96C1 /* SetsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1BD23A2F4D8003D96C1 /* SetsButton.swift */; };
 		E9FBC1C223A2F84C003D96C1 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1C123A2F84C003D96C1 /* SetViewController.swift */; };
+		E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1C323A360EB003D96C1 /* LegoIos.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
 		E9FBC1BD23A2F4D8003D96C1 /* SetsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsButton.swift; sourceTree = "<group>"; };
 		E9FBC1C123A2F84C003D96C1 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		E9FBC1C423A360EB003D96C1 /* LegoIos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LegoIos.xcdatamodel; sourceTree = "<group>"; };
 		EBEE6353E0177B18B2D2FFB4 /* Pods_LegoIosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LegoIosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F090BE5F53D3DE0240D36437 /* Pods_LegoIosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LegoIosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,6 +169,7 @@
 				E976203E2177B1A7009257E8 /* Assets.xcassets */,
 				E97620432177B1A7009257E8 /* Info.plist */,
 				E9BACB5421DB899300F1D3B6 /* AppConfig.swift */,
+				E9FBC1C323A360EB003D96C1 /* LegoIos.xcdatamodeld */,
 			);
 			path = LegoIos;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */,
 				E9FBC1C223A2F84C003D96C1 /* SetViewController.swift in Sources */,
 				E951C2E0239830AD00EF90CC /* Set.swift in Sources */,
+				E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */,
 				E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
 				E988FF73239A2BFF006272FD /* UIImageExtensions.swift in Sources */,
@@ -800,6 +804,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9FBC1C323A360EB003D96C1 /* LegoIos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9FBC1C423A360EB003D96C1 /* LegoIos.xcdatamodel */,
+			);
+			currentVersion = E9FBC1C423A360EB003D96C1 /* LegoIos.xcdatamodel */;
+			path = LegoIos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E976202A2177B1A4009257E8 /* Project object */;
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="StoredSet" representedClassName="StoredSet" syncable="YES" codeGenerationType="class"/>
+    <entity name="StoredSets" representedClassName="StoredSets" syncable="YES" codeGenerationType="class">
+        <attribute name="lastModifiedDt" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="numParts" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="setImgUrl" optional="YES" attributeType="String"/>
+        <attribute name="setNum" optional="YES" attributeType="String"/>
+        <attribute name="setUrl" optional="YES" attributeType="String"/>
+        <attribute name="themeId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="StoredSet" positionX="-54" positionY="-9" width="128" height="43"/>
+        <element name="StoredSets" positionX="-270.97265625" positionY="-9.796875" width="128" height="163"/>
+    </elements>
+</model>
