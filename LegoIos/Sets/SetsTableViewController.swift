@@ -19,6 +19,7 @@ class SetsTableViewController: UITableViewController {
             _sets = newValue
         }
     }
+    var images = [UIImage?]()
 
     var mainActivity = UIActivityIndicatorView()
 
@@ -59,17 +60,7 @@ class SetsTableViewController: UITableViewController {
             withIdentifier: "reuseIdentifier",
             for: indexPath) as? SetsTableViewCell)!
 
-        if let urlString = sets[indexPath.row].setImgUrl {
-            if let url = URL(string: urlString) {
-                if let data = try? Data(contentsOf: url) {
-                     //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-
-                    // Configure the cell...
-                    cell.mainImage.image = UIImage(data: data)?
-                        .resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit)
-                    }
-                }
-            }
+        cell.mainImage.image = images[indexPath.row]
         cell.mainLabel.text = sets[indexPath.row].name
         cell.setNum = sets[indexPath.row].setNum
         return cell
@@ -141,6 +132,7 @@ class SetsTableViewController: UITableViewController {
                         let jsonDecoder = JSONDecoder()
                         let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
                         self.sets = setsQueryResult.results
+                        self.retrieveImages()
                     }
                 }
             } catch {
@@ -148,6 +140,21 @@ class SetsTableViewController: UITableViewController {
             }
         }
         task.resume()
+    }
+
+    private func retrieveImages() {
+        DispatchQueue.main.async {
+            for count in 0...(self.sets.count - 1) {
+                if let urlString = self.sets[count].setImgUrl {
+                    if let url = URL(string: urlString) {
+                        if let data = try? Data(contentsOf: url) {
+                            self.images.append(UIImage(data: data)?
+                                .resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit))
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private func setsUpdated() {
