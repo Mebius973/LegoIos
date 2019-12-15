@@ -9,21 +9,14 @@
 import UIKit
 
 class SetsTableViewController: UITableViewController {
-    private var _sets = [Set]()
-    var sets: [Set] {
-        get {
-            return _sets
-        }
-        set(newValue) {
-            setsUpdated()
-            _sets = newValue
-        }
-    }
-    var images = [UIImage?]()
-
-    var mainActivity = UIActivityIndicatorView()
+    private var sets = [Set]()
+    private var images = [UIImage?]()
+    private var mainActivity = UIActivityIndicatorView()
 
     override func viewDidLoad() {
+        self.refreshControl = UIRefreshControl()
+        // Configure Refresh Control
+        self.refreshControl!.addTarget(self, action: #selector(refreshSets(_:)), for: .valueChanged)
         addActivityIndicator()
         super.viewDidLoad()
         if sets.count < 1 {
@@ -56,6 +49,7 @@ class SetsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SetsTableViewCell {
+//        if indexPath ==
         let cell = (tableView.dequeueReusableCell(
             withIdentifier: "reuseIdentifier",
             for: indexPath) as? SetsTableViewCell)!
@@ -117,6 +111,10 @@ class SetsTableViewController: UITableViewController {
         }
     }
 
+    @objc private func refreshSets(_ sender: Any) {
+        retrieveSets()
+    }
+
     private func retrieveSets() {
         let authorization = "key=\(AppConfig.LegoApiKey)"
         let request = "https://rebrickable.com/api/v3/lego/sets?ordering=-year%2C-set_num&page_size=10&\(authorization)"
@@ -154,12 +152,14 @@ class SetsTableViewController: UITableViewController {
                     }
                 }
             }
+            self.imagesUpdated()
         }
     }
 
-    private func setsUpdated() {
+    private func imagesUpdated() {
         DispatchQueue.main.async {
-            self.mainActivity.stopAnimating()
+            if self.mainActivity.isAnimating { self.mainActivity.stopAnimating() }
+            if self.refreshControl != nil && self.refreshControl!.isRefreshing { self.refreshControl!.endRefreshing() }
             self.tableView.reloadData()
         }
     }
