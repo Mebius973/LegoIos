@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol SetTabBarDelegate: class {
-    func getSetNum() -> String?
-}
-
 class SetTabBarViewController: UITabBarController, SetTabBarDelegate {
     func getSetNum() -> String? {
         return setNum

@@ -8,26 +8,6 @@
 
 import Foundation
 
-protocol SetsViewModelDelegate: AnyObject {
-    var isInitialized: Bool { get }
-    var isRefreshed: Bool { get }
-    var count: Int { get }
-    func nameFor(row: Int) -> String?
-    func urlFor(row: Int) -> String?
-    func setNumFor(row: Int) -> String?
-    func initializeSets(_ closure: (() -> Void)?)
-    func refreshSets(_ closure: (() -> Void)?)
-}
-
-extension SetsViewModelDelegate {
-    func initializeSets() {
-        initializeSets(nil)
-    }
-    func refreshSets() {
-        refreshSets(nil)
-    }
-}
-
 class SetsViewModel: SetsViewModelDelegate {
     var isInitialized = false
     var isRefreshed = false
