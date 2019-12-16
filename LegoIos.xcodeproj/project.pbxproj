@@ -10,6 +10,7 @@
 		0C2138EEE8EC82F62F265182 /* Pods_LegoIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F4D1C563F777EED55A2DF0 /* Pods_LegoIos.framework */; };
 		22F1D50BD96B7E36F60EEBF2 /* Pods_LegoIosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEE6353E0177B18B2D2FFB4 /* Pods_LegoIosUITests.framework */; };
 		6DF97E7F06B77AC4E945BE3C /* Pods_LegoIosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F090BE5F53D3DE0240D36437 /* Pods_LegoIosTests.framework */; };
+		E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9047CAC23A80900005183AB /* SetsViewModel.swift */; };
 		E951C2E0239830AD00EF90CC /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2DF239830AD00EF90CC /* Set.swift */; };
 		E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */; };
 		E97620362177B1A4009257E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97620352177B1A4009257E8 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		AC1CC75B7B89FEA2E6BCB4AC /* Pods-LegoIosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIosUITests/Pods-LegoIosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C461035A2A89219698A5911E /* Pods-LegoIosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIosUITests/Pods-LegoIosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E1478521606E8CEA106FD96F /* Pods-LegoIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIos.release.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIos/Pods-LegoIos.release.xcconfig"; sourceTree = "<group>"; };
+		E9047CAC23A80900005183AB /* SetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModel.swift; sourceTree = "<group>"; };
 		E951C2DF239830AD00EF90CC /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewCell.swift; sourceTree = "<group>"; };
 		E97620322177B1A4009257E8 /* LegoIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E9047CAA23A751D3005183AB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E9047CAC23A80900005183AB /* SetsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E9047CAB23A751E8005183AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9960AD023A2704600E2FE18 /* Set */,
+				E9B5254D2396F64300C50B5E /* Sets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E97620292177B1A4009257E8 = {
 			isa = PBXGroup;
 			children = (
@@ -160,8 +179,8 @@
 		E97620342177B1A4009257E8 /* LegoIos */ = {
 			isa = PBXGroup;
 			children = (
-				E9960AD023A2704600E2FE18 /* Set */,
-				E9B5254D2396F64300C50B5E /* Sets */,
+				E9047CAB23A751E8005183AB /* Views */,
+				E9047CAA23A751D3005183AB /* ViewModels */,
 				E988FF71239A2BDC006272FD /* Extensions */,
 				E9CF82FE239C013400DB309F /* Models */,
 				E9960ACB23A26DBE00E2FE18 /* StoryBoards */,
@@ -458,6 +477,7 @@
 				E951C2E0239830AD00EF90CC /* Set.swift in Sources */,
 				E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */,
 				E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */,
+				E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
 				E988FF73239A2BFF006272FD /* UIImageExtensions.swift in Sources */,
 				E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */,

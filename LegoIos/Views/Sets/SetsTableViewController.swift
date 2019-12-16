@@ -9,23 +9,19 @@
 import UIKit
 
 class SetsTableViewController: UITableViewController {
-    private var sets = [Set]()
     private var images = [UIImage?]()
     private var mainActivity = UIActivityIndicatorView()
+    private var viewModel: SetsViewModelDelegate = SetsViewModel()
 
     override func viewDidLoad() {
-        self.refreshControl = UIRefreshControl()
-        // Configure Refresh Control
-        self.refreshControl!.addTarget(self, action: #selector(refreshSets(_:)), for: .valueChanged)
-        addActivityIndicator()
         super.viewDidLoad()
-        if sets.count < 1 {
-            mainActivity.startAnimating()
-        } else {
-            mainActivity.stopAnimating()
-        }
-        DispatchQueue.main.async {
-            self.retrieveSets()
+
+        setupPullToRefreshUI()
+        addActivityIndicator()
+
+        mainActivity.startAnimating()
+        viewModel.initializeSets {
+            self.retrieveImages()
         }
 
         //self.tableView.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20);
@@ -45,18 +41,23 @@ class SetsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return sets.count
+        return viewModel.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SetsTableViewCell {
-//        if indexPath ==
+        let row = indexPath.row
+//        if row > infiniteScrollCellNumTrigger {
+//            DispatchQueue.main.async {
+//                self.retrieveSets()
+//            }
+//        }
         let cell = (tableView.dequeueReusableCell(
             withIdentifier: "reuseIdentifier",
             for: indexPath) as? SetsTableViewCell)!
 
-        cell.mainImage.image = images[indexPath.row]
-        cell.mainLabel.text = sets[indexPath.row].name
-        cell.setNum = sets[indexPath.row].setNum
+        cell.mainImage.image = images[row]
+        cell.mainLabel.text = viewModel.nameFor(row: row)
+        cell.setNum = viewModel.setNumFor(row: row)
         return cell
     }
 
@@ -111,39 +112,20 @@ class SetsTableViewController: UITableViewController {
         }
     }
 
-    @objc private func refreshSets(_ sender: Any) {
-        retrieveSets()
+    private func setupPullToRefreshUI() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl!.addTarget(self, action: #selector(refreshSets(_:)), for: .valueChanged)
     }
 
-    private func retrieveSets() {
-        let authorization = "key=\(AppConfig.LegoApiKey)"
-        let request = "https://rebrickable.com/api/v3/lego/sets?ordering=-year%2C-set_num&page_size=10&\(authorization)"
-        let url: URL = URL(string: request)!
-
-        let session = URLSession.shared
-        let task = session.dataTask(with: url) { (data, response, error) in
-            do {
-                if response is HTTPURLResponse {
-                    let httprep = (response as? HTTPURLResponse)!
-                    if httprep.statusCode == 200 {
-                        let data = data!
-                        let jsonDecoder = JSONDecoder()
-                        let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
-                        self.sets = setsQueryResult.results
-                        self.retrieveImages()
-                    }
-                }
-            } catch {
-                print("error: \(error)")
-            }
-        }
-        task.resume()
+    @objc private func refreshSets(_ sender: Any) {
+        viewModel.refreshSets()
     }
 
     private func retrieveImages() {
         DispatchQueue.main.async {
-            for count in 0...(self.sets.count - 1) {
-                if let urlString = self.sets[count].setImgUrl {
+            let count = self.viewModel.count
+            for counter in 0...(count - 1) {
+                if let urlString = self.viewModel.urlFor(row: counter) {
                     if let url = URL(string: urlString) {
                         if let data = try? Data(contentsOf: url) {
                             self.images.append(UIImage(data: data)?
