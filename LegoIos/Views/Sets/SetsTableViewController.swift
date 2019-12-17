@@ -12,6 +12,7 @@ class SetsTableViewController: UITableViewController {
     private var images = [UIImage?]()
     private var mainActivity = UIActivityIndicatorView()
     private var viewModel: SetsViewModelDelegate = SetsViewModel()
+    private var imageService: UIImageServiceDelegate = UIImageService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,10 @@ class SetsTableViewController: UITableViewController {
 
         mainActivity.startAnimating()
         viewModel.initializeSets {
-            self.retrieveImages()
+            self.imageService.retrieveImages(viewModel: self.viewModel) { images in
+                self.images = images
+                self.imagesUpdated()
+            }
         }
 
         //self.tableView.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20);
@@ -119,23 +123,6 @@ class SetsTableViewController: UITableViewController {
 
     @objc private func refreshSets(_ sender: Any) {
         viewModel.refreshSets()
-    }
-
-    private func retrieveImages() {
-        DispatchQueue.main.async {
-            let count = self.viewModel.count
-            for counter in 0...(count - 1) {
-                if let urlString = self.viewModel.urlFor(row: counter) {
-                    if let url = URL(string: urlString) {
-                        if let data = try? Data(contentsOf: url) {
-                            self.images.append(UIImage(data: data)?
-                                .resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit))
-                        }
-                    }
-                }
-            }
-            self.imagesUpdated()
-        }
     }
 
     private func imagesUpdated() {
