@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C2138EEE8EC82F62F265182 /* Pods_LegoIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F4D1C563F777EED55A2DF0 /* Pods_LegoIos.framework */; };
-		22F1D50BD96B7E36F60EEBF2 /* Pods_LegoIosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEE6353E0177B18B2D2FFB4 /* Pods_LegoIosUITests.framework */; };
-		6DF97E7F06B77AC4E945BE3C /* Pods_LegoIosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F090BE5F53D3DE0240D36437 /* Pods_LegoIosTests.framework */; };
 		E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9047CAC23A80900005183AB /* SetsViewModel.swift */; };
 		E951C2E0239830AD00EF90CC /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2DF239830AD00EF90CC /* Set.swift */; };
 		E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */; };
@@ -23,7 +20,6 @@
 		E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF72239A2BFF006272FD /* UIImageExtension.swift */; };
 		E9960ACF23A26E0800E2FE18 /* SetDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */; };
 		E9960AD623A2714D00E2FE18 /* SetTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */; };
-		E9BACB5321DB834500F1D3B6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E9BACB5221DB834500F1D3B6 /* Podfile */; };
 		E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BACB5421DB899300F1D3B6 /* AppConfig.swift */; };
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
 		E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */; };
@@ -32,6 +28,8 @@
 		E9D79D3D23A8C16600046B41 /* UIImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3C23A8C16600046B41 /* UIImageService.swift */; };
 		E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */; };
 		E9D79D4123A8C2B000046B41 /* UIImageServiceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D4023A8C2B000046B41 /* UIImageServiceExtension.swift */; };
+		E9D79D4923A9521300046B41 /* Fastlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D4823A9521300046B41 /* Fastlane.swift */; };
+		E9D79D5123A9525200046B41 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D5023A9525200046B41 /* SnapshotHelper.swift */; };
 		E9FBC1BE23A2F4D8003D96C1 /* SetsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1BD23A2F4D8003D96C1 /* SetsButton.swift */; };
 		E9FBC1C223A2F84C003D96C1 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1C123A2F84C003D96C1 /* SetViewController.swift */; };
 		E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1C323A360EB003D96C1 /* LegoIos.xcdatamodeld */; };
@@ -52,16 +50,16 @@
 			remoteGlobalIDString = E97620312177B1A4009257E8;
 			remoteInfo = LegoIos;
 		};
+		E9D79D4B23A9521300046B41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E976202A2177B1A4009257E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E97620312177B1A4009257E8;
+			remoteInfo = LegoIos;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C8EDBE4FA9DC9A842180F3B /* Pods-LegoIosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIosTests/Pods-LegoIosTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4F7747F61E2C5A9A69108E41 /* Pods-LegoIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIos/Pods-LegoIos.debug.xcconfig"; sourceTree = "<group>"; };
-		54F4D1C563F777EED55A2DF0 /* Pods_LegoIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LegoIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		704C617C78F1CDA63B8524B2 /* Pods-LegoIosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIosTests/Pods-LegoIosTests.release.xcconfig"; sourceTree = "<group>"; };
-		AC1CC75B7B89FEA2E6BCB4AC /* Pods-LegoIosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIosUITests/Pods-LegoIosUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C461035A2A89219698A5911E /* Pods-LegoIosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIosUITests/Pods-LegoIosUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E1478521606E8CEA106FD96F /* Pods-LegoIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoIos.release.xcconfig"; path = "Pods/Target Support Files/Pods-LegoIos/Pods-LegoIos.release.xcconfig"; sourceTree = "<group>"; };
 		E9047CAC23A80900005183AB /* SetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModel.swift; sourceTree = "<group>"; };
 		E951C2DF239830AD00EF90CC /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 		E988FF72239A2BFF006272FD /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetDetails.storyboard; sourceTree = "<group>"; };
 		E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTabBarViewController.swift; sourceTree = "<group>"; };
-		E9BACB5221DB834500F1D3B6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E9BACB5421DB899300F1D3B6 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
 		E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -90,11 +87,13 @@
 		E9D79D3C23A8C16600046B41 /* UIImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageService.swift; sourceTree = "<group>"; };
 		E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageServiceDelegate.swift; sourceTree = "<group>"; };
 		E9D79D4023A8C2B000046B41 /* UIImageServiceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageServiceExtension.swift; sourceTree = "<group>"; };
+		E9D79D4623A9521300046B41 /* Fastlane.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fastlane.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9D79D4823A9521300046B41 /* Fastlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fastlane.swift; sourceTree = "<group>"; };
+		E9D79D4A23A9521300046B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9D79D5023A9525200046B41 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		E9FBC1BD23A2F4D8003D96C1 /* SetsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsButton.swift; sourceTree = "<group>"; };
 		E9FBC1C123A2F84C003D96C1 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		E9FBC1C423A360EB003D96C1 /* LegoIos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LegoIos.xcdatamodel; sourceTree = "<group>"; };
-		EBEE6353E0177B18B2D2FFB4 /* Pods_LegoIosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LegoIosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F090BE5F53D3DE0240D36437 /* Pods_LegoIosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LegoIosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C2138EEE8EC82F62F265182 /* Pods_LegoIos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DF97E7F06B77AC4E945BE3C /* Pods_LegoIosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,36 +115,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F1D50BD96B7E36F60EEBF2 /* Pods_LegoIosUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9D79D4323A9521300046B41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		150ACEA1369B8C697FD1AB1B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				54F4D1C563F777EED55A2DF0 /* Pods_LegoIos.framework */,
-				F090BE5F53D3DE0240D36437 /* Pods_LegoIosTests.framework */,
-				EBEE6353E0177B18B2D2FFB4 /* Pods_LegoIosUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5D829DEF30EE55B80AA2D68C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4F7747F61E2C5A9A69108E41 /* Pods-LegoIos.debug.xcconfig */,
-				E1478521606E8CEA106FD96F /* Pods-LegoIos.release.xcconfig */,
-				4C8EDBE4FA9DC9A842180F3B /* Pods-LegoIosTests.debug.xcconfig */,
-				704C617C78F1CDA63B8524B2 /* Pods-LegoIosTests.release.xcconfig */,
-				AC1CC75B7B89FEA2E6BCB4AC /* Pods-LegoIosUITests.debug.xcconfig */,
-				C461035A2A89219698A5911E /* Pods-LegoIosUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		E9047CAA23A751D3005183AB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,13 +148,11 @@
 		E97620292177B1A4009257E8 = {
 			isa = PBXGroup;
 			children = (
-				E9BACB5221DB834500F1D3B6 /* Podfile */,
 				E97620342177B1A4009257E8 /* LegoIos */,
 				E976204B2177B1A7009257E8 /* LegoIosTests */,
 				E97620562177B1A7009257E8 /* LegoIosUITests */,
+				E9D79D4723A9521300046B41 /* Fastlane */,
 				E97620332177B1A4009257E8 /* Products */,
-				5D829DEF30EE55B80AA2D68C /* Pods */,
-				150ACEA1369B8C697FD1AB1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +162,7 @@
 				E97620322177B1A4009257E8 /* LegoIos.app */,
 				E97620482177B1A7009257E8 /* LegoIosTests.xctest */,
 				E97620532177B1A7009257E8 /* LegoIosUITests.xctest */,
+				E9D79D4623A9521300046B41 /* Fastlane.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,6 +270,16 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		E9D79D4723A9521300046B41 /* Fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				E9D79D5023A9525200046B41 /* SnapshotHelper.swift */,
+				E9D79D4823A9521300046B41 /* Fastlane.swift */,
+				E9D79D4A23A9521300046B41 /* Info.plist */,
+			);
+			path = Fastlane;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -298,7 +287,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E976205C2177B1A7009257E8 /* Build configuration list for PBXNativeTarget "LegoIos" */;
 			buildPhases = (
-				640BEA424A4FB45280558397 /* [CP] Check Pods Manifest.lock */,
 				E976202E2177B1A4009257E8 /* Sources */,
 				E976202F2177B1A4009257E8 /* Frameworks */,
 				E97620302177B1A4009257E8 /* Resources */,
@@ -351,13 +339,31 @@
 			productReference = E97620532177B1A7009257E8 /* LegoIosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E9D79D4523A9521300046B41 /* Fastlane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9D79D4F23A9521300046B41 /* Build configuration list for PBXNativeTarget "Fastlane" */;
+			buildPhases = (
+				E9D79D4223A9521300046B41 /* Sources */,
+				E9D79D4323A9521300046B41 /* Frameworks */,
+				E9D79D4423A9521300046B41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9D79D4C23A9521300046B41 /* PBXTargetDependency */,
+			);
+			name = Fastlane;
+			productName = Fastlane;
+			productReference = E9D79D4623A9521300046B41 /* Fastlane.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		E976202A2177B1A4009257E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Mebius;
 				TargetAttributes = {
@@ -373,6 +379,10 @@
 					E97620522177B1A7009257E8 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1120;
+						TestTargetID = E97620312177B1A4009257E8;
+					};
+					E9D79D4523A9521300046B41 = {
+						CreatedOnToolsVersion = 11.3;
 						TestTargetID = E97620312177B1A4009257E8;
 					};
 				};
@@ -393,6 +403,7 @@
 				E97620312177B1A4009257E8 /* LegoIos */,
 				E97620472177B1A7009257E8 /* LegoIosTests */,
 				E97620522177B1A7009257E8 /* LegoIosUITests */,
+				E9D79D4523A9521300046B41 /* Fastlane */,
 			);
 		};
 /* End PBXProject section */
@@ -402,7 +413,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9BACB5321DB834500F1D3B6 /* Podfile in Resources */,
 				E97620422177B1A7009257E8 /* LaunchScreen.storyboard in Resources */,
 				E976203F2177B1A7009257E8 /* Assets.xcassets in Resources */,
 				E976203D2177B1A4009257E8 /* Main.storyboard in Resources */,
@@ -424,6 +434,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9D79D4423A9521300046B41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -439,24 +456,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-LegoIosTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		640BEA424A4FB45280558397 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LegoIos-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -543,6 +542,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9D79D4223A9521300046B41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D79D4923A9521300046B41 /* Fastlane.swift in Sources */,
+				E9D79D5123A9525200046B41 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -555,6 +563,11 @@
 			isa = PBXTargetDependency;
 			target = E97620312177B1A4009257E8 /* LegoIos */;
 			targetProxy = E97620542177B1A7009257E8 /* PBXContainerItemProxy */;
+		};
+		E9D79D4C23A9521300046B41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E97620312177B1A4009257E8 /* LegoIos */;
+			targetProxy = E9D79D4B23A9521300046B41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -696,7 +709,6 @@
 		};
 		E976205D2177B1A7009257E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F7747F61E2C5A9A69108E41 /* Pods-LegoIos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -718,7 +730,6 @@
 		};
 		E976205E2177B1A7009257E8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1478521606E8CEA106FD96F /* Pods-LegoIos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -740,7 +751,6 @@
 		};
 		E97620602177B1A7009257E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C8EDBE4FA9DC9A842180F3B /* Pods-LegoIosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -763,7 +773,6 @@
 		};
 		E97620612177B1A7009257E8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 704C617C78F1CDA63B8524B2 /* Pods-LegoIosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -786,7 +795,6 @@
 		};
 		E97620632177B1A7009257E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC1CC75B7B89FEA2E6BCB4AC /* Pods-LegoIosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -808,7 +816,6 @@
 		};
 		E97620642177B1A7009257E8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C461035A2A89219698A5911E /* Pods-LegoIosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -821,6 +828,46 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mebius.LegoIosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LegoIos;
+			};
+			name = Release;
+		};
+		E9D79D4D23A9521300046B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 868NW64LNM;
+				INFOPLIST_FILE = Fastlane/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mebius.Fastlane;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LegoIos;
+			};
+			name = Debug;
+		};
+		E9D79D4E23A9521300046B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 868NW64LNM;
+				INFOPLIST_FILE = Fastlane/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mebius.Fastlane;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -863,6 +910,15 @@
 			buildConfigurations = (
 				E97620632177B1A7009257E8 /* Debug */,
 				E97620642177B1A7009257E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9D79D4F23A9521300046B41 /* Build configuration list for PBXNativeTarget "Fastlane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9D79D4D23A9521300046B41 /* Debug */,
+				E9D79D4E23A9521300046B41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

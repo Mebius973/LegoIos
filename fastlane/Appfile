@@ -1,0 +1,8 @@
+app_identifier("mebius.LegoIos") # The bundle identifier of your app
+apple_id("viddafroygeo@hotmail.com") # Your Apple email address
+
+itc_team_id("120820441") # App Store Connect Team ID
+team_id("868NW64LNM") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
