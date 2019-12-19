@@ -12,9 +12,7 @@ protocol SetsViewModelDelegate: class {
     var isInitialized: Bool { get }
     var isRefreshed: Bool { get }
     var count: Int { get }
-    func nameFor(row: Int) -> String?
-    func urlFor(row: Int) -> String?
-    func setNumFor(row: Int) -> String?
-    func initializeSets(_ closure: (() -> Void)?)
-    func refreshSets(_ closure: (() -> Void)?)
+    func setCellAt(index: Int) -> SetCell?
+    func initializeSetCells(_ closure: (() -> Void)?)
+    func refreshSetCells(_ closure: (() -> Void)?)
 }

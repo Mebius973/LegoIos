@@ -9,21 +9,16 @@
 import UIKit
 
 class UIImageService: UIImageServiceDelegate {
-    func retrieveImages(viewModel: SetsViewModelDelegate, _ closure: ((_ images: [UIImage?]) -> Void)?) {
-        DispatchQueue.main.async {
-            let count = viewModel.count
-            var images = [UIImage?]()
-            for counter in 0...(count - 1) {
-                if let urlString = viewModel.urlFor(row: counter) {
-                    if let url = URL(string: urlString) {
-                        if let data = try? Data(contentsOf: url) {
-                            images.append(UIImage(data: data)?
-                                .resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit))
-                        }
-                    }
+    static func retrieveImage(for set: Set) -> UIImage? {
+        var image: UIImage?
+        if let urlString = set.setImgUrl {
+            if let url = URL(string: urlString) {
+                if let data = try? Data(contentsOf: url) {
+                    image = UIImage(data: data)?
+                        .resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit)
                 }
             }
-            if closure != nil { closure!(images) }
         }
+        return image
     }
 }

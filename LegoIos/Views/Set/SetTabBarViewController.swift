@@ -9,11 +9,11 @@
 import UIKit
 
 class SetTabBarViewController: UITabBarController, SetTabBarDelegate {
-    func getSetNum() -> String? {
-        return setNum
+    func getSetCell() -> SetCell? {
+        return setCell
     }
 
-    var setNum: String?
+    var setCell: SetCell?
 
     override func viewDidLoad() {
         super.viewDidLoad()

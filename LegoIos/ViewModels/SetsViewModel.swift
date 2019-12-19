@@ -12,46 +12,32 @@ class SetsViewModel: SetsViewModelDelegate {
     var isInitialized = false
     var isRefreshed = false
     var count: Int {
-        return sets.count
+        return setCells.count
     }
-    private var sets = [Set]()
+    private var setCells = [SetCell]()
     private var offset = 0
     private var page = 1
     private let itemsPerPage = 10
     private var infiniteScrollCellNumTrigger = 9
 
-    func nameFor(row: Int) -> String? {
-        guard sets.count > row else {
+    func setCellAt(index: Int) -> SetCell? {
+        guard setCells.count > index else {
             return nil
         }
-        return sets[row].name
+        return setCells[index]
     }
 
-    func urlFor(row: Int) -> String? {
-        guard sets.count > row else {
-            return nil
-        }
-        return sets[row].setImgUrl
-    }
-
-    func setNumFor(row: Int) -> String? {
-        guard sets.count > row else {
-            return nil
-        }
-        return sets[row].setNum
-    }
-
-    func initializeSets(_ closure: (() -> Void)? = nil) {
+    func initializeSetCells(_ closure: (() -> Void)? = nil) {
         isInitialized = false
-        retrieveSets(closure)
+        retrieveSetCells(closure)
     }
 
-    func refreshSets(_ closure: (() -> Void)? = nil) {
+    func refreshSetCells(_ closure: (() -> Void)? = nil) {
         isRefreshed = false
-        retrieveSets(closure)
+        retrieveSetCells(closure)
     }
 
-    private func retrieveSets(_ closure: (() -> Void)? = nil) {
+    private func retrieveSetCells(_ closure: (() -> Void)? = nil) {
         let authorization = "key=\(AppConfig.LegoApiKey)"
         let baseUrl = "https://rebrickable.com/api/v3/lego/sets"
         let params = "?ordering=-year%2C-set_num&page_size=\(itemsPerPage)&page=\(self.page)&\(authorization)"
@@ -67,7 +53,9 @@ class SetsViewModel: SetsViewModelDelegate {
                         let data = data!
                         let jsonDecoder = JSONDecoder()
                         let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
-                        self.sets.append(contentsOf: setsQueryResult.results)
+                        for set in setsQueryResult.results {
+                            self.setCells.append(SetCell(set: set, image: UIImageService.retrieveImage(for: set)))
+                        }
                         self.infiniteScrollCellNumTrigger = self.page * self.itemsPerPage * 3 / 4
                         self.page += 1
                         self.isInitialized = true

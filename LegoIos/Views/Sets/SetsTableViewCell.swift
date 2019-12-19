@@ -15,28 +15,31 @@ class SetsTableViewCell: UITableViewCell {
     @IBOutlet weak var buyButton: SetsButton!
     @IBOutlet weak var detailButton: SetsButton!
 
-    private var _setNum: String?
-    var setNum: String? {
-        get {
-            return _setNum
+    private var _setCell: SetCell?
+    var setCell: SetCell? { get {
+            return _setCell
         }
         set(newValue) {
-            buyButton.setNum = newValue
-            detailButton.setNum = newValue
-            _setNum = newValue
+            _setCell = newValue
+            mainLabel.text = newValue?.set.name
+            mainImage.image = newValue?.image
         }
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        buyButton.setNum = setNum
-        detailButton.setNum = setNum
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    func configure(with setCell: SetCell) {
+        self.setCell = setCell
+        buyButton.configure(with: setCell)
+        detailButton.configure(with: setCell)
     }
 }

@@ -10,6 +10,7 @@
 		E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9047CAC23A80900005183AB /* SetsViewModel.swift */; };
 		E951C2E0239830AD00EF90CC /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2DF239830AD00EF90CC /* Set.swift */; };
 		E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */; };
+		E96B541C23AC161E00EC5416 /* SetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B541B23AC161E00EC5416 /* SetCell.swift */; };
 		E97620362177B1A4009257E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97620352177B1A4009257E8 /* AppDelegate.swift */; };
 		E976203D2177B1A4009257E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E976203B2177B1A4009257E8 /* Main.storyboard */; };
 		E976203F2177B1A7009257E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E976203E2177B1A7009257E8 /* Assets.xcassets */; };
@@ -27,7 +28,6 @@
 		E9D79D3B23A823FC00046B41 /* SetTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3A23A823FC00046B41 /* SetTabBarDelegate.swift */; };
 		E9D79D3D23A8C16600046B41 /* UIImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3C23A8C16600046B41 /* UIImageService.swift */; };
 		E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */; };
-		E9D79D4123A8C2B000046B41 /* UIImageServiceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D4023A8C2B000046B41 /* UIImageServiceExtension.swift */; };
 		E9D79D4923A9521300046B41 /* Fastlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D4823A9521300046B41 /* Fastlane.swift */; };
 		E9D79D5123A9525200046B41 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D5023A9525200046B41 /* SnapshotHelper.swift */; };
 		E9FBC1BE23A2F4D8003D96C1 /* SetsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1BD23A2F4D8003D96C1 /* SetsButton.swift */; };
@@ -63,6 +63,7 @@
 		E9047CAC23A80900005183AB /* SetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModel.swift; sourceTree = "<group>"; };
 		E951C2DF239830AD00EF90CC /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewCell.swift; sourceTree = "<group>"; };
+		E96B541B23AC161E00EC5416 /* SetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCell.swift; sourceTree = "<group>"; };
 		E97620322177B1A4009257E8 /* LegoIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97620352177B1A4009257E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E976203C2177B1A4009257E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 		E9D79D3A23A823FC00046B41 /* SetTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTabBarDelegate.swift; sourceTree = "<group>"; };
 		E9D79D3C23A8C16600046B41 /* UIImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageService.swift; sourceTree = "<group>"; };
 		E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageServiceDelegate.swift; sourceTree = "<group>"; };
-		E9D79D4023A8C2B000046B41 /* UIImageServiceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageServiceExtension.swift; sourceTree = "<group>"; };
 		E9D79D4623A9521300046B41 /* Fastlane.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fastlane.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D79D4823A9521300046B41 /* Fastlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fastlane.swift; sourceTree = "<group>"; };
 		E9D79D4A23A9521300046B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -209,7 +209,6 @@
 			children = (
 				E988FF72239A2BFF006272FD /* UIImageExtension.swift */,
 				E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */,
-				E9D79D4023A8C2B000046B41 /* UIImageServiceExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +247,7 @@
 			children = (
 				E951C2DF239830AD00EF90CC /* Set.swift */,
 				E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */,
+				E96B541B23AC161E00EC5416 /* SetCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -513,10 +513,10 @@
 				E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */,
 				E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */,
 				E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */,
+				E96B541C23AC161E00EC5416 /* SetCell.swift in Sources */,
 				E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */,
 				E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
-				E9D79D4123A8C2B000046B41 /* UIImageServiceExtension.swift in Sources */,
 				E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */,
 				E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */,
 				E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */,

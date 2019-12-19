@@ -9,10 +9,10 @@
 import Foundation
 
 extension SetsViewModelDelegate {
-    func initializeSets() {
-        initializeSets(nil)
+    func initializeSetCells() {
+        initializeSetCells(nil)
     }
-    func refreshSets() {
-        refreshSets(nil)
+    func refreshSetCells() {
+        refreshSetCells(nil)
     }
 }

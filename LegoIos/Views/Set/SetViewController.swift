@@ -11,14 +11,14 @@ import UIKit
 class SetViewController: UIViewController {
     weak var setTabBarController: SetTabBarViewController?
     @IBOutlet weak var mainLabel: UILabel!
-    var setNum: String?
+    var setCell: SetCell?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setNum = setTabBarController!.getSetNum()
-        if let num = setNum {
+        setCell = setTabBarController!.getSetCell()
+        if let num = setCell!.set.setNum {
             mainLabel.text = "Set Num: \(num)"
         }
     }

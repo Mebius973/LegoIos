@@ -9,5 +9,5 @@
 import UIKit
 
 protocol UIImageServiceDelegate: class {
-    func retrieveImages(viewModel: SetsViewModelDelegate, _ closure: ((_ images: [UIImage?]) -> Void)?)
+    static func retrieveImage(for set: Set) -> UIImage?
 }

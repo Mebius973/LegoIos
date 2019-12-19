@@ -9,13 +9,9 @@
 import UIKit
 
 class SetsButton: UIButton {
-    var setNum: String?
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    var setCell: SetCell?
 
+    func configure(with setCell: SetCell) {
+        self.setCell = setCell
+    }
 }
