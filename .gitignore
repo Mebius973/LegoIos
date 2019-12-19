@@ -101,4 +101,5 @@ iOSInjectionProject/
 # xcodegen
 .DS_Store
 vendor/
-
+*.mobileprovision
+*.cer
