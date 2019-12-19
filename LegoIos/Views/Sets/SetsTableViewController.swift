@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SetsTableViewController: UITableViewController {
+class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefetching {
     private var mainActivity = UIActivityIndicatorView()
     private var viewModel: SetsViewModelDelegate = SetsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.prefetchDataSource = self
         setupPullToRefreshUI()
         addActivityIndicator()
 
@@ -47,6 +47,12 @@ class SetsTableViewController: UITableViewController {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        viewModel.fetchSetCells(range: indexPaths.count) {
+            self.setsUpdated()
+        }
+    }
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -65,7 +71,7 @@ class SetsTableViewController: UITableViewController {
     }
 
     @objc private func refreshSets(_ sender: Any) {
-        viewModel.refreshSetCells {
+        viewModel.fetchNewSetCells {
             self.setsUpdated()
         }
     }

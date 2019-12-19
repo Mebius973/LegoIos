@@ -17,8 +17,7 @@ class SetsViewModel: SetsViewModelDelegate {
     private var setCells = [SetCell]()
     private var offset = 0
     private var page = 1
-    private let itemsPerPage = 10
-    private var infiniteScrollCellNumTrigger = 9
+    private let itemsPerPage = 15
 
     func setCellAt(index: Int) -> SetCell? {
         guard setCells.count > index else {
@@ -32,43 +31,57 @@ class SetsViewModel: SetsViewModelDelegate {
         retrieveSetCells(closure)
     }
 
-    func refreshSetCells(_ closure: (() -> Void)? = nil) {
+    func fetchSetCells(range: Int, _ closure: (() -> Void)?) {
+        retrieveSetCells(range: range, closure)
+    }
+
+    func fetchNewSetCells(_ closure: (() -> Void)? = nil) {
         isRefreshed = false
         retrieveSetCells(closure)
     }
 
-    private func retrieveSetCells(_ closure: (() -> Void)? = nil) {
-        let authorization = "key=\(AppConfig.LegoApiKey)"
-        let baseUrl = "https://rebrickable.com/api/v3/lego/sets"
-        let params = "?ordering=-year%2C-set_num&page_size=\(itemsPerPage)&page=\(self.page)&\(authorization)"
-        let request = "\(baseUrl)\(params)"
-        let url: URL = URL(string: request)!
+    private func computePagination(_ range: Int?) -> Int {
+        guard range != nil else { return 0 }
+        return range! / itemsPerPage + (range! % itemsPerPage == 0 ? 0 : 1)
+    }
 
-        let session = URLSession.shared
-        let task = session.dataTask(with: url) { (data, response, error) in
-            do {
-                if response is HTTPURLResponse {
-                    let httprep = (response as? HTTPURLResponse)!
-                    if httprep.statusCode == 200 {
-                        let data = data!
-                        let jsonDecoder = JSONDecoder()
-                        let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
-                        for set in setsQueryResult.results {
-                            self.setCells.append(SetCell(set: set, image: UIImageService.retrieveImage(for: set)))
-                        }
-                        self.infiniteScrollCellNumTrigger = self.page * self.itemsPerPage * 3 / 4
-                        self.page += 1
-                        self.isInitialized = true
-                        self.isRefreshed = true
-                        if closure != nil {
-                            closure!()
+    private func retrieveSetCells(range: Int? = nil, _ closure: (() -> Void)? = nil) {
+        let pages = computePagination(range) + self.page
+
+        for page in self.page...pages {
+            let authorization = "key=\(AppConfig.LegoApiKey)"
+            let baseUrl = "https://rebrickable.com/api/v3/lego/sets"
+            let params = "?ordering=-year%2C-set_num&page_size=\(itemsPerPage)&page=\(page)&\(authorization)"
+            let request = "\(baseUrl)\(params)"
+            let url: URL = URL(string: request)!
+
+            let session = URLSession.shared
+            let task = session.dataTask(with: url) { (data, response, error) in
+                do {
+                    if response is HTTPURLResponse {
+                        let httprep = (response as? HTTPURLResponse)!
+                        if httprep.statusCode == 200 {
+                            let data = data!
+                            let jsonDecoder = JSONDecoder()
+                            let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
+                            for set in setsQueryResult.results {
+                                self.setCells.append(SetCell(set: set, image: UIImageService.retrieveImage(for: set)))
+                            }
+                            if page == pages {
+                                self.isInitialized = true
+                                self.isRefreshed = true
+                                if closure != nil {
+                                    closure!()
+                                }
+                            }
+                            self.page += 1
                         }
                     }
+                } catch {
+                    print("error: \(error)")
                 }
-            } catch {
-                print("error: \(error)")
             }
+            task.resume()
         }
-        task.resume()
     }
 }

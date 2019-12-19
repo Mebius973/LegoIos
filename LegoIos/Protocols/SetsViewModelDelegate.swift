@@ -14,5 +14,6 @@ protocol SetsViewModelDelegate: class {
     var count: Int { get }
     func setCellAt(index: Int) -> SetCell?
     func initializeSetCells(_ closure: (() -> Void)?)
-    func refreshSetCells(_ closure: (() -> Void)?)
+    func fetchNewSetCells(_ closure: (() -> Void)?)
+    func fetchSetCells(range: Int, _ closure: (() -> Void)?)
 }

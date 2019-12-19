@@ -12,7 +12,10 @@ extension SetsViewModelDelegate {
     func initializeSetCells() {
         initializeSetCells(nil)
     }
-    func refreshSetCells() {
-        refreshSetCells(nil)
+    func fetchNewSetCells() {
+        fetchNewSetCells(nil)
+    }
+    func fetchSetCells(range: Int) {
+        fetchSetCells(range: range, nil)
     }
 }
