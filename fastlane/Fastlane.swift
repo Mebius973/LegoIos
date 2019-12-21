@@ -30,8 +30,11 @@ class Fastlane: XCTestCase {
         setupSnapshot(app)
         app.launch()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        for activity in app.activityIndicators.allElementsBoundByIndex {
+            if waitForElementToDisAppear(activity) {
+                snapshot("SetsTableView")
+            }
+        }
     }
 
     func testLaunchPerformance() {
@@ -41,5 +44,23 @@ class Fastlane: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+
+    private func waitForElementToDisAppear(_ element: XCUIElement) -> Bool {
+        let predicate = NSPredicate(format: "exists == false")
+        let expectation = XCTNSPredicateExpectation(predicate: predicate,
+                                                    object: element)
+
+        let result = XCTWaiter().wait(for: [expectation], timeout: 30)
+        return result == .completed
+    }
+
+    private func waitForElementToAppear(_ element: XCUIElement) -> Bool {
+        let predicate = NSPredicate(format: "exists == true")
+        let expectation = XCTNSPredicateExpectation(predicate: predicate,
+                                                    object: element)
+
+        let result = XCTWaiter().wait(for: [expectation], timeout: 30)
+        return result == .completed
     }
 }
