@@ -1,0 +1,19 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - name: Fastlane Action
+      uses: maierj/fastlane-action@v1.2.0
+      with:
+        # The lane that should be executed.
+        lane: screenshots
+        # The relative path from the project root directory to the subdirectory where the fastlane folder is located.
+        subdirectory: fastlane # optional
+        # The action tracks usage in Firebase by default. You can disable tracking by setting this parameter to 'true'.
+        skip-tracking: true # optional
