@@ -22,6 +22,8 @@ devices([
 	"iPad Pro (12.9-inch) (3rd generation)"
 ])
 
+# ios_version("13.2")
+
 # languages([
 #   "en-US",
 #   "de-DE",
