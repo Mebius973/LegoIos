@@ -38,7 +38,7 @@ class SetsViewModel: SetsViewModelDelegate {
 
     func fetchNewSetCells(_ closure: (() -> Void)? = nil) {
         isRefreshed = false
-        retrieveSetCells(closure)
+        retrieveNewSetCells(closure)
     }
 
     private func computePagination(_ range: Int?) -> Int {
@@ -83,6 +83,47 @@ class SetsViewModel: SetsViewModelDelegate {
                 }
             }
             task.resume()
+        }
+    }
+
+    private func retrieveNewSetCells(_ closure: (() -> Void)? = nil) {
+        var duplicated = false
+        while !duplicated {
+            var currentPage = 1
+            let authorization = "key=\(AppConfig.LegoApiKey)"
+            let baseUrl = "https://rebrickable.com/api/v3/lego/sets"
+            let params = "?ordering=-year%2C-set_num&page_size=\(itemsPerPage)&page=\(currentPage)&\(authorization)"
+            let request = "\(baseUrl)\(params)"
+            let url: URL = URL(string: request)!
+
+            let session = URLSession.shared
+            let task = session.dataTask(with: url) { (data, response, error) in
+                do {
+                    let data = data!
+                    let jsonDecoder = JSONDecoder()
+                    let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
+                    var setNumArray = self.setCells.map { $0.set.setNum }
+                    for set in setsQueryResult.results {
+                        if !setNumArray.contains(set.setNum) {
+                            self.setCells.append(SetCell(set: set,
+                                                         image: UIImageService.retrieveImage(for: set)))
+                            setNumArray.append(set.setNum)
+                        } else {
+                            duplicated = true
+                            self.page = self.count / self.itemsPerPage + 1
+                            self.isInitialized = true
+                            self.isRefreshed = true
+                            if closure != nil {
+                                closure!()
+                            }
+                        }
+                    }
+                } catch {
+                    print("error: \(error)")
+                }
+            }
+            task.resume()
+            currentPage += 1
         }
     }
 }
