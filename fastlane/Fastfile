@@ -28,8 +28,11 @@ platform :ios do
   	get_provisioning_profile   # invokes sigh
 		increment_build_number
   	build_app(scheme: "LegoIos")
-		upload_to_testflight
-  	slack(message: "Successfully distributed a new beta build")
+		upload_to_testflight(skip_waiting_for_build_processing: true)
+  	slack(
+			slack_url: "https://hooks.slack.com/services/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",
+			message: "Successfully distributed a new beta build"
+		)
 	end
 
 end
