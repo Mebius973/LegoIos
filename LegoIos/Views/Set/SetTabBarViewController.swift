@@ -8,29 +8,27 @@
 
 import UIKit
 
-class SetTabBarViewController: UITabBarController, SetTabBarDelegate {
-    func getSetCell() -> SetCell? {
-        return setCell
+class SetTabBarViewController: UITabBarController, SetTabBarDelegate, UISetCellDelegate {
+    private var _setCell: SetCell? {
+        didSet {
+            if let controllers = self.viewControllers {
+                for controller in controllers where controller is SetViewController {
+                    (controller as? SetViewController)!.configure(with: _setCell!)
+                }
+            }
+        }
     }
 
-    var setCell: SetCell?
+    func getSetCell() -> SetCell? {
+        return _setCell
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let controllers = self.viewControllers {
-            for controller in controllers where controller is SetViewController {
-                (controller as? SetViewController)!.setTabBarController = self
-            }
-        }
         // Do any additional setup after loading the view.
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configure(with setCell: SetCell) {
+        self._setCell = setCell
     }
-    */
 }

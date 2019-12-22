@@ -8,29 +8,22 @@
 
 import UIKit
 
-class SetViewController: UIViewController {
-    weak var setTabBarController: SetTabBarViewController?
+class SetViewController: UIViewController, UISetCellDelegate {
     @IBOutlet weak var mainLabel: UILabel!
-    var setCell: SetCell?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        setCell = setTabBarController!.getSetCell()
-        if let num = setCell!.set.setNum {
-            mainLabel.text = "Set Num: \(num)"
+    private var _setCell: SetCell? {
+        didSet {
+            if let num = _setCell!.set.setNum {
+                mainLabel.text = "Set Num: \(num)"
+            }
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
-    */
 
+    func configure(with setCell: SetCell) {
+        self._setCell = setCell
+    }
 }

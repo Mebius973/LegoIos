@@ -58,7 +58,6 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
             bottomActivityIndicator.startAnimating()
         }
     }
-
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -66,8 +65,8 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier != nil && segue.identifier! == "SetDetails" {
-            let nvc = (segue.destination as? SetTabBarViewController)!
-            nvc.setCell = (sender as? SetsButton)!.setCell
+            let nextViewController = (segue.destination as? SetTabBarViewController)!
+            nextViewController.configure(with: (sender as? SetsTableViewCell)!.setCell!)
         }
     }
 

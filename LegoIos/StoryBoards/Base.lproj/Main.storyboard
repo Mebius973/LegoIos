@@ -61,74 +61,44 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91f-oD-X0d">
                                             <rect key="frame" x="41" y="48" width="332" height="273"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eEF-E5-CVS">
-                                                    <rect key="frame" x="61" y="56" width="210" height="170"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom du set" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlZ-5L-NVg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="290" placeholderIntrinsicHeight="40" text="Nom du set" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NlZ-5L-NVg">
                                                     <rect key="frame" x="21" y="8" width="290" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="eYI-LS-9Jr"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="pNG-P7-uzQ"/>
+                                                        <constraint firstAttribute="height" constant="40" id="sac-6g-28r"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-zG-Guf" customClass="SetsButton" customModule="LegoIos" customModuleProvider="target">
-                                                    <rect key="frame" x="38" y="234" width="73" height="23"/>
-                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="5jk-7J-CpU"/>
-                                                        <constraint firstAttribute="height" constant="23" id="DPt-5x-6bB"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="tintColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                                    <state key="normal" title="Buy Button"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39v-hJ-wVH" customClass="SetsButton" customModule="LegoIos" customModuleProvider="target">
-                                                    <rect key="frame" x="211" y="234" width="80" height="23"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                                    <state key="normal" title="View Details"/>
-                                                    <connections>
-                                                        <segue destination="JW8-pe-7qz" kind="show" identifier="SetDetails" id="Kh3-7y-PK1"/>
-                                                    </connections>
-                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eEF-E5-CVS">
+                                                    <rect key="frame" x="21" y="56" width="290" height="199"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstItem="8Yh-zG-Guf" firstAttribute="leading" secondItem="91f-oD-X0d" secondAttribute="leading" constant="38" id="2Bz-oG-T3p"/>
-                                                <constraint firstItem="NlZ-5L-NVg" firstAttribute="leading" secondItem="91f-oD-X0d" secondAttribute="leading" constant="21" id="3Iw-Nv-fLb"/>
-                                                <constraint firstItem="8Yh-zG-Guf" firstAttribute="firstBaseline" secondItem="39v-hJ-wVH" secondAttribute="firstBaseline" id="6x5-ve-YiG"/>
-                                                <constraint firstItem="NlZ-5L-NVg" firstAttribute="top" secondItem="91f-oD-X0d" secondAttribute="topMargin" id="90e-cN-Dqx"/>
-                                                <constraint firstItem="8Yh-zG-Guf" firstAttribute="top" secondItem="eEF-E5-CVS" secondAttribute="bottom" constant="8" id="DTz-da-yQY"/>
-                                                <constraint firstItem="NlZ-5L-NVg" firstAttribute="centerX" secondItem="91f-oD-X0d" secondAttribute="centerX" id="I9U-Py-cfq"/>
-                                                <constraint firstAttribute="trailing" secondItem="39v-hJ-wVH" secondAttribute="trailing" constant="41" id="Mrc-kU-PHc"/>
-                                                <constraint firstItem="39v-hJ-wVH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Yh-zG-Guf" secondAttribute="trailing" constant="59" id="Wgc-HO-aRZ"/>
-                                                <constraint firstItem="eEF-E5-CVS" firstAttribute="centerX" secondItem="91f-oD-X0d" secondAttribute="centerX" id="a0c-Sg-C1d"/>
-                                                <constraint firstItem="eEF-E5-CVS" firstAttribute="leading" secondItem="91f-oD-X0d" secondAttribute="leading" constant="61" id="bDZ-lc-d0f"/>
-                                                <constraint firstItem="eEF-E5-CVS" firstAttribute="top" secondItem="NlZ-5L-NVg" secondAttribute="bottom" constant="8" id="ekb-0R-ekp"/>
-                                                <constraint firstItem="8Yh-zG-Guf" firstAttribute="baseline" secondItem="39v-hJ-wVH" secondAttribute="baseline" id="gjz-QB-UnL"/>
-                                                <constraint firstAttribute="bottom" secondItem="8Yh-zG-Guf" secondAttribute="bottom" constant="16" id="pUQ-yn-pNa"/>
-                                                <constraint firstItem="8Yh-zG-Guf" firstAttribute="top" secondItem="39v-hJ-wVH" secondAttribute="top" id="we8-ww-sOX"/>
+                                                <constraint firstItem="eEF-E5-CVS" firstAttribute="centerX" secondItem="91f-oD-X0d" secondAttribute="centerX" id="BbE-Nz-y4d"/>
+                                                <constraint firstItem="NlZ-5L-NVg" firstAttribute="leading" secondItem="91f-oD-X0d" secondAttribute="leading" constant="21" id="FtC-xI-uYA"/>
+                                                <constraint firstAttribute="bottom" secondItem="eEF-E5-CVS" secondAttribute="bottom" constant="18" id="Nu2-Gy-yFy"/>
+                                                <constraint firstItem="eEF-E5-CVS" firstAttribute="top" secondItem="NlZ-5L-NVg" secondAttribute="bottom" constant="8" id="Ug8-Bu-JjY"/>
+                                                <constraint firstItem="NlZ-5L-NVg" firstAttribute="top" secondItem="91f-oD-X0d" secondAttribute="topMargin" id="lRt-9G-b6O"/>
+                                                <constraint firstItem="NlZ-5L-NVg" firstAttribute="leading" secondItem="eEF-E5-CVS" secondAttribute="leading" id="wv9-D6-Ml3"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstItem="91f-oD-X0d" firstAttribute="centerX" secondItem="JUA-TQ-4Oz" secondAttribute="centerX" id="24L-nW-HPq"/>
-                                        <constraint firstItem="91f-oD-X0d" firstAttribute="leading" secondItem="JUA-TQ-4Oz" secondAttribute="leadingMargin" constant="21" id="Rmj-1o-7V8"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="91f-oD-X0d" secondAttribute="bottom" constant="-10" id="Tla-Vp-2Mf"/>
-                                        <constraint firstItem="91f-oD-X0d" firstAttribute="top" secondItem="JUA-TQ-4Oz" secondAttribute="topMargin" constant="37" id="bnY-co-Dny"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="91f-oD-X0d" secondAttribute="bottom" constant="-10" id="9V8-eg-NBt"/>
+                                        <constraint firstItem="91f-oD-X0d" firstAttribute="leading" secondItem="JUA-TQ-4Oz" secondAttribute="leadingMargin" constant="21" id="S3C-h3-z4s"/>
+                                        <constraint firstItem="91f-oD-X0d" firstAttribute="centerX" secondItem="JUA-TQ-4Oz" secondAttribute="centerX" id="mYf-ob-DMu"/>
+                                        <constraint firstItem="91f-oD-X0d" firstAttribute="top" secondItem="JUA-TQ-4Oz" secondAttribute="topMargin" constant="37" id="mx7-na-vtW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="buyButton" destination="8Yh-zG-Guf" id="XNs-Td-caA"/>
-                                    <outlet property="detailButton" destination="39v-hJ-wVH" id="3Di-Lv-a3a"/>
                                     <outlet property="mainImage" destination="eEF-E5-CVS" id="48v-EZ-Hve"/>
                                     <outlet property="mainLabel" destination="NlZ-5L-NVg" id="7tR-dI-7eP"/>
+                                    <segue destination="JW8-pe-7qz" kind="show" identifier="SetDetails" id="wdc-cH-V0I"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

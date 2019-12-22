@@ -8,22 +8,20 @@
 
 import UIKit
 
-class SetsTableViewCell: UITableViewCell {
+class SetsTableViewCell: UITableViewCell, UISetCellDelegate {
 
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var mainImage: UIImageView!
-    @IBOutlet weak var buyButton: SetsButton!
-    @IBOutlet weak var detailButton: SetsButton!
 
-    private var _setCell: SetCell?
-    var setCell: SetCell? { get {
-            return _setCell
+    private var _setCell: SetCell? {
+        didSet {
+            mainLabel.text = _setCell!.set.name
+            mainImage.image = _setCell!.image
         }
-        set(newValue) {
-            _setCell = newValue
-            mainLabel.text = newValue?.set.name
-            mainImage.image = newValue?.image
-        }
+    }
+
+    var setCell: SetCell? {
+        return _setCell
     }
 
     override func awakeFromNib() {
@@ -31,15 +29,7 @@ class SetsTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
     func configure(with setCell: SetCell) {
-        self.setCell = setCell
-        buyButton.configure(with: setCell)
-        detailButton.configure(with: setCell)
+        self._setCell = setCell
     }
 }
