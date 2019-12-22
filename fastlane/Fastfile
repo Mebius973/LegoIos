@@ -16,11 +16,13 @@
 default_platform(:ios)
 
 platform :ios do
+
   desc "Generate new localized screenshots"
   lane :screenshots do
     capture_screenshots(scheme: "Fastlane")
     upload_to_app_store(skip_binary_upload: true, skip_metadata: true)
   end
+
 	lane :beta do
 		get_certificates           # invokes cert
   	get_provisioning_profile   # invokes sigh
@@ -29,4 +31,5 @@ platform :ios do
 		upload_to_testflight
   	slack(message: "Successfully distributed a new beta build")
 	end
+
 end
