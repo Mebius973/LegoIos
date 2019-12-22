@@ -24,7 +24,7 @@ class LegoIosUITests: XCTestCase {
         // interface orientation - required for your tests before they run.
         // The setUp method is a good place to do this.
     }
-    
+
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.

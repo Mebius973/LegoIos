@@ -32,6 +32,7 @@ class SetsViewModel: SetsViewModelDelegate {
     }
 
     func fetchSetCells(range: Int, _ closure: (() -> Void)?) {
+        isRefreshed = false
         retrieveSetCells(range: range, closure)
     }
 

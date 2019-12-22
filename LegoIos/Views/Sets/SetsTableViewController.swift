@@ -9,16 +9,18 @@
 import UIKit
 
 class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefetching {
-    private var mainActivity = UIActivityIndicatorView()
+    private let mainActivityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
     private var viewModel: SetsViewModelDelegate = SetsViewModel()
+    private let bottomActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.prefetchDataSource = self
         setupPullToRefreshUI()
-        addActivityIndicator()
+        addMainActivityIndicator()
+        addBottomActivityIndicator()
 
-        mainActivity.startAnimating()
+        mainActivityIndicator.startAnimating()
         viewModel.initializeSetCells {
             self.setsUpdated()
         }
@@ -36,7 +38,7 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
         return viewModel.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SetsTableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(
             withIdentifier: "reuseIdentifier",
             for: indexPath) as? SetsTableViewCell)!
@@ -48,8 +50,12 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
     }
 
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        viewModel.fetchSetCells(range: indexPaths.count) {
-            self.setsUpdated()
+        if viewModel.isRefreshed {
+            viewModel.fetchSetCells(range: indexPaths.count) {
+                self.setsUpdated()
+            }
+        } else {
+            bottomActivityIndicator.startAnimating()
         }
     }
 
@@ -78,18 +84,27 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
 
     private func setsUpdated() {
         DispatchQueue.main.async {
-            if self.mainActivity.isAnimating { self.mainActivity.stopAnimating() }
+            if self.mainActivityIndicator.isAnimating { self.mainActivityIndicator.stopAnimating() }
             if self.refreshControl != nil && self.refreshControl!.isRefreshing { self.refreshControl!.endRefreshing() }
+            self.bottomActivityIndicator.startAnimating()
             self.tableView.reloadData()
         }
     }
 
-    private func addActivityIndicator() {
-        mainActivity = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        mainActivity.style = UIActivityIndicatorView.Style.large
-        mainActivity.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 50)
-        mainActivity.backgroundColor = .white
-        mainActivity.hidesWhenStopped = true
-        self.view.addSubview(mainActivity)
+    private func addMainActivityIndicator() {
+        mainActivityIndicator.style = UIActivityIndicatorView.Style.large
+        mainActivityIndicator.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 50)
+        mainActivityIndicator.backgroundColor = .white
+        mainActivityIndicator.hidesWhenStopped = true
+        self.view.addSubview(mainActivityIndicator)
+    }
+
+    private func addBottomActivityIndicator() {
+        bottomActivityIndicator.hidesWhenStopped = true
+        bottomActivityIndicator.frame = CGRect(x: CGFloat(0),
+                                               y: CGFloat(0),
+                                               width: tableView.bounds.width,
+                                               height: CGFloat(44))
+        self.tableView.tableFooterView = bottomActivityIndicator
     }
 }
