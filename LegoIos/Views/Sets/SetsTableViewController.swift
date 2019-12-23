@@ -21,8 +21,10 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
         addBottomActivityIndicator()
 
         mainActivityIndicator.startAnimating()
-        viewModel.initializeSetCells {
-            self.setsUpdated()
+        if !viewModel.isInitialized {
+            viewModel.initializeSetCells {
+                self.setsUpdated()
+            }
         }
     }
 
