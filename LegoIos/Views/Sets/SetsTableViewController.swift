@@ -9,22 +9,19 @@
 import UIKit
 
 class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefetching {
-    private let mainActivityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
     private var viewModel: SetsViewModelDelegate = SetsViewModel()
     private let bottomActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        prolongateLaunchScreen()
+
         tableView.prefetchDataSource = self
         setupPullToRefreshUI()
-        addMainActivityIndicator()
         addBottomActivityIndicator()
 
-        mainActivityIndicator.startAnimating()
-        if !viewModel.isInitialized {
-            viewModel.initializeSetCells {
-                self.setsUpdated()
-            }
+        viewModel.initializeSetCells {
+            self.setsUpdated()
         }
     }
 
@@ -72,6 +69,12 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
         }
     }
 
+    private func prolongateLaunchScreen() {
+        let launchScreen = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()!
+        navigationController!.isNavigationBarHidden = true
+        navigationController!.pushViewController(launchScreen, animated: false)
+    }
+
     private func setupPullToRefreshUI() {
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.addTarget(self, action: #selector(refreshSets(_:)), for: .valueChanged)
@@ -85,19 +88,12 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
 
     private func setsUpdated() {
         DispatchQueue.main.async {
-            if self.mainActivityIndicator.isAnimating { self.mainActivityIndicator.stopAnimating() }
             if self.refreshControl != nil && self.refreshControl!.isRefreshing { self.refreshControl!.endRefreshing() }
             self.bottomActivityIndicator.startAnimating()
             self.tableView.reloadData()
+            self.navigationController!.isNavigationBarHidden = false
+            self.navigationController!.popViewController(animated: false)
         }
-    }
-
-    private func addMainActivityIndicator() {
-        mainActivityIndicator.style = UIActivityIndicatorView.Style.large
-        mainActivityIndicator.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 50)
-        mainActivityIndicator.backgroundColor = .white
-        mainActivityIndicator.hidesWhenStopped = true
-        self.view.addSubview(mainActivityIndicator)
     }
 
     private func addBottomActivityIndicator() {
