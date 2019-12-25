@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Parts-->
         <scene sceneID="W30-yP-gju">
             <objects>
                 <viewController id="0Dw-fk-jdn" sceneMemberID="viewController">
@@ -17,13 +17,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Msi-UO-UUM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Y5Z-5J-2we"/>
+                    <tabBarItem key="tabBarItem" title="Parts" id="Y5Z-5J-2we"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZ2-Xm-oel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93" y="149"/>
         </scene>
-        <!--Item 1-->
+        <!--Details-->
         <scene sceneID="i3i-9n-oRR">
             <objects>
                 <viewController id="NRm-uM-EkA" customClass="SetViewController" customModule="LegoIos" customModuleProvider="target" sceneMemberID="viewController">
@@ -151,7 +151,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wRC-oB-RFL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="hNe-eP-PrA"/>
+                    <tabBarItem key="tabBarItem" title="Details" id="hNe-eP-PrA"/>
                     <connections>
                         <outlet property="image" destination="xOY-gJ-DCr" id="e5M-gE-flw"/>
                         <outlet property="setCategoryLabel" destination="thi-MW-vP8" id="C9P-oa-ZxL"/>
