@@ -8,14 +8,16 @@
 
 import UIKit
 
-class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefetching {
+class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefetching, UITabBarControllerDelegate {
     private var viewModel: SetsViewModelDelegate = SetsViewModel()
     private let bottomActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+    private var tabBarItemClickedOnce = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         prolongateLaunchScreen()
 
+        self.tabBarController?.delegate = self
         tableView.prefetchDataSource = self
         setupPullToRefreshUI()
         addBottomActivityIndicator()
@@ -58,6 +60,18 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
         }
     }
     // MARK: - Navigation
+
+    func tabBarController(_ tabBarController: UITabBarController, didSelect: UIViewController) {
+        if didSelect is SetsTableViewController {
+            if tabBarItemClickedOnce {
+                self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            } else {
+                tabBarItemClickedOnce = true
+            }
+        } else {
+            tabBarItemClickedOnce = false
+        }
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
