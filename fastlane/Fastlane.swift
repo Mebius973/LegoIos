@@ -48,8 +48,8 @@ class Fastlane: XCTestCase {
         setupSnapshot(app)
         app.launch()
         if waitForAtLeast1ElementToAppear(app.cells) {
-            app.tables.tap()
-            if waitForElementToAppear(app.textViews.staticText["Set Name"]) {
+            app.tables.firstMatch.tap()
+            if waitForElementToAppear(app.staticTexts["Set Name:"]) {
                 snapshot("SetDetailView")
             }
         }
