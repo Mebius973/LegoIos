@@ -24,15 +24,33 @@ class Fastlane: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testScreenshotLaunchScreen() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         setupSnapshot(app)
         app.launch()
+        snapshot("LaunchScreen")
+    }
 
-        for activity in app.activityIndicators.allElementsBoundByIndex {
-            if waitForElementToDisAppear(activity) {
-                snapshot("SetsTableView")
+    func testScreenshotSetsView() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
+        if waitForAtLeast1ElementToAppear(app.cells) {
+            snapshot("SetsTableView")
+        }
+    }
+
+    func testScreenshotSetDetailView() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
+        if waitForAtLeast1ElementToAppear(app.cells) {
+            app.tables.tap()
+            if waitForElementToAppear(app.textViews.staticText["Set Name"]) {
+                snapshot("SetDetailView")
             }
         }
     }
@@ -48,6 +66,15 @@ class Fastlane: XCTestCase {
 
     private func waitForElementToAppear(_ element: XCUIElement) -> Bool {
         let predicate = NSPredicate(format: "exists == true")
+        let expectation = XCTNSPredicateExpectation(predicate: predicate,
+                                                    object: element)
+
+        let result = XCTWaiter().wait(for: [expectation], timeout: 30)
+        return result == .completed
+    }
+
+    private func waitForAtLeast1ElementToAppear(_ element: XCUIElementQuery) -> Bool {
+        let predicate = NSPredicate(format: "count > 0")
         let expectation = XCTNSPredicateExpectation(predicate: predicate,
                                                     object: element)
 
