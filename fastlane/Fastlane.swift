@@ -29,16 +29,8 @@ class Fastlane: XCTestCase {
         let app = XCUIApplication()
         setupSnapshot(app)
         app.launch()
-        snapshot("LaunchScreen")
-    }
-
-    func testScreenshotSetsView() {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        setupSnapshot(app)
-        app.launch()
-        if waitForAtLeast1ElementToAppear(app.cells) {
-            snapshot("SetsTableView")
+        if waitForElementToAppear(app.staticTexts["Lego is Love"]) {
+            snapshot("LaunchScreen")
         }
     }
 
