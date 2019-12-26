@@ -33,7 +33,6 @@ class SetViewController: UIViewController, UISetCellDelegate {
         if let setCell = _setCell {
             image.image = setCell.image
             setNameLabel.text = setCell.set.name
-            setNameLabel.adjustsFontSizeToFitWidth = true
             if let year = setCell.set.year {
                 setYearLabel.text = String(year)
             }
