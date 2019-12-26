@@ -22,6 +22,9 @@
 		E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF72239A2BFF006272FD /* UIImageExtension.swift */; };
 		E9960ACF23A26E0800E2FE18 /* SetDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */; };
 		E9960AD623A2714D00E2FE18 /* SetTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */; };
+		E9A85A6223B55BFA005A5A35 /* SetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6123B55BFA005A5A35 /* SetViewModel.swift */; };
+		E9A85A6423B55C88005A5A35 /* SetViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6323B55C88005A5A35 /* SetViewModelDelegate.swift */; };
+		E9A85A6623B55D1B005A5A35 /* SetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6523B55D1B005A5A35 /* SetDetails.swift */; };
 		E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BACB5421DB899300F1D3B6 /* AppConfig.swift */; };
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
 		E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */; };
@@ -81,6 +84,9 @@
 		E988FF72239A2BFF006272FD /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetDetails.storyboard; sourceTree = "<group>"; };
 		E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTabBarViewController.swift; sourceTree = "<group>"; };
+		E9A85A6123B55BFA005A5A35 /* SetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModel.swift; sourceTree = "<group>"; };
+		E9A85A6323B55C88005A5A35 /* SetViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModelDelegate.swift; sourceTree = "<group>"; };
+		E9A85A6523B55D1B005A5A35 /* SetDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetails.swift; sourceTree = "<group>"; };
 		E9BACB5421DB899300F1D3B6 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
 		E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				E9047CAC23A80900005183AB /* SetsViewModel.swift */,
+				E9A85A6123B55BFA005A5A35 /* SetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -247,6 +254,7 @@
 				E951C2DF239830AD00EF90CC /* Set.swift */,
 				E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */,
 				E96B541B23AC161E00EC5416 /* SetCell.swift */,
+				E9A85A6523B55D1B005A5A35 /* SetDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 				E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */,
 				E9D79D3A23A823FC00046B41 /* SetTabBarDelegate.swift */,
 				E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */,
+				E9A85A6323B55C88005A5A35 /* SetViewModelDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -474,10 +483,13 @@
 				E951C2E0239830AD00EF90CC /* Set.swift in Sources */,
 				E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */,
 				E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */,
+				E9A85A6623B55D1B005A5A35 /* SetDetails.swift in Sources */,
+				E9A85A6223B55BFA005A5A35 /* SetViewModel.swift in Sources */,
 				E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */,
 				E96B541C23AC161E00EC5416 /* SetCell.swift in Sources */,
 				E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */,
 				E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */,
+				E9A85A6423B55C88005A5A35 /* SetViewModelDelegate.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
 				E9510D8723AFBF7B0092E487 /* UISetCellDelegate.swift in Sources */,
 				E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */,
