@@ -9,7 +9,6 @@
 import Foundation
 
 protocol SetsViewModelDelegate: class {
-    var isInitialized: Bool { get }
     var isRefreshed: Bool { get }
     var count: Int { get }
     func setCellAt(index: Int) -> SetCell?

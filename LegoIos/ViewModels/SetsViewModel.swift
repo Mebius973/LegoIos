@@ -9,7 +9,6 @@
 import Foundation
 
 class SetsViewModel: SetsViewModelDelegate {
-    var isInitialized = false
     var isRefreshed = false
     var count: Int {
         return setCells.count
@@ -27,7 +26,7 @@ class SetsViewModel: SetsViewModelDelegate {
     }
 
     func initializeSetCells(_ closure: (() -> Void)? = nil) {
-        isInitialized = false
+        isRefreshed = false
         retrieveSetCells(closure)
     }
 
@@ -69,7 +68,6 @@ class SetsViewModel: SetsViewModelDelegate {
                                 self.setCells.append(SetCell(set: set, image: UIImageService.retrieveImage(for: set)))
                             }
                             if page == pages {
-                                self.isInitialized = true
                                 self.isRefreshed = true
                                 if closure != nil {
                                     closure!()
@@ -115,7 +113,6 @@ class SetsViewModel: SetsViewModelDelegate {
                         } else {
                             duplicated = true
                             self.page = self.count / self.itemsPerPage + 1
-                            self.isInitialized = true
                             self.isRefreshed = true
                             if closure != nil {
                                 closure!()
