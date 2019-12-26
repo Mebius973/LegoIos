@@ -12,7 +12,6 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
     private var viewModel: SetsViewModelDelegate = SetsViewModel()
     private let bottomActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
     private var tabBarItemClickedOnce = true
-    private var isLaunchScreenPresented = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +24,7 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
 
         viewModel.initializeSetCells {
             self.setsUpdated()
+            self.dismissLaunchSreen()
         }
     }
 
@@ -88,7 +88,6 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
         let launchScreen = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()!
         navigationController!.isNavigationBarHidden = true
         navigationController!.pushViewController(launchScreen, animated: false)
-        isLaunchScreenPresented = true
     }
 
     private func setupPullToRefreshUI() {
@@ -107,11 +106,13 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
             if self.refreshControl != nil && self.refreshControl!.isRefreshing { self.refreshControl!.endRefreshing() }
             self.bottomActivityIndicator.startAnimating()
             self.tableView.reloadData()
-            if self.isLaunchScreenPresented {
+        }
+    }
+
+    private func dismissLaunchSreen() {
+        DispatchQueue.main.async {
                 self.navigationController!.isNavigationBarHidden = false
                 self.navigationController!.popViewController(animated: false)
-                self.isLaunchScreenPresented = false
-            }
         }
     }
 
