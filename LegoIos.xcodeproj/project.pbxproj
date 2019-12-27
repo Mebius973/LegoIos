@@ -25,6 +25,7 @@
 		E9A85A6223B55BFA005A5A35 /* SetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6123B55BFA005A5A35 /* SetViewModel.swift */; };
 		E9A85A6423B55C88005A5A35 /* SetViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6323B55C88005A5A35 /* SetViewModelDelegate.swift */; };
 		E9A85A6623B55D1B005A5A35 /* SetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6523B55D1B005A5A35 /* SetDetails.swift */; };
+		E9A85A6823B5E456005A5A35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6723B5E456005A5A35 /* Constants.swift */; };
 		E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BACB5421DB899300F1D3B6 /* AppConfig.swift */; };
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
 		E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */; };
@@ -87,6 +88,7 @@
 		E9A85A6123B55BFA005A5A35 /* SetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModel.swift; sourceTree = "<group>"; };
 		E9A85A6323B55C88005A5A35 /* SetViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModelDelegate.swift; sourceTree = "<group>"; };
 		E9A85A6523B55D1B005A5A35 /* SetDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetails.swift; sourceTree = "<group>"; };
+		E9A85A6723B5E456005A5A35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9BACB5421DB899300F1D3B6 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
 		E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				E97620432177B1A7009257E8 /* Info.plist */,
 				E9BACB5421DB899300F1D3B6 /* AppConfig.swift */,
 				E9FBC1C323A360EB003D96C1 /* LegoIos.xcdatamodeld */,
+				E9A85A6723B5E456005A5A35 /* Constants.swift */,
 			);
 			path = LegoIos;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9D79D3B23A823FC00046B41 /* SetTabBarDelegate.swift in Sources */,
+				E9A85A6823B5E456005A5A35 /* Constants.swift in Sources */,
 				E9D79D3D23A8C16600046B41 /* UIImageService.swift in Sources */,
 				E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */,
 				E9FBC1C223A2F84C003D96C1 /* SetViewController.swift in Sources */,

@@ -9,5 +9,8 @@
 import Foundation
 
 class SetViewModel: SetViewModelDelegate {
-    
+    func getSetDetails(setCell: SetCell) -> SetDetails {
+        print("toto")
+        return SetDetails()
+    }
 }

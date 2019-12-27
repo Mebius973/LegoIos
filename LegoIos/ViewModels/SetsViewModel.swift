@@ -50,8 +50,8 @@ class SetsViewModel: SetsViewModelDelegate {
 
         for page in self.page...pages {
             let authorization = "key=\(AppConfig.LegoApiKey)"
-            let baseUrl = "https://rebrickable.com/api/v3/lego/sets"
-            let params = "?ordering=-year%2C-set_num&page_size=\(itemsPerPage)&page=\(page)&\(authorization)"
+            let baseUrl = "\(Constants.ApiBaseURL)\(Constants.SetsEndPoint)"
+            let params = "?\(Constants.SetsDefaultParams)&page_size=\(itemsPerPage)&page=\(page)&\(authorization)"
             let request = "\(baseUrl)\(params)"
             let url: URL = URL(string: request)!
 
