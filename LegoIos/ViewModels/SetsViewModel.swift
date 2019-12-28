@@ -47,10 +47,10 @@ class SetsViewModel: SetsViewModelDelegate {
 
     private func retrieveSetCells(range: Int? = nil, _ closure: (() -> Void)? = nil) {
         let pages = computePagination(range) + self.page
+        let authorization = "key=\(AppConfig.LegoApiKey)"
+        let baseUrl = "\(Constants.ApiBaseURL)\(Constants.SetsEndPoint)"
 
         for page in self.page...pages {
-            let authorization = "key=\(AppConfig.LegoApiKey)"
-            let baseUrl = "\(Constants.ApiBaseURL)\(Constants.SetsEndPoint)"
             let params = "?\(Constants.SetsDefaultParams)&page_size=\(itemsPerPage)&page=\(page)&\(authorization)"
             let request = "\(baseUrl)\(params)"
             let url: URL = URL(string: request)!
