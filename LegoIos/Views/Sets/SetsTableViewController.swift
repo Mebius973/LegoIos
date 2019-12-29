@@ -42,7 +42,7 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(
-            withIdentifier: "reuseIdentifier",
+            withIdentifier: "SetsTableViewCell",
             for: indexPath) as? SetsTableViewCell)!
 
         guard let setCell = viewModel.setCellAt(index: indexPath.row) else { return cell}

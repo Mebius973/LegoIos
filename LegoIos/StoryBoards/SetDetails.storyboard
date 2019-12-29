@@ -7,22 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Parts-->
-        <scene sceneID="W30-yP-gju">
-            <objects>
-                <viewController id="0Dw-fk-jdn" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kTa-o9-MdW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Msi-UO-UUM"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Parts" id="Y5Z-5J-2we"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eZ2-Xm-oel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="93" y="149"/>
-        </scene>
         <!--Details-->
         <scene sceneID="i3i-9n-oRR">
             <objects>
@@ -182,12 +166,55 @@
                     </tabBar>
                     <connections>
                         <segue destination="NRm-uM-EkA" kind="relationship" relationship="viewControllers" id="34N-6u-ANQ"/>
-                        <segue destination="0Dw-fk-jdn" kind="relationship" relationship="viewControllers" id="dbF-S0-PYH"/>
+                        <segue destination="Tfl-08-pZN" kind="relationship" relationship="viewControllers" id="qLM-Sy-rz1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iy0-wO-TnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-826" y="-175"/>
+        </scene>
+        <!--Parts-->
+        <scene sceneID="vRv-op-hin">
+            <objects>
+                <tableViewController id="Tfl-08-pZN" userLabel="Parts" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="47Z-X6-gai">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SetPartsTableViewCell" id="96A-me-Qgp">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="96A-me-Qgp" id="mp8-Ch-CKD">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6T-Ai-ynO">
+                                            <rect key="frame" x="107" y="12" width="200" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="K6T-Ai-ynO" firstAttribute="centerY" secondItem="mp8-Ch-CKD" secondAttribute="centerY" id="54s-9W-9l6"/>
+                                        <constraint firstItem="K6T-Ai-ynO" firstAttribute="centerX" secondItem="mp8-Ch-CKD" secondAttribute="centerX" id="Phe-2o-6Ic"/>
+                                        <constraint firstItem="K6T-Ai-ynO" firstAttribute="top" secondItem="mp8-Ch-CKD" secondAttribute="topMargin" constant="1" id="ars-Oh-v23"/>
+                                        <constraint firstItem="K6T-Ai-ynO" firstAttribute="leading" secondItem="mp8-Ch-CKD" secondAttribute="leadingMargin" constant="87" id="coF-ED-9vT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Tfl-08-pZN" id="8f4-VJ-U43"/>
+                            <outlet property="delegate" destination="Tfl-08-pZN" id="K6O-9q-TdM"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Parts" id="Q0E-B7-SRG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVq-na-eu9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="324"/>
         </scene>
     </scenes>
 </document>
