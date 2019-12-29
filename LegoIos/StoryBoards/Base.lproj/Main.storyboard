@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="-565" y="256"/>
         </scene>
-        <!--Item 1-->
+        <!--Sets-->
         <scene sceneID="Y4g-Zh-EQw">
             <objects>
-                <tableViewController id="KGI-qP-z8L" userLabel="Item 1" customClass="SetsTableViewController" customModule="LegoIos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="KGI-qP-z8L" userLabel="Sets" customClass="SetsTableViewController" customModule="LegoIos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wYh-kM-fNC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
