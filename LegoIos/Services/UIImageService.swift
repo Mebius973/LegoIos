@@ -9,14 +9,12 @@
 import UIKit
 
 class UIImageService: UIImageServiceDelegate {
-    static func retrieveImage(for set: Set) -> UIImage? {
+    static func retrieveImage(for urlString: String) -> UIImage? {
         var image: UIImage?
-        if let urlString = set.setImgUrl {
-            if let url = URL(string: urlString) {
-                if let data = try? Data(contentsOf: url) {
-                    image = UIImage(data: data)?
-                        .resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit)
-                }
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                image = UIImage(data: data)?
+                    .resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit)
             }
         }
         return image

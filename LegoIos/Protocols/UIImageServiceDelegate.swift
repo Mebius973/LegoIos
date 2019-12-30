@@ -9,5 +9,5 @@
 import UIKit
 
 protocol UIImageServiceDelegate: class {
-    static func retrieveImage(for set: Set) -> UIImage?
+    static func retrieveImage(for urlString: String) -> UIImage?
 }

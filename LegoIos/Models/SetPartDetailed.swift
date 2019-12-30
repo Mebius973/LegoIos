@@ -15,7 +15,7 @@ struct SetPartDetailed: Codable {
     let setPartDetailedId, invPartID: Int?
     let setNum: String?
     let isSpare: Bool?
-    let elementID: JSONNull?
+    let elementID: String?
     let numSets: Int?
 
     enum CodingKeys: String, CodingKey {

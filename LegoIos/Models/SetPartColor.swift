@@ -47,7 +47,7 @@ struct BrickLink: Codable {
 }
 
 struct Peeron: Codable {
-    let extIDS: [JSONNull?]
+    let extIDS: [String?]
     let extDescrs: [[String]]?
 
     enum CodingKeys: String, CodingKey {

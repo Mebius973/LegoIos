@@ -14,7 +14,7 @@ struct SetPart: Codable {
     let partURL: String?
     let partImgURL: String?
     let externalIDS: [String: [String]]?
-    let printOf: JSONNull?
+    let printOf: String?
 
     enum CodingKeys: String, CodingKey {
         case name

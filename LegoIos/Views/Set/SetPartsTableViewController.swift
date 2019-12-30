@@ -34,10 +34,19 @@ class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SetPartsTableViewCell", for: indexPath)
+        let cell = (tableView.dequeueReusableCell(
+        withIdentifier: "SetPartsTableViewCell",
+        for: indexPath) as? SetPartsTableViewCell)!
 
         // Configure the cell...
-
+        let setPart = _viewModel!.getSetPartDetailedAt(index: indexPath.row)
+        cell.configure(with: setPart)
         return cell
+    }
+
+    func setPartsUpdated(_ setParts: [SetPartPresentable]) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }

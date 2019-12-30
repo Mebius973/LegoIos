@@ -65,7 +65,12 @@ class SetsViewModel: SetsViewModelDelegate {
                             let jsonDecoder = JSONDecoder()
                             let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
                             for set in setsQueryResult.results! {
-                                self.setCells.append(SetCell(set: set, image: UIImageService.retrieveImage(for: set)))
+                                self.setCells.append(
+                                    SetCell(
+                                        set: set,
+                                        image: UIImageService.retrieveImage(for: set.setImgUrl!)
+                                    )
+                                )
                             }
                             if page == pages {
                                 self.isRefreshed = true
@@ -108,7 +113,7 @@ class SetsViewModel: SetsViewModelDelegate {
                     for set in setsQueryResult.results! {
                         if !setNumArray.contains(set.setNum) {
                             self.setCells.append(SetCell(set: set,
-                                                         image: UIImageService.retrieveImage(for: set)))
+                                                         image: UIImageService.retrieveImage(for: set.setImgUrl!)))
                             setNumArray.append(set.setNum)
                         } else {
                             duplicated = true
