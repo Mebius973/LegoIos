@@ -64,7 +64,7 @@ class SetsViewModel: SetsViewModelDelegate {
                             let data = data!
                             let jsonDecoder = JSONDecoder()
                             let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
-                            for set in setsQueryResult.results {
+                            for set in setsQueryResult.results! {
                                 self.setCells.append(SetCell(set: set, image: UIImageService.retrieveImage(for: set)))
                             }
                             if page == pages {
@@ -104,8 +104,8 @@ class SetsViewModel: SetsViewModelDelegate {
                     let data = data!
                     let jsonDecoder = JSONDecoder()
                     let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
-                    var setNumArray = self.setCells.map { $0.set.setNum }
-                    for set in setsQueryResult.results {
+                    var setNumArray = self.setCells.map { $0.set!.setNum }
+                    for set in setsQueryResult.results! {
                         if !setNumArray.contains(set.setNum) {
                             self.setCells.append(SetCell(set: set,
                                                          image: UIImageService.retrieveImage(for: set)))

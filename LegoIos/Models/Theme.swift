@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Theme: Codable {
+struct Theme: Codable {
     let themeId: Int?
     let parentId: Int?
     let name: String?

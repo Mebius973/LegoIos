@@ -19,13 +19,12 @@ class Set: Codable {
     let year: Int?
 
     enum CodingKeys: String, CodingKey {
+        case name, year
         case lastModifiedDt = "last_modified_dt"
-        case name = "name"
         case numParts = "num_parts"
         case setImgUrl = "set_img_url"
         case setNum = "set_num"
         case setUrl = "set_url"
         case themeId = "theme_id"
-        case year = "year"
     }
 }

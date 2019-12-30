@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SetDetails {
+struct SetDetails {
     var setCell: SetCell?
     var theme: Theme?
 }

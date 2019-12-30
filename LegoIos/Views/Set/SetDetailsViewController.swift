@@ -46,15 +46,16 @@ class SetDetailsViewController: UIViewController, UISetCellDelegate {
     private func updateUIElements() {
         if let setCell = _setCell {
             image.image = setCell.image
-            setNameLabel.text = setCell.set.name
-            if let year = setCell.set.year {
-                setYearLabel.text = String(year)
+            if let set = setCell.set {
+                setNameLabel.text = set.name
+                if let year = set.year {
+                    setYearLabel.text = String(year)
+                }
+                if let numParts = set.numParts {
+                    setPartsLabel.text = String(numParts)
+                }
+                setSetNumLabel.text = set.setNum
             }
-            if let numParts = setCell.set.numParts {
-                setPartsLabel.text = String(numParts)
-            }
-            setSetNumLabel.text = setCell.set.setNum
-
             setCategoryLabel.isHidden = true
             setCategorySpinner.startAnimating()
         }

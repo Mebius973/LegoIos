@@ -15,7 +15,7 @@ class SetsTableViewCell: UITableViewCell, UISetCellDelegate {
 
     private var _setCell: SetCell? {
         didSet {
-            mainLabel.text = _setCell!.set.name
+            mainLabel.text = _setCell!.set!.name
             mainImage.image = _setCell!.image
         }
     }

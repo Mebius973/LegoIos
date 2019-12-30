@@ -9,6 +9,6 @@
 import UIKit
 
 struct SetCell {
-    let set: Set
+    let set: Set?
     let image: UIImage?
 }

@@ -24,7 +24,7 @@ class SetDetailsViewModel {
     }
 
     private func retrieveTheme() {
-        if let themeId = _setDetails.setCell!.set.themeId {
+        if let themeId = _setDetails.setCell!.set!.themeId {
             let authorization = "key=\(AppConfig.LegoApiKey)"
             let baseUrl = "\(Constants.ApiBaseURL)\(Constants.ThemesEndPoint)\(themeId)/"
             let params = "?\(authorization)"

@@ -8,10 +8,17 @@
 
 import UIKit
 
-class SetPartsTableViewController: UITableViewController {
+class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
+    private var _setCell: SetCell?
+    private var _viewModel: SetPartsViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    func configure(with setCell: SetCell) {
+        self._setCell = setCell
+        _viewModel = SetPartsViewModel(viewController: self, setCell: _setCell!)
     }
 
     // MARK: - Table view data source
@@ -23,7 +30,7 @@ class SetPartsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return _viewModel!.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

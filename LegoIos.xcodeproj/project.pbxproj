@@ -29,6 +29,13 @@
 		E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BACB5421DB899300F1D3B6 /* AppConfig.swift */; };
 		E9C771C723BA18DC00D2BCB2 /* SetPartsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771C623BA18DC00D2BCB2 /* SetPartsTableViewController.swift */; };
 		E9C771C923BA191200D2BCB2 /* SetPartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771C823BA191200D2BCB2 /* SetPartsTableViewCell.swift */; };
+		E9C771CB23BA223400D2BCB2 /* SetPartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771CA23BA223400D2BCB2 /* SetPartsViewModel.swift */; };
+		E9C771CF23BA276800D2BCB2 /* SetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771CE23BA276800D2BCB2 /* SetDetailsViewController.swift */; };
+		E9C771D123BA2A6200D2BCB2 /* SetPartsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771D023BA2A6200D2BCB2 /* SetPartsQueryResult.swift */; };
+		E9C771D323BA2B1900D2BCB2 /* SetPartDetailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771D223BA2B1900D2BCB2 /* SetPartDetailed.swift */; };
+		E9C771D523BA2BEC00D2BCB2 /* SetPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771D423BA2BEC00D2BCB2 /* SetPart.swift */; };
+		E9C771D723BA2DB600D2BCB2 /* SetPartColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771D623BA2DB500D2BCB2 /* SetPartColor.swift */; };
+		E9C771DB23BA89DE00D2BCB2 /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771DA23BA89DE00D2BCB2 /* JSONNull.swift */; };
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
 		E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */; };
 		E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */; };
@@ -37,7 +44,6 @@
 		E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */; };
 		E9D79D4923A9521300046B41 /* Fastlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D4823A9521300046B41 /* Fastlane.swift */; };
 		E9D79D5123A9525200046B41 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D5023A9525200046B41 /* SnapshotHelper.swift */; };
-		E9FBC1C223A2F84C003D96C1 /* SetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1C123A2F84C003D96C1 /* SetDetailsViewController.swift */; };
 		E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1C323A360EB003D96C1 /* LegoIos.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +100,13 @@
 		E9BACB5421DB899300F1D3B6 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E9C771C623BA18DC00D2BCB2 /* SetPartsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartsTableViewController.swift; sourceTree = "<group>"; };
 		E9C771C823BA191200D2BCB2 /* SetPartsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartsTableViewCell.swift; sourceTree = "<group>"; };
+		E9C771CA23BA223400D2BCB2 /* SetPartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartsViewModel.swift; sourceTree = "<group>"; };
+		E9C771CE23BA276800D2BCB2 /* SetDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetailsViewController.swift; sourceTree = "<group>"; };
+		E9C771D023BA2A6200D2BCB2 /* SetPartsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartsQueryResult.swift; sourceTree = "<group>"; };
+		E9C771D223BA2B1900D2BCB2 /* SetPartDetailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartDetailed.swift; sourceTree = "<group>"; };
+		E9C771D423BA2BEC00D2BCB2 /* SetPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPart.swift; sourceTree = "<group>"; };
+		E9C771D623BA2DB500D2BCB2 /* SetPartColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartColor.swift; sourceTree = "<group>"; };
+		E9C771DA23BA89DE00D2BCB2 /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
 		E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegate.swift; sourceTree = "<group>"; };
 		E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegateExtension.swift; sourceTree = "<group>"; };
@@ -104,7 +117,6 @@
 		E9D79D4823A9521300046B41 /* Fastlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fastlane.swift; sourceTree = "<group>"; };
 		E9D79D4A23A9521300046B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9D79D5023A9525200046B41 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
-		E9FBC1C123A2F84C003D96C1 /* SetDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetailsViewController.swift; sourceTree = "<group>"; };
 		E9FBC1C423A360EB003D96C1 /* LegoIos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LegoIos.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +157,7 @@
 			children = (
 				E9047CAC23A80900005183AB /* SetsViewModel.swift */,
 				E9A85A6123B55BFA005A5A35 /* SetDetailsViewModel.swift */,
+				E9C771CA23BA223400D2BCB2 /* SetPartsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -241,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */,
-				E9FBC1C123A2F84C003D96C1 /* SetDetailsViewController.swift */,
+				E9C771CE23BA276800D2BCB2 /* SetDetailsViewController.swift */,
 				E9C771C623BA18DC00D2BCB2 /* SetPartsTableViewController.swift */,
 				E9C771C823BA191200D2BCB2 /* SetPartsTableViewCell.swift */,
 			);
@@ -265,6 +278,11 @@
 				E96B541B23AC161E00EC5416 /* SetCell.swift */,
 				E9A85A6523B55D1B005A5A35 /* SetDetails.swift */,
 				E9A85A6923B74867005A5A35 /* Theme.swift */,
+				E9C771D023BA2A6200D2BCB2 /* SetPartsQueryResult.swift */,
+				E9C771D223BA2B1900D2BCB2 /* SetPartDetailed.swift */,
+				E9C771D423BA2BEC00D2BCB2 /* SetPart.swift */,
+				E9C771D623BA2DB500D2BCB2 /* SetPartColor.swift */,
+				E9C771DA23BA89DE00D2BCB2 /* JSONNull.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -490,10 +508,15 @@
 				E9D79D3D23A8C16600046B41 /* UIImageService.swift in Sources */,
 				E9A85A6A23B74867005A5A35 /* Theme.swift in Sources */,
 				E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */,
-				E9FBC1C223A2F84C003D96C1 /* SetDetailsViewController.swift in Sources */,
+				E9C771D723BA2DB600D2BCB2 /* SetPartColor.swift in Sources */,
 				E951C2E0239830AD00EF90CC /* Set.swift in Sources */,
 				E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */,
+				E9C771D123BA2A6200D2BCB2 /* SetPartsQueryResult.swift in Sources */,
+				E9C771CF23BA276800D2BCB2 /* SetDetailsViewController.swift in Sources */,
+				E9C771D323BA2B1900D2BCB2 /* SetPartDetailed.swift in Sources */,
 				E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */,
+				E9C771DB23BA89DE00D2BCB2 /* JSONNull.swift in Sources */,
+				E9C771D523BA2BEC00D2BCB2 /* SetPart.swift in Sources */,
 				E9A85A6623B55D1B005A5A35 /* SetDetails.swift in Sources */,
 				E9A85A6223B55BFA005A5A35 /* SetDetailsViewModel.swift in Sources */,
 				E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */,
@@ -509,6 +532,7 @@
 				E97620362177B1A4009257E8 /* AppDelegate.swift in Sources */,
 				E9960AD623A2714D00E2FE18 /* SetTabBarViewController.swift in Sources */,
 				E9C771C923BA191200D2BCB2 /* SetPartsTableViewCell.swift in Sources */,
+				E9C771CB23BA223400D2BCB2 /* SetPartsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
