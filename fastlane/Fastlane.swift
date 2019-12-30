@@ -42,7 +42,27 @@ class Fastlane: XCTestCase {
         if waitForAtLeast1ElementToAppear(app.cells) {
             app.tables.firstMatch.tap()
             if waitForElementToAppear(app.staticTexts["Set Name:"]) {
-                snapshot("SetDetailView")
+                if checkNoElementOfType(app.activityIndicators) {
+                    snapshot("SetDetailView")
+                }
+            }
+        }
+    }
+
+    func testScreenshotSetPartsView() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
+        if waitForAtLeast1ElementToAppear(app.cells) {
+            app.tables.staticTexts["Creative Bag Charm"].tap()
+            if waitForElementToAppear(app.staticTexts["Set Name:"]) {
+                if checkNoElementOfType(app.activityIndicators) {
+                    app.tabBars.buttons["Parts"].tap()
+                    if waitForAtLeast1ElementToAppear(app.cells) {
+                        snapshot("SetPartView")
+                    }
+                }
             }
         }
     }
@@ -73,4 +93,13 @@ class Fastlane: XCTestCase {
         let result = XCTWaiter().wait(for: [expectation], timeout: 30)
         return result == .completed
     }
+
+    private func checkNoElementOfType(_ element: XCUIElementQuery) -> Bool {
+           let predicate = NSPredicate(format: "count == 0")
+           let expectation = XCTNSPredicateExpectation(predicate: predicate,
+                                                       object: element)
+
+           let result = XCTWaiter().wait(for: [expectation], timeout: 30)
+           return result == .completed
+       }
 }
