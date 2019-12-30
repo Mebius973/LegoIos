@@ -12,8 +12,8 @@ class SetTabBarViewController: UITabBarController, SetTabBarDelegate, UISetCellD
     private var _setCell: SetCell? {
         didSet {
             if let controllers = self.viewControllers {
-                for controller in controllers where controller is SetViewController {
-                    (controller as? SetViewController)!.configure(with: _setCell!)
+                for controller in controllers where controller is SetDetailsViewController {
+                    (controller as? SetDetailsViewController)!.configure(with: _setCell!)
                 }
             }
         }

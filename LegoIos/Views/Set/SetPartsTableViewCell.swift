@@ -14,7 +14,7 @@ class SetPartsTableViewCell: UITableViewCell {
     @IBOutlet weak var partsColor: UILabel!
     @IBOutlet weak var partsQuantity: UILabel!
     @IBOutlet weak var partsCategory: UILabel!
- 
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

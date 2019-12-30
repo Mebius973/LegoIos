@@ -8,12 +8,12 @@
 
 import UIKit
 
-class SetViewModel {
+class SetDetailsViewModel {
     private var _setDetails = SetDetails()
 
-    private weak var _viewController: SetViewController?
+    private weak var _viewController: SetDetailsViewController?
 
-    init(viewController: SetViewController, setCell: SetCell) {
+    init(viewController: SetDetailsViewController, setCell: SetCell) {
         _viewController = viewController
         _setDetails.setCell = setCell
         retrieveTheme()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetViewController: UIViewController, UISetCellDelegate {
+class SetDetailsViewController: UIViewController, UISetCellDelegate {
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var setNameLabel: UILabel!
@@ -19,7 +19,7 @@ class SetViewController: UIViewController, UISetCellDelegate {
     @IBOutlet weak var setCategorySpinner: UIActivityIndicatorView!
 
     private var _setCell: SetCell?
-    private var _viewModel: SetViewModel?
+    private var _viewModel: SetDetailsViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class SetViewController: UIViewController, UISetCellDelegate {
 
     func configure(with setCell: SetCell) {
         self._setCell = setCell
-        _viewModel = SetViewModel(viewController: self, setCell: _setCell!)
+        _viewModel = SetDetailsViewModel(viewController: self, setCell: _setCell!)
     }
 
     func setDetailsUpdated(setDetails: SetDetails) {
