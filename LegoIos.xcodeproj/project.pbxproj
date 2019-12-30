@@ -27,6 +27,8 @@
 		E9A85A6823B5E456005A5A35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6723B5E456005A5A35 /* Constants.swift */; };
 		E9A85A6A23B74867005A5A35 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6923B74867005A5A35 /* Theme.swift */; };
 		E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BACB5421DB899300F1D3B6 /* AppConfig.swift */; };
+		E9C771C723BA18DC00D2BCB2 /* SetPartsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771C623BA18DC00D2BCB2 /* SetPartsTableViewController.swift */; };
+		E9C771C923BA191200D2BCB2 /* SetPartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771C823BA191200D2BCB2 /* SetPartsTableViewCell.swift */; };
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
 		E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */; };
 		E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */; };
@@ -90,6 +92,8 @@
 		E9A85A6723B5E456005A5A35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9A85A6923B74867005A5A35 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		E9BACB5421DB899300F1D3B6 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		E9C771C623BA18DC00D2BCB2 /* SetPartsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartsTableViewController.swift; sourceTree = "<group>"; };
+		E9C771C823BA191200D2BCB2 /* SetPartsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartsTableViewCell.swift; sourceTree = "<group>"; };
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
 		E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegate.swift; sourceTree = "<group>"; };
 		E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegateExtension.swift; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 			children = (
 				E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */,
 				E9FBC1C123A2F84C003D96C1 /* SetViewController.swift */,
+				E9C771C623BA18DC00D2BCB2 /* SetPartsTableViewController.swift */,
+				E9C771C823BA191200D2BCB2 /* SetPartsTableViewCell.swift */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -493,6 +499,7 @@
 				E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */,
 				E96B541C23AC161E00EC5416 /* SetCell.swift in Sources */,
 				E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */,
+				E9C771C723BA18DC00D2BCB2 /* SetPartsTableViewController.swift in Sources */,
 				E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
 				E9510D8723AFBF7B0092E487 /* UISetCellDelegate.swift in Sources */,
@@ -501,6 +508,7 @@
 				E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */,
 				E97620362177B1A4009257E8 /* AppDelegate.swift in Sources */,
 				E9960AD623A2714D00E2FE18 /* SetTabBarViewController.swift in Sources */,
+				E9C771C923BA191200D2BCB2 /* SetPartsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,7 +699,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -714,7 +722,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
