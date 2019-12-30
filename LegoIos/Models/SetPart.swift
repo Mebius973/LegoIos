@@ -13,7 +13,7 @@ struct SetPart: Codable {
     let partCatID: Int?
     let partURL: String?
     let partImgURL: String?
-    let externalIDS: PartExternalIDS?
+    let externalIDS: [String: [String]]?
     let printOf: JSONNull?
 
     enum CodingKeys: String, CodingKey {
@@ -24,14 +24,5 @@ struct SetPart: Codable {
         case partImgURL = "part_img_url"
         case externalIDS = "external_ids"
         case printOf = "print_of"
-    }
-}
-
-struct PartExternalIDS: Codable {
-    let brickOwl, lDraw: [String]?
-
-    enum CodingKeys: String, CodingKey {
-        case brickOwl = "BrickOwl"
-        case lDraw = "LDraw"
     }
 }
