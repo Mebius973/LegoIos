@@ -11,9 +11,21 @@ import UIKit
 class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
     private var _setCell: SetCell?
     private var _viewModel: SetPartsViewModel?
+    private var _spinner = UIActivityIndicatorView(
+        frame: CGRect(x: 0,
+                      y: 0,
+                      width: 40,
+                      height: 40)
+    )
+
+    @IBOutlet weak var noContentLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.separatorStyle = .none
+        self.noContentLabel.isHidden = true
+        addSpinner()
     }
 
     func configure(with setCell: SetCell) {
@@ -46,7 +58,22 @@ class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
 
     func setPartsUpdated(_ setParts: [SetPartPresentable]) {
         DispatchQueue.main.async {
-            self.tableView.reloadData()
+            self._spinner.stopAnimating()
+            if self._viewModel!.count == 0 {
+                self.noContentLabel.isHidden = false
+            } else {
+                self.noContentLabel.isHidden = true
+                self.tableView.separatorStyle = .singleLine
+                self.tableView.reloadData()
+            }
         }
+    }
+
+    private func addSpinner() {
+        _spinner.hidesWhenStopped = true
+        _spinner.startAnimating()
+        _spinner.center = self.view.center
+        _spinner.backgroundColor = .white
+        self.view.addSubview(_spinner)
     }
 }
