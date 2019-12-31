@@ -12,20 +12,20 @@ class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
     private var _setCell: SetCell?
     private var _viewModel: SetPartsViewModel?
     private var _spinner = UIActivityIndicatorView(
-        frame: CGRect(x: 0,
-                      y: 0,
-                      width: 40,
-                      height: 40)
+        frame: CGRect(
+            x: 0,
+            y: 0,
+            width: 40,
+            height: 40)
     )
-
-    @IBOutlet weak var noContentLabel: UILabel!
+    private var _noContentLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.separatorStyle = .none
-        self.noContentLabel.isHidden = true
         addSpinner()
+        addNoContentLabel()
     }
 
     func configure(with setCell: SetCell) {
@@ -60,9 +60,9 @@ class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
         DispatchQueue.main.async {
             self._spinner.stopAnimating()
             if self._viewModel!.count == 0 {
-                self.noContentLabel.isHidden = false
+                self._noContentLabel.isHidden = false
             } else {
-                self.noContentLabel.isHidden = true
+                self._noContentLabel.isHidden = true
                 self.tableView.separatorStyle = .singleLine
                 self.tableView.reloadData()
             }
@@ -72,8 +72,20 @@ class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
     private func addSpinner() {
         _spinner.hidesWhenStopped = true
         _spinner.startAnimating()
-        _spinner.center = self.view.center
+        _spinner.center.x = self.view.center.x
+        _spinner.center.y = self.view.center.y - 50
         _spinner.backgroundColor = .white
         self.view.addSubview(_spinner)
+    }
+
+    private func addNoContentLabel() {
+        _noContentLabel.bounds = self.view.bounds
+        _noContentLabel.text = "There is no information on parts for this set"
+        _noContentLabel.center.x = self.view.center.x
+        _noContentLabel.center.y = self.view.center.y - 50
+        _noContentLabel.numberOfLines = 2
+        _noContentLabel.textAlignment = .center
+        _noContentLabel.isHidden = true
+        self.view.addSubview(_noContentLabel)
     }
 }
