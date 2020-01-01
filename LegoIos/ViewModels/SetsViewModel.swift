@@ -68,7 +68,7 @@ class SetsViewModel: SetsViewModelDelegate {
                                 self.setCells.append(
                                     SetCell(
                                         set: set,
-                                        image: UIImageService.retrieveImage(for: set.setImgUrl!)
+                                        image: UIImageService.retrieveImage(for: set.setImgUrl)
                                     )
                                 )
                             }
@@ -113,7 +113,7 @@ class SetsViewModel: SetsViewModelDelegate {
                     for set in setsQueryResult.results! {
                         if !setNumArray.contains(set.setNum) {
                             self.setCells.append(SetCell(set: set,
-                                                         image: UIImageService.retrieveImage(for: set.setImgUrl!)))
+                                                         image: UIImageService.retrieveImage(for: set.setImgUrl)))
                             setNumArray.append(set.setNum)
                         } else {
                             duplicated = true

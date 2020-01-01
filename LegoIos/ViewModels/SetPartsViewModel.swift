@@ -51,7 +51,7 @@ class SetPartsViewModel {
                                     color: setPart.color!.name!,
                                     quantity: String(setPart.quantity!),
                                     category: String(setPart.part!.partCatID!),
-                                    image: UIImageService.retrieveImage(for: setPart.part!.partImgURL!)!
+                                    image: UIImageService.retrieveImage(for: setPart.part!.partImgURL)!
                                 )
                                 self._setParts.append(part)
                             }
