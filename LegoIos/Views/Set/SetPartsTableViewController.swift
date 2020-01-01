@@ -80,7 +80,7 @@ class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
 
     private func addNoContentLabel() {
         _noContentLabel.bounds = self.view.bounds
-        _noContentLabel.text = "There is no information on parts for this set"
+        _noContentLabel.text = "There is no parts information for this set"
         _noContentLabel.center.x = self.view.center.x
         _noContentLabel.center.y = self.view.center.y - 50
         _noContentLabel.numberOfLines = 2
