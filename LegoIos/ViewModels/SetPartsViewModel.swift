@@ -13,26 +13,23 @@ class SetPartsViewModel {
         return _setParts.count
     }
 
-    private weak var _viewController: SetPartsTableViewController?
-    private var _setCell: SetCell
+    private var _setCell: SetCell?
     private var _setParts = [SetPartPresentable]()
 
-    init(viewController: SetPartsTableViewController, setCell: SetCell) {
-        _viewController = viewController
+    func configure(setCell: SetCell) {
         _setCell = setCell
-        retrieveParts()
+    }
+
+    func fetchSetParts(_ closure: (() -> Void)?) {
+        retrieveParts(closure)
     }
 
     func getSetPartDetailedAt(index: Int) -> SetPartPresentable {
         return _setParts[index]
     }
 
-    private func setDetailsUpdated() {
-        _viewController?.setPartsUpdated(_setParts)
-    }
-
-    private func retrieveParts() {
-        if let setNum = _setCell.set!.setNum {
+    private func retrieveParts(_ closure: (() -> Void)?) {
+        if let setNum = _setCell!.set!.setNum {
             let authorization = "key=\(AppConfig.LegoApiKey)"
             let baseUrl = "\(Constants.ApiBaseURL)\(Constants.SetsEndPoint)\(setNum)/\(Constants.PartsEndPoint)"
             let params = "?\(authorization)"
@@ -58,7 +55,9 @@ class SetPartsViewModel {
                                 )
                                 self._setParts.append(part)
                             }
-                            self.setDetailsUpdated()
+                            if closure != nil {
+                               closure!()
+                           }
                         }
                     }
                 } catch {

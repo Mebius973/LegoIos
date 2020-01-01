@@ -10,7 +10,7 @@ import UIKit
 
 class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
     private var _setCell: SetCell?
-    private var _viewModel: SetPartsViewModel?
+    private var _viewModel = SetPartsViewModel()
     private var _spinner = UIActivityIndicatorView(
         frame: CGRect(
             x: 0,
@@ -26,11 +26,14 @@ class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
         tableView.separatorStyle = .none
         addSpinner()
         addNoContentLabel()
+        _viewModel.fetchSetParts {
+            self.setPartsUpdated()
+        }
     }
 
     func configure(with setCell: SetCell) {
         self._setCell = setCell
-        _viewModel = SetPartsViewModel(viewController: self, setCell: _setCell!)
+        self._viewModel.configure(setCell: _setCell!)
     }
 
     // MARK: - Table view data source
@@ -42,7 +45,7 @@ class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return _viewModel!.count
+        return _viewModel.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,15 +54,15 @@ class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
         for: indexPath) as? SetPartsTableViewCell)!
 
         // Configure the cell...
-        let setPart = _viewModel!.getSetPartDetailedAt(index: indexPath.row)
+        let setPart = _viewModel.getSetPartDetailedAt(index: indexPath.row)
         cell.configure(with: setPart)
         return cell
     }
 
-    func setPartsUpdated(_ setParts: [SetPartPresentable]) {
+    func setPartsUpdated() {
         DispatchQueue.main.async {
             self._spinner.stopAnimating()
-            if self._viewModel!.count == 0 {
+            if self._viewModel.count == 0 {
                 self._noContentLabel.isHidden = false
             } else {
                 self._noContentLabel.isHidden = true
