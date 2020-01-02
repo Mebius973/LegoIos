@@ -25,6 +25,17 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
         return _viewModel.count
     }
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = (tableView.dequeueReusableCell(
+            withIdentifier: "SearchResult",
+            for: indexPath) as? SearchTableViewCell)!
+
+        let searchResult = _viewModel.searchResultAt(index: indexPath.row)
+        cell.configure(with: searchResult)
+
+        return cell
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.endEditing(true)
     }

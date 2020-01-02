@@ -95,7 +95,7 @@ class SetsViewModel: SetsViewModelDelegate {
         var queryNotRunning = true
         while !duplicated && queryNotRunning {
             let authorization = "key=\(AppConfig.LegoApiKey)"
-            let baseUrl = "https://rebrickable.com/api/v3/lego/sets"
+            let baseUrl = "\(Constants.ApiBaseURL)\(Constants.SetsEndPoint)"
             let params = "?ordering=-year%2C-set_num&page_size=\(itemsPerPage)&page=\(currentPage)&\(authorization)"
             let request = "\(baseUrl)\(params)"
             let url: URL = URL(string: request)!
