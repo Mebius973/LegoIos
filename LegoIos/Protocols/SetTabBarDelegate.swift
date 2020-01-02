@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SetTabBarDelegate: class {
-    func getSetCell() -> SetCell?
+     func getSetNum() -> String?
 }

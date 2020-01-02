@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9047CAC23A80900005183AB /* SetsViewModel.swift */; };
-		E9510D8723AFBF7B0092E487 /* UISetCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9510D8623AFBF7B0092E487 /* UISetCellDelegate.swift */; };
+		E9510D8723AFBF7B0092E487 /* UISetDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9510D8623AFBF7B0092E487 /* UISetDelegate.swift */; };
 		E951C2E0239830AD00EF90CC /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2DF239830AD00EF90CC /* Set.swift */; };
 		E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */; };
 		E96B541C23AC161E00EC5416 /* SetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B541B23AC161E00EC5416 /* SetCell.swift */; };
@@ -78,7 +78,7 @@
 
 /* Begin PBXFileReference section */
 		E9047CAC23A80900005183AB /* SetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModel.swift; sourceTree = "<group>"; };
-		E9510D8623AFBF7B0092E487 /* UISetCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetCellDelegate.swift; sourceTree = "<group>"; };
+		E9510D8623AFBF7B0092E487 /* UISetDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetDelegate.swift; sourceTree = "<group>"; };
 		E951C2DF239830AD00EF90CC /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewCell.swift; sourceTree = "<group>"; };
 		E96B541B23AC161E00EC5416 /* SetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCell.swift; sourceTree = "<group>"; };
@@ -313,7 +313,7 @@
 		E9D79D3523A8235B00046B41 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				E9510D8623AFBF7B0092E487 /* UISetCellDelegate.swift */,
+				E9510D8623AFBF7B0092E487 /* UISetDelegate.swift */,
 				E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */,
 				E9D79D3A23A823FC00046B41 /* SetTabBarDelegate.swift */,
 				E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */,
@@ -545,7 +545,7 @@
 				E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
 				E9C771DF23BDD22D00D2BCB2 /* SearchTableViewController.swift in Sources */,
-				E9510D8723AFBF7B0092E487 /* UISetCellDelegate.swift in Sources */,
+				E9510D8723AFBF7B0092E487 /* UISetDelegate.swift in Sources */,
 				E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */,
 				E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */,
 				E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */,
@@ -743,7 +743,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -766,7 +766,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;

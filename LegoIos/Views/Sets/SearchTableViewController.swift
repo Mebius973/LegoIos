@@ -36,6 +36,15 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier != nil && segue.identifier! == "SearchDetails" {
+            let nextViewController = (segue.destination as? SetTabBarViewController)!
+            nextViewController.configure(with: (sender as? SearchTableViewCell)!.searchResult!.num)
+        }
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.endEditing(true)
     }

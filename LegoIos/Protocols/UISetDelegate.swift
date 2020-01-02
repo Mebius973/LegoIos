@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol UISetCellDelegate: class {
-    func configure(with setCell: SetCell)
+protocol UISetDelegate: class {
+    func configure(with setNum: String)
 }

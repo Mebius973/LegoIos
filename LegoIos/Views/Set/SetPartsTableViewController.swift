@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
-    private var _setCell: SetCell?
+class SetPartsTableViewController: UITableViewController, UISetDelegate {
+    private var _setNum: String?
     private var _viewModel = SetPartsViewModel()
     private var _spinner = UIActivityIndicatorView(
         frame: CGRect(
@@ -31,9 +31,9 @@ class SetPartsTableViewController: UITableViewController, UISetCellDelegate {
         }
     }
 
-    func configure(with setCell: SetCell) {
-        self._setCell = setCell
-        self._viewModel.configure(setCell: _setCell!)
+    func configure(with setNum: String) {
+        self._setNum = setNum
+        self._viewModel.configure(setNum: setNum)
     }
 
     // MARK: - Table view data source

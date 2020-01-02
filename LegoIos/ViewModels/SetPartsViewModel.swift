@@ -13,11 +13,11 @@ class SetPartsViewModel {
         return _setParts.count
     }
 
-    private var _setCell: SetCell?
+    private var _setNum: String?
     private var _setParts = [SetPartPresentable]()
 
-    func configure(setCell: SetCell) {
-        _setCell = setCell
+    func configure(setNum: String) {
+        _setNum = setNum
     }
 
     func fetchSetParts(_ closure: (() -> Void)?) {
@@ -29,7 +29,7 @@ class SetPartsViewModel {
     }
 
     private func retrieveParts(_ closure: (() -> Void)?) {
-        if let setNum = _setCell!.set!.setNum {
+        if let setNum = _setNum {
             let authorization = "key=\(AppConfig.LegoApiKey)"
             let baseUrl = "\(Constants.ApiBaseURL)\(Constants.SetsEndPoint)\(setNum)/\(Constants.PartsEndPoint)"
             let params = "?\(authorization)"

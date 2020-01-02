@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetDetailsViewController: UIViewController, UISetCellDelegate {
+class SetDetailsViewController: UIViewController, UISetDelegate {
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var setNameLabel: UILabel!
@@ -18,33 +18,43 @@ class SetDetailsViewController: UIViewController, UISetCellDelegate {
     @IBOutlet weak var setSetNumLabel: UILabel!
     @IBOutlet weak var setCategorySpinner: UIActivityIndicatorView!
 
-    private var _setCell: SetCell?
+    private var _spinner = UIActivityIndicatorView(frame: CGRect(
+        x: 0,
+        y: 0,
+        width: 40,
+        height: 40
+    ))
+    private var _setNum: String?
     private var _viewModel: SetDetailsViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        updateUIElements()
+        addSpinner()
     }
 
-    func configure(with setCell: SetCell) {
-        self._setCell = setCell
-        _viewModel = SetDetailsViewModel(viewController: self, setCell: _setCell!)
+    func configure(with setNum: String) {
+        self._setNum = setNum
+        _viewModel = SetDetailsViewModel(viewController: self, setNum: setNum)
     }
 
     func setDetailsUpdated(setDetails: SetDetails) {
         DispatchQueue.main.async {
-            self.updateUIElements()
-            if let themeName = setDetails.theme!.name {
-                self.setCategorySpinner.stopAnimating()
-                self.setCategoryLabel.text = themeName
-                self.setCategoryLabel.isHidden = false
-            }
+            self.updateUIElements(setDetails: setDetails)
         }
     }
 
-    private func updateUIElements() {
-        if let setCell = _setCell {
+    private func addSpinner() {
+        _spinner.center = self.view.center
+        _spinner.hidesWhenStopped = true
+        _spinner.backgroundColor = .systemBackground
+        _spinner.bounds = self.view.bounds
+        _spinner.startAnimating()
+        self.view.addSubview(_spinner)
+    }
+
+    private func updateUIElements(setDetails: SetDetails) {
+        if let setCell = setDetails.setCell {
             image.image = setCell.image
             if let set = setCell.set {
                 setNameLabel.text = set.name
@@ -56,8 +66,10 @@ class SetDetailsViewController: UIViewController, UISetCellDelegate {
                 }
                 setSetNumLabel.text = set.setNum
             }
-            setCategoryLabel.isHidden = true
-            setCategorySpinner.startAnimating()
+            if let themeName = setDetails.theme!.name {
+                self.setCategoryLabel.text = themeName
+            }
         }
+        _spinner.stopAnimating()
     }
 }

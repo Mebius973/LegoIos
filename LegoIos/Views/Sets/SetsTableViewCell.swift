@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetsTableViewCell: UITableViewCell, UISetCellDelegate {
+class SetsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var mainImage: UIImageView!
