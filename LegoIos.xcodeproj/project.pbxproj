@@ -46,6 +46,7 @@
 		E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */; };
 		E9D79D4923A9521300046B41 /* Fastlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D4823A9521300046B41 /* Fastlane.swift */; };
 		E9D79D5123A9525200046B41 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D5023A9525200046B41 /* SnapshotHelper.swift */; };
+		E9DF836A23BDD7B9003D28A6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF836923BDD7B9003D28A6 /* SearchViewModel.swift */; };
 		E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1C323A360EB003D96C1 /* LegoIos.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,7 @@
 		E9D79D4823A9521300046B41 /* Fastlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fastlane.swift; sourceTree = "<group>"; };
 		E9D79D4A23A9521300046B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9D79D5023A9525200046B41 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		E9DF836923BDD7B9003D28A6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		E9FBC1C423A360EB003D96C1 /* LegoIos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LegoIos.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 				E9047CAC23A80900005183AB /* SetsViewModel.swift */,
 				E9A85A6123B55BFA005A5A35 /* SetDetailsViewModel.swift */,
 				E9C771CA23BA223400D2BCB2 /* SetPartsViewModel.swift */,
+				E9DF836923BDD7B9003D28A6 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				E9C771D123BA2A6200D2BCB2 /* SetPartsQueryResult.swift in Sources */,
 				E9C771CF23BA276800D2BCB2 /* SetDetailsViewController.swift in Sources */,
 				E9C771D323BA2B1900D2BCB2 /* SetPartDetailed.swift in Sources */,
+				E9DF836A23BDD7B9003D28A6 /* SearchViewModel.swift in Sources */,
 				E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */,
 				E9C771DB23BA89DE00D2BCB2 /* JSONNull.swift in Sources */,
 				E9C771D523BA2BEC00D2BCB2 /* SetPart.swift in Sources */,
