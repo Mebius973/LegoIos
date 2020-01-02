@@ -37,6 +37,7 @@
 		E9C771D723BA2DB600D2BCB2 /* SetPartColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771D623BA2DB500D2BCB2 /* SetPartColor.swift */; };
 		E9C771DB23BA89DE00D2BCB2 /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771DA23BA89DE00D2BCB2 /* JSONNull.swift */; };
 		E9C771DD23BAA9EE00D2BCB2 /* SetPartPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771DC23BAA9EE00D2BCB2 /* SetPartPresentable.swift */; };
+		E9C771DF23BDD22D00D2BCB2 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */; };
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
 		E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */; };
 		E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */; };
@@ -109,6 +110,7 @@
 		E9C771D623BA2DB500D2BCB2 /* SetPartColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartColor.swift; sourceTree = "<group>"; };
 		E9C771DA23BA89DE00D2BCB2 /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
 		E9C771DC23BAA9EE00D2BCB2 /* SetPartPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartPresentable.swift; sourceTree = "<group>"; };
+		E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
 		E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegate.swift; sourceTree = "<group>"; };
 		E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegateExtension.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			children = (
 				E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */,
 				E988FF67239852F0006272FD /* SetsTableViewController.swift */,
+				E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */,
 			);
 			path = Sets;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				E9C771C723BA18DC00D2BCB2 /* SetPartsTableViewController.swift in Sources */,
 				E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
+				E9C771DF23BDD22D00D2BCB2 /* SearchTableViewController.swift in Sources */,
 				E9510D8723AFBF7B0092E487 /* UISetCellDelegate.swift in Sources */,
 				E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */,
 				E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */,

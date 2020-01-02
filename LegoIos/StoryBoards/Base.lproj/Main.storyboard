@@ -28,7 +28,7 @@
         <!--Search-->
         <scene sceneID="wYZ-8B-KZZ">
             <objects>
-                <tableViewController id="vwb-KA-DcA" userLabel="Search" sceneMemberID="viewController">
+                <tableViewController id="vwb-KA-DcA" userLabel="Search" customClass="SearchTableViewController" customModule="LegoIos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7cT-TT-Eev">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,6 +62,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="Ayi-3J-0My"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="8Ve-7Q-Sgg" id="bI5-c8-NQw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQM-y9-uNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
