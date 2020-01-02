@@ -50,22 +50,18 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResult" rowHeight="40" id="eSL-Lt-kdY" customClass="SearchTableViewCell" customModule="LegoIos" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eSL-Lt-kdY" id="cl8-nr-TOB">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eSL-Lt-kdY" translatesAutoresizingMaskIntoConstraints="NO" id="cl8-nr-TOB">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jb-KR-g1t">
-                                            <rect key="frame" x="20" y="10" width="394" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7jb-KR-g1t">
+                                            <rect key="frame" x="20" y="10" width="374" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="7jb-KR-g1t" firstAttribute="leading" secondItem="cl8-nr-TOB" secondAttribute="leadingMargin" id="Kew-aG-ibY"/>
-                                        <constraint firstItem="7jb-KR-g1t" firstAttribute="centerY" secondItem="cl8-nr-TOB" secondAttribute="centerY" id="ekr-sP-sCN"/>
-                                        <constraint firstItem="7jb-KR-g1t" firstAttribute="centerX" secondItem="cl8-nr-TOB" secondAttribute="centerX" constant="10" id="f1d-pq-GZ5"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="7jb-KR-g1t" id="7lc-W4-QIB"/>

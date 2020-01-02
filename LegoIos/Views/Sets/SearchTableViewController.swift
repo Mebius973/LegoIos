@@ -40,10 +40,18 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
         return textField.endEditing(true)
     }
 
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if let query = textField.text {
+            _viewModel.searchHint(query) {
+                self.searchEnded()
+            }
+        }
+    }
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         // Hanlde search terms here
         if let query = textField.text {
-            _viewModel.search(query) {
+            _viewModel.searchFull(query) {
                 self.searchEnded()
             }
         }

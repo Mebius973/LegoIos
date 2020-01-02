@@ -18,11 +18,24 @@ class SearchViewModel {
         return _searchResults[index]
     }
 
-    func search(_ query: String, _ closure: (() -> Void)?) {
+    func searchHint(_ query: String, _ closure: (() -> Void)?) {
+        search(itemQuantity: 10, query, closure)
+    }
+
+    func searchFull(_ query: String, _ closure: (() -> Void)?) {
+        search(itemQuantity: nil, query, closure)
+    }
+
+    private func search(itemQuantity: Int?, _ query: String, _ closure: (() -> Void)?) {
+        _searchResults.removeAll()
         let authorization = "key=\(AppConfig.LegoApiKey)"
         let baseUrl = "\(Constants.ApiBaseURL)\(Constants.SetsEndPoint)"
         let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let params = "?search=\(encodedQuery)&\(authorization)"
+        var params = "?search=\(encodedQuery)&\(authorization)"
+        if let itemsPerPage = itemQuantity {
+            params = "\(params)&page_size=\(itemsPerPage)"
+        }
+
         let request = "\(baseUrl)\(params)"
         let url: URL = URL(string: request)!
 
