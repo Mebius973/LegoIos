@@ -18,4 +18,5 @@ class Constants {
     static let SetsEndPoint = "sets/"
     static let SetsDefaultParams = "ordering=-year%2C-set_num"
     static let ThemesEndPoint = "themes/"
+    static let PoliciesURL = "https://sites.google.com/view/brick-browser/policies"
 }

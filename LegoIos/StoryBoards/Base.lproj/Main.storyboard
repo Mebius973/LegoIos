@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,6 +36,7 @@
                     <connections>
                         <segue destination="KGI-qP-z8L" kind="relationship" relationship="viewControllers" id="82Y-3V-68v"/>
                         <segue destination="vwb-KA-DcA" kind="relationship" relationship="viewControllers" id="C26-AS-cAY"/>
+                        <segue destination="Y3m-t2-WpL" kind="relationship" relationship="viewControllers" id="Z0P-gp-7RH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AGD-z2-nH7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -110,7 +112,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04w-tL-vXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="-35"/>
+            <point key="canvasLocation" x="377" y="-468"/>
         </scene>
         <!--Search-->
         <scene sceneID="wYZ-8B-KZZ">
@@ -142,7 +144,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7jb-KR-g1t">
-                                            <rect key="frame" x="10" y="10" width="379" height="20"/>
+                                            <rect key="frame" x="9" y="10" width="380" height="20"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -152,7 +154,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="7jb-KR-g1t" id="7lc-W4-QIB"/>
-                                    <segue destination="JW8-pe-7qz" kind="show" identifier="SearchDetails" id="Rf7-ef-vJ4"/>
+                                    <segue destination="JW8-pe-7qz" kind="show" id="Rf7-ef-vJ4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -168,7 +170,23 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQM-y9-uNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="664"/>
+            <point key="canvasLocation" x="377" y="256"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="amJ-Gh-kpj">
+            <objects>
+                <viewController id="Y3m-t2-WpL" userLabel="Info" customClass="InfoViewController" customModule="LegoIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="krX-ow-mde">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ytf-LV-xjO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="info.circle" catalog="system" id="IbK-eb-cGK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fh1-fu-bQj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376.81159420289856" y="986.38392857142856"/>
         </scene>
         <!--SetDetails-->
         <scene sceneID="NjE-gy-R3u">
@@ -178,11 +196,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsa-9I-Zkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1098" y="256"/>
+            <point key="canvasLocation" x="1354" y="-177"/>
         </scene>
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>

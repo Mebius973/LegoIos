@@ -18,6 +18,7 @@
 		E97620422177B1A7009257E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97620402177B1A7009257E8 /* LaunchScreen.storyboard */; };
 		E976204D2177B1A7009257E8 /* LegoIosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976204C2177B1A7009257E8 /* LegoIosTests.swift */; };
 		E97620582177B1A7009257E8 /* LegoIosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97620572177B1A7009257E8 /* LegoIosUITests.swift */; };
+		E977053923C09DD000B5E002 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977053823C09DD000B5E002 /* InfoViewController.swift */; };
 		E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF67239852F0006272FD /* SetsTableViewController.swift */; };
 		E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF72239A2BFF006272FD /* UIImageExtension.swift */; };
 		E9960ACF23A26E0800E2FE18 /* SetDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */; };
@@ -94,6 +95,7 @@
 		E97620532177B1A7009257E8 /* LegoIosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoIosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97620572177B1A7009257E8 /* LegoIosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoIosUITests.swift; sourceTree = "<group>"; };
 		E97620592177B1A7009257E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E977053823C09DD000B5E002 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		E988FF67239852F0006272FD /* SetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewController.swift; sourceTree = "<group>"; };
 		E988FF72239A2BFF006272FD /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetDetails.storyboard; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				E9960AD023A2704600E2FE18 /* Set */,
 				E9B5254D2396F64300C50B5E /* Sets */,
+				E977053823C09DD000B5E002 /* InfoViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */,
 				E96B541C23AC161E00EC5416 /* SetCell.swift in Sources */,
 				E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */,
+				E977053923C09DD000B5E002 /* InfoViewController.swift in Sources */,
 				E9DF836E23BE74C3003D28A6 /* SearchResult.swift in Sources */,
 				E9C771C723BA18DC00D2BCB2 /* SetPartsTableViewController.swift in Sources */,
 				E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */,
@@ -743,7 +747,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -766,7 +770,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
