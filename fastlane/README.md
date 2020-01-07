@@ -16,9 +16,9 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## iOS
-### ios localScreen
+### ios screenshot_local
 ```
-fastlane ios localScreen
+fastlane ios screenshot_local
 ```
 Generate new localized screenshots locally
 ### ios screenshot

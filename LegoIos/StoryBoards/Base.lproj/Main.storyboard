@@ -154,7 +154,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="7jb-KR-g1t" id="7lc-W4-QIB"/>
-                                    <segue destination="JW8-pe-7qz" kind="show" id="Rf7-ef-vJ4"/>
+                                    <segue destination="JW8-pe-7qz" kind="show" identifier="SearchDetails" id="Rf7-ef-vJ4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -205,6 +205,6 @@
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rf7-ef-vJ4"/>
+        <segue reference="wdc-cH-V0I"/>
     </inferredMetricsTieBreakers>
 </document>

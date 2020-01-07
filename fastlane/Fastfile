@@ -18,7 +18,7 @@ default_platform(:ios)
 platform :ios do
 
   desc "Generate new localized screenshots locally"
-  lane :localScreen do
+  lane :screenshot_local do
     capture_screenshots(scheme: "Fastlane")
   end
 
