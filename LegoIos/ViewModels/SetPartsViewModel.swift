@@ -8,16 +8,16 @@
 
 import Foundation
 
-class SetPartsViewModel {
+class SetPartsViewModel: UISetDelegate {
     var count: Int {
         return _setParts.count
     }
 
-    private var _setNum: String?
+    private var _setCell: SetCell?
     private var _setParts = [SetPartPresentable]()
 
-    func configure(setNum: String) {
-        _setNum = setNum
+    func configure(with setCell: SetCell) {
+           _setCell = setCell
     }
 
     func fetchSetParts(_ closure: (() -> Void)?) {
@@ -29,7 +29,7 @@ class SetPartsViewModel {
     }
 
     private func retrieveParts(_ closure: (() -> Void)?) {
-        if let setNum = _setNum {
+        if let setNum = _setCell!.set!.setNum {
             let authorization = "key=\(AppConfig.LegoApiKey)"
             let baseUrl = "\(Constants.ApiBaseURL)\(Constants.SetsEndPoint)\(setNum)/\(Constants.PartsEndPoint)"
             let params = "?\(authorization)"

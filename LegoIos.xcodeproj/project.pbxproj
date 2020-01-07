@@ -24,7 +24,6 @@
 		E9960ACF23A26E0800E2FE18 /* SetDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */; };
 		E9960AD623A2714D00E2FE18 /* SetTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */; };
 		E9A85A6223B55BFA005A5A35 /* SetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6123B55BFA005A5A35 /* SetDetailsViewModel.swift */; };
-		E9A85A6623B55D1B005A5A35 /* SetDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6523B55D1B005A5A35 /* SetDetails.swift */; };
 		E9A85A6823B5E456005A5A35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6723B5E456005A5A35 /* Constants.swift */; };
 		E9A85A6A23B74867005A5A35 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6923B74867005A5A35 /* Theme.swift */; };
 		E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BACB5421DB899300F1D3B6 /* AppConfig.swift */; };
@@ -42,14 +41,12 @@
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
 		E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */; };
 		E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */; };
-		E9D79D3B23A823FC00046B41 /* SetTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3A23A823FC00046B41 /* SetTabBarDelegate.swift */; };
 		E9D79D3D23A8C16600046B41 /* UIImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3C23A8C16600046B41 /* UIImageService.swift */; };
 		E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */; };
 		E9D79D4923A9521300046B41 /* Fastlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D4823A9521300046B41 /* Fastlane.swift */; };
 		E9D79D5123A9525200046B41 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D5023A9525200046B41 /* SnapshotHelper.swift */; };
 		E9DF836A23BDD7B9003D28A6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF836923BDD7B9003D28A6 /* SearchViewModel.swift */; };
 		E9DF836C23BE7349003D28A6 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF836B23BE7349003D28A6 /* SearchTableViewCell.swift */; };
-		E9DF836E23BE74C3003D28A6 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF836D23BE74C3003D28A6 /* SearchResult.swift */; };
 		E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1C323A360EB003D96C1 /* LegoIos.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -101,7 +98,6 @@
 		E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetDetails.storyboard; sourceTree = "<group>"; };
 		E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTabBarViewController.swift; sourceTree = "<group>"; };
 		E9A85A6123B55BFA005A5A35 /* SetDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetailsViewModel.swift; sourceTree = "<group>"; };
-		E9A85A6523B55D1B005A5A35 /* SetDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetails.swift; sourceTree = "<group>"; };
 		E9A85A6723B5E456005A5A35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9A85A6923B74867005A5A35 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		E9BACB5421DB899300F1D3B6 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
@@ -119,7 +115,6 @@
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
 		E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegate.swift; sourceTree = "<group>"; };
 		E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegateExtension.swift; sourceTree = "<group>"; };
-		E9D79D3A23A823FC00046B41 /* SetTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTabBarDelegate.swift; sourceTree = "<group>"; };
 		E9D79D3C23A8C16600046B41 /* UIImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageService.swift; sourceTree = "<group>"; };
 		E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageServiceDelegate.swift; sourceTree = "<group>"; };
 		E9D79D4623A9521300046B41 /* Fastlane.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fastlane.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +123,6 @@
 		E9D79D5023A9525200046B41 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		E9DF836923BDD7B9003D28A6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		E9DF836B23BE7349003D28A6 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		E9DF836D23BE74C3003D28A6 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		E9FBC1C423A360EB003D96C1 /* LegoIos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LegoIos.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,7 +286,6 @@
 				E951C2DF239830AD00EF90CC /* Set.swift */,
 				E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */,
 				E96B541B23AC161E00EC5416 /* SetCell.swift */,
-				E9A85A6523B55D1B005A5A35 /* SetDetails.swift */,
 				E9A85A6923B74867005A5A35 /* Theme.swift */,
 				E9C771D023BA2A6200D2BCB2 /* SetPartsQueryResult.swift */,
 				E9C771D223BA2B1900D2BCB2 /* SetPartDetailed.swift */,
@@ -300,7 +293,6 @@
 				E9C771D623BA2DB500D2BCB2 /* SetPartColor.swift */,
 				E9C771DC23BAA9EE00D2BCB2 /* SetPartPresentable.swift */,
 				E9C771DA23BA89DE00D2BCB2 /* JSONNull.swift */,
-				E9DF836D23BE74C3003D28A6 /* SearchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,7 +310,6 @@
 			children = (
 				E9510D8623AFBF7B0092E487 /* UISetDelegate.swift */,
 				E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */,
-				E9D79D3A23A823FC00046B41 /* SetTabBarDelegate.swift */,
 				E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */,
 			);
 			path = Protocols;
@@ -521,7 +512,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9D79D3B23A823FC00046B41 /* SetTabBarDelegate.swift in Sources */,
 				E9A85A6823B5E456005A5A35 /* Constants.swift in Sources */,
 				E9D79D3D23A8C16600046B41 /* UIImageService.swift in Sources */,
 				E9C771DD23BAA9EE00D2BCB2 /* SetPartPresentable.swift in Sources */,
@@ -538,13 +528,11 @@
 				E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */,
 				E9C771DB23BA89DE00D2BCB2 /* JSONNull.swift in Sources */,
 				E9C771D523BA2BEC00D2BCB2 /* SetPart.swift in Sources */,
-				E9A85A6623B55D1B005A5A35 /* SetDetails.swift in Sources */,
 				E9A85A6223B55BFA005A5A35 /* SetDetailsViewModel.swift in Sources */,
 				E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */,
 				E96B541C23AC161E00EC5416 /* SetCell.swift in Sources */,
 				E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */,
 				E977053923C09DD000B5E002 /* InfoViewController.swift in Sources */,
-				E9DF836E23BE74C3003D28A6 /* SearchResult.swift in Sources */,
 				E9C771C723BA18DC00D2BCB2 /* SetPartsTableViewController.swift in Sources */,
 				E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
@@ -747,7 +735,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -770,7 +758,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;

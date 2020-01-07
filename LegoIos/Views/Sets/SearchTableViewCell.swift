@@ -11,9 +11,9 @@ import UIKit
 class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
 
-    var searchResult: SearchResult? {
+    var setCell: SetCell? {
         didSet {
-            nameLabel.text = searchResult?.name
+            nameLabel.text = setCell!.set!.name
         }
     }
     override func awakeFromNib() {
@@ -21,7 +21,7 @@ class SearchTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func configure(with searchResult: SearchResult) {
-        self.searchResult = searchResult
+    func configure(with setCell: SetCell) {
+        self.setCell = setCell
     }
 }

@@ -12,9 +12,9 @@ class SearchViewModel {
     var count: Int {
         return _searchResults.count
     }
-    private var _searchResults = [SearchResult]()
+    private var _searchResults = [SetCell]()
 
-    func searchResultAt(index: Int) -> SearchResult {
+    func searchResultAt(index: Int) -> SetCell {
         return _searchResults[index]
     }
 
@@ -49,9 +49,7 @@ class SearchViewModel {
                 let jsonDecoder = JSONDecoder()
                 let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
                 for set in setsQueryResult.results! {
-                    if let name = set.name, let num = set.setNum {
-                        self._searchResults.append(SearchResult(name: name, num: num))
-                    }
+                    self._searchResults.append(SetCell(set: set, image: nil))
                 }
                 if closure != nil {
                    closure!()

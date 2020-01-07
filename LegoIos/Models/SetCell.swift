@@ -9,6 +9,7 @@
 import UIKit
 
 struct SetCell {
-    let set: Set?
-    let image: UIImage?
+    var set: Set?
+    var image: UIImage?
+    var theme: Theme?
 }

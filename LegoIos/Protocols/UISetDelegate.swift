@@ -9,5 +9,5 @@
 import Foundation
 
 protocol UISetDelegate: class {
-    func configure(with setNum: String)
+    func configure(with setCell: SetCell)
 }

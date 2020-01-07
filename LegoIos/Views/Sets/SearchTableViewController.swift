@@ -41,7 +41,7 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
         if segue.identifier != nil && segue.identifier! == "SearchDetails" {
             let nextViewController = (segue.destination as? SetTabBarViewController)!
-            nextViewController.configure(with: (sender as? SearchTableViewCell)!.searchResult!.num)
+            nextViewController.configure(with: (sender as? SearchTableViewCell)!.setCell!)
         }
     }
 

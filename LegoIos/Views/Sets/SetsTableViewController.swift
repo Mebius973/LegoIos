@@ -80,7 +80,7 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
         // Pass the selected object to the new view controller.
         if segue.identifier != nil && segue.identifier! == "SetDetails" {
             let nextViewController = (segue.destination as? SetTabBarViewController)!
-            nextViewController.configure(with: (sender as? SetsTableViewCell)!.setCell!.set!.setNum!)
+            nextViewController.configure(with: (sender as? SetsTableViewCell)!.setCell!)
         }
     }
 

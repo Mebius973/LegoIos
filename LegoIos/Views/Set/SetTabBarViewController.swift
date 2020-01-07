@@ -8,19 +8,15 @@
 
 import UIKit
 
-class SetTabBarViewController: UITabBarController, SetTabBarDelegate, UISetDelegate {
-    private var _setNum: String? {
+class SetTabBarViewController: UITabBarController, UISetDelegate {
+    private var _setCell: SetCell? {
         didSet {
             if let controllers = self.viewControllers {
                 for controller in controllers where controller is UISetDelegate {
-                    (controller as? UISetDelegate)!.configure(with: _setNum!)
+                    (controller as? UISetDelegate)!.configure(with: _setCell!)
                 }
             }
         }
-    }
-
-    func getSetNum() -> String? {
-        return _setNum
     }
 
     override func viewDidLoad() {
@@ -28,7 +24,7 @@ class SetTabBarViewController: UITabBarController, SetTabBarDelegate, UISetDeleg
         // Do any additional setup after loading the view.
     }
 
-    func configure(with setNum: String) {
-        self._setNum = setNum
+    func configure(with setCell: SetCell) {
+        self._setCell = setCell
     }
 }
