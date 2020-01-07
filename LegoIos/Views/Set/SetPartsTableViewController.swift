@@ -54,7 +54,7 @@ class SetPartsTableViewController: UITableViewController, UISetDelegate {
         for: indexPath) as? SetPartsTableViewCell)!
 
         // Configure the cell...
-        let setPart = _viewModel.getSetPartDetailedAt(index: indexPath.row)
+        let setPart = _viewModel.getSetPartCelldAt(index: indexPath.row)
         cell.configure(with: setPart)
         return cell
     }

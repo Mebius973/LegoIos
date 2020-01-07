@@ -14,7 +14,7 @@ class SetPartsViewModel: UISetDelegate {
     }
 
     private var _setCell: SetCell?
-    private var _setParts = [SetPartPresentable]()
+    private var _setParts = [SetPartCell]()
 
     func configure(with setCell: SetCell) {
            _setCell = setCell
@@ -24,7 +24,7 @@ class SetPartsViewModel: UISetDelegate {
         retrieveParts(closure)
     }
 
-    func getSetPartDetailedAt(index: Int) -> SetPartPresentable {
+    func getSetPartCelldAt(index: Int) -> SetPartCell {
         return _setParts[index]
     }
 
@@ -44,16 +44,11 @@ class SetPartsViewModel: UISetDelegate {
                             let data = data!
                             let jsonDecoder = JSONDecoder()
                             let setPartsQueryResult = try jsonDecoder.decode(SetPartsQueryResult.self, from: data)
-                            let setParts = setPartsQueryResult.results!
-                            for setPart in setParts {
-                                let part = SetPartPresentable(
-                                    name: setPart.part!.name!,
-                                    color: setPart.color!.name!,
-                                    quantity: String(setPart.quantity!),
-                                    category: String(setPart.part!.partCatID!),
-                                    image: UIImageService.retrieveImage(for: setPart.part!.partImgURL)!
-                                )
-                                self._setParts.append(part)
+                            let parts = setPartsQueryResult.results!
+                            for part in parts {
+                                let partCell = SetPartCell()
+                                partCell.setPart = part
+                                self._setParts.append(partCell)
                             }
                             if closure != nil {
                                closure!()

@@ -11,5 +11,5 @@ import UIKit
 struct SetCell {
     var set: Set?
     var image: UIImage?
-    var theme: Theme?
+    var category: String?
 }

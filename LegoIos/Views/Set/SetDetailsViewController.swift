@@ -37,7 +37,7 @@ class SetDetailsViewController: UIViewController, UISetDelegate {
     func setImageUpdated() {
         DispatchQueue.main.async {
             self.setImageSpinner.stopAnimating()
-            self._setCell = self._viewModel!.getSetCell()
+            self._setCell = self._viewModel!.getSetCell
             self.image.image = self._setCell!.image
         }
     }
@@ -45,12 +45,14 @@ class SetDetailsViewController: UIViewController, UISetDelegate {
     func setCategoryUpdated() {
         DispatchQueue.main.async {
             self.setCategorySpinner.stopAnimating()
-            self._setCell = self._viewModel!.getSetCell()
-            self.setCategoryLabel.text = self._setCell!.theme!.name
+            self._setCell = self._viewModel!.getSetCell
+            self.setCategoryLabel.text = self._setCell!.category!
+            self.setCategoryLabel.isHidden = false
         }
     }
 
     private func addSpinners() {
+        setCategoryLabel.isHidden = true
         setImageSpinner.hidesWhenStopped = true
         setCategorySpinner.hidesWhenStopped = true
         setImageSpinner.startAnimating()
