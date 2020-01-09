@@ -127,11 +127,22 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search a specific Lego set" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" id="8Ve-7Q-Sgg">
-                                    <rect key="frame" x="10" y="5" width="394" height="34"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <rect key="frame" x="15" y="5" width="320" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ljr-QM-Ykr">
+                                    <rect key="frame" x="351" y="7" width="48" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Cancel"/>
+                                    <state key="disabled">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="searchCanceled:" destination="vwb-KA-DcA" eventType="touchUpInside" id="xfZ-9c-EGk"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
@@ -144,7 +155,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7jb-KR-g1t">
-                                            <rect key="frame" x="9" y="10" width="380" height="20"/>
+                                            <rect key="frame" x="7" y="10" width="381" height="20"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -165,12 +176,13 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="Ayi-3J-0My"/>
                     <connections>
+                        <outlet property="cancelButton" destination="ljr-QM-Ykr" id="AKY-wA-T9R"/>
                         <outlet property="searchTextField" destination="8Ve-7Q-Sgg" id="bI5-c8-NQw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQM-y9-uNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="256"/>
+            <point key="canvasLocation" x="376.81159420289856" y="255.80357142857142"/>
         </scene>
         <!--Info-->
         <scene sceneID="amJ-Gh-kpj">
@@ -205,6 +217,6 @@
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wdc-cH-V0I"/>
+        <segue reference="Rf7-ef-vJ4"/>
     </inferredMetricsTieBreakers>
 </document>

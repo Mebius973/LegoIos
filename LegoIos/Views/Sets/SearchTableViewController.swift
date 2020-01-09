@@ -10,10 +10,18 @@ import UIKit
 
 class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBAction func searchCanceled(_ sender: Any) {
+        self.calledFromCancel = true
+        self.searchTextField.endEditing(true)
+        self.calledFromCancel = false
+    }
 
+    private var calledFromCancel = false
     private var _viewModel = SearchViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        cancelButton.isEnabled = false
         searchTextField.delegate = self
     }
 
@@ -50,25 +58,34 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if let query = textField.text {
-            _viewModel.searchHint(query) {
-                self.searchEnded()
-            }
+        _viewModel.searchHint(textField.text) {
+            self.hintEnded()
         }
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         // Hanlde search terms here
-        if let query = textField.text {
-            _viewModel.searchFull(query) {
+        if !calledFromCancel {
+            _viewModel.searchFull(textField.text) {
                 self.searchEnded()
             }
         }
     }
 
-    private func searchEnded() {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.cancelButton.isEnabled = true
+    }
+
+    private func hintEnded() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+    }
+
+    private func searchEnded() {
+        hintEnded()
+        DispatchQueue.main.async {
+            self.cancelButton.isEnabled = false
         }
     }
 }

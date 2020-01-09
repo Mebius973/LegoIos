@@ -18,12 +18,26 @@ class SearchViewModel {
         return _searchResults[index]
     }
 
-    func searchHint(_ query: String, _ closure: (() -> Void)?) {
-        search(itemQuantity: 10, query, closure)
+    func searchHint(_ query: String?, _ closure: (() -> Void)?) {
+        if query == nil || query!.count == 0 {
+            self._searchResults.removeAll()
+            if closure != nil {
+                closure!()
+            }
+        } else {
+            search(itemQuantity: 10, query!, closure)
+        }
     }
 
-    func searchFull(_ query: String, _ closure: (() -> Void)?) {
-        search(itemQuantity: nil, query, closure)
+    func searchFull(_ query: String?, _ closure: (() -> Void)?) {
+        if query == nil || query!.count == 0 {
+            self._searchResults.removeAll()
+            if closure != nil {
+                closure!()
+            }
+        } else {
+            search(itemQuantity: nil, query!, closure)
+        }
     }
 
     private func search(itemQuantity: Int?, _ query: String, _ closure: (() -> Void)?) {
