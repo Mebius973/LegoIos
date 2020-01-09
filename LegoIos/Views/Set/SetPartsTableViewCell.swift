@@ -20,6 +20,7 @@ class SetPartsTableViewCell: UITableViewCell {
 
     private var _setPart: SetPartCell?
     private var _viewModel: SetPartViewModel?
+    private var isInitialized = false
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,9 +29,12 @@ class SetPartsTableViewCell: UITableViewCell {
     }
 
     func configure(with setPart: SetPartCell) {
-        self._setPart = setPart
-        _viewModel = SetPartViewModel(viewController: self, setPart: _setPart!)
-        updateUIElements()
+        if !isInitialized {
+            self._setPart = setPart
+            self._viewModel = SetPartViewModel(viewController: self, setPart: _setPart!)
+            updateUIElements()
+            self.isInitialized = true
+        }
     }
 
     func partsImageUpdated() {

@@ -10,7 +10,7 @@ import Foundation
 
 class SetPartViewModel {
 
-    private var _viewController: SetPartsTableViewCell
+    private weak var _viewController: SetPartsTableViewCell?
     private var _setPart: SetPartCell
 
     init(viewController: SetPartsTableViewCell, setPart: SetPartCell) {
@@ -23,11 +23,11 @@ class SetPartViewModel {
     var getSetPart: SetPartCell { return _setPart }
 
     private func partImageUpdated() {
-        _viewController.partsImageUpdated()
+        _viewController!.partsImageUpdated()
     }
 
     private func partCategoryUpdated() {
-        _viewController.partsCategoryUpdated()
+        _viewController!.partsCategoryUpdated()
     }
 
     private func retrieveImage() {
