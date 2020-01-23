@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SetsViewModel: SetsViewModelDelegate {
+class SetsViewModel {
     var isRefreshed = false
     var count: Int {
         return setCells.count
@@ -23,6 +23,16 @@ class SetsViewModel: SetsViewModelDelegate {
             return nil
         }
         return setCells[index]
+    }
+
+    func initializeSetCells() {
+        initializeSetCells(nil)
+    }
+    func fetchNewSetCells() {
+        fetchNewSetCells(nil)
+    }
+    func fetchSetCells(range: Int) {
+        fetchSetCells(range: range, nil)
     }
 
     func initializeSetCells(_ closure: (() -> Void)? = nil) {

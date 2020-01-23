@@ -40,8 +40,6 @@
 		E9C771DB23BA89DE00D2BCB2 /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771DA23BA89DE00D2BCB2 /* JSONNull.swift */; };
 		E9C771DF23BDD22D00D2BCB2 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */; };
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
-		E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */; };
-		E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */; };
 		E9D79D3D23A8C16600046B41 /* UIImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3C23A8C16600046B41 /* UIImageService.swift */; };
 		E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */; };
 		E9D79D4923A9521300046B41 /* Fastlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D4823A9521300046B41 /* Fastlane.swift */; };
@@ -115,8 +113,6 @@
 		E9C771DA23BA89DE00D2BCB2 /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
 		E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
-		E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegate.swift; sourceTree = "<group>"; };
-		E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModelDelegateExtension.swift; sourceTree = "<group>"; };
 		E9D79D3C23A8C16600046B41 /* UIImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageService.swift; sourceTree = "<group>"; };
 		E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageServiceDelegate.swift; sourceTree = "<group>"; };
 		E9D79D4623A9521300046B41 /* Fastlane.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fastlane.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,28 +156,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E9047CAA23A751D3005183AB /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				E9047CAC23A80900005183AB /* SetsViewModel.swift */,
-				E9A85A6123B55BFA005A5A35 /* SetDetailsViewModel.swift */,
-				E9C771CA23BA223400D2BCB2 /* SetPartsViewModel.swift */,
-				E9DF836923BDD7B9003D28A6 /* SearchViewModel.swift */,
-				E977053B23C51C4100B5E002 /* SetPartViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		E9047CAB23A751E8005183AB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E9960AD023A2704600E2FE18 /* Set */,
-				E9B5254D2396F64300C50B5E /* Sets */,
-				E977053823C09DD000B5E002 /* InfoViewController.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		E97620292177B1A4009257E8 = {
 			isa = PBXGroup;
 			children = (
@@ -207,8 +181,12 @@
 		E97620342177B1A4009257E8 /* LegoIos */ = {
 			isa = PBXGroup;
 			children = (
-				E9047CAB23A751E8005183AB /* Views */,
-				E9047CAA23A751D3005183AB /* ViewModels */,
+				E97CD4AF23DA38A5001A3361 /* Navigation */,
+				E97CD4AC23DA32C8001A3361 /* Parts */,
+				E97CD4AA23DA329D001A3361 /* Set List */,
+				E97CD4AD23DA32DA001A3361 /* Search */,
+				E97CD4AB23DA32B8001A3361 /* Set Detail */,
+				E97CD4AE23DA32EC001A3361 /* Policies */,
 				E9CF82FE239C013400DB309F /* Models */,
 				E9D79D3423A8231300046B41 /* Services */,
 				E9D79D3523A8235B00046B41 /* Protocols */,
@@ -242,11 +220,66 @@
 			path = LegoIosUITests;
 			sourceTree = "<group>";
 		};
+		E97CD4AA23DA329D001A3361 /* Set List */ = {
+			isa = PBXGroup;
+			children = (
+				E9047CAC23A80900005183AB /* SetsViewModel.swift */,
+				E988FF67239852F0006272FD /* SetsTableViewController.swift */,
+				E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */,
+			);
+			path = "Set List";
+			sourceTree = "<group>";
+		};
+		E97CD4AB23DA32B8001A3361 /* Set Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E9A85A6123B55BFA005A5A35 /* SetDetailsViewModel.swift */,
+				E9C771CE23BA276800D2BCB2 /* SetDetailsViewController.swift */,
+			);
+			path = "Set Detail";
+			sourceTree = "<group>";
+		};
+		E97CD4AC23DA32C8001A3361 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				E9C771C623BA18DC00D2BCB2 /* SetPartsTableViewController.swift */,
+				E9C771C823BA191200D2BCB2 /* SetPartsTableViewCell.swift */,
+				E9C771CA23BA223400D2BCB2 /* SetPartsViewModel.swift */,
+				E977053B23C51C4100B5E002 /* SetPartViewModel.swift */,
+			);
+			path = Parts;
+			sourceTree = "<group>";
+		};
+		E97CD4AD23DA32DA001A3361 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E9DF836B23BE7349003D28A6 /* SearchTableViewCell.swift */,
+				E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */,
+				E9DF836923BDD7B9003D28A6 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E97CD4AE23DA32EC001A3361 /* Policies */ = {
+			isa = PBXGroup;
+			children = (
+				E977053823C09DD000B5E002 /* InfoViewController.swift */,
+			);
+			path = Policies;
+			sourceTree = "<group>";
+		};
+		E97CD4AF23DA38A5001A3361 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		E988FF71239A2BDC006272FD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				E988FF72239A2BFF006272FD /* UIImageExtension.swift */,
-				E9D79D3823A823B100046B41 /* SetsViewModelDelegateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,28 +292,6 @@
 				E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */,
 			);
 			path = StoryBoards;
-			sourceTree = "<group>";
-		};
-		E9960AD023A2704600E2FE18 /* Set */ = {
-			isa = PBXGroup;
-			children = (
-				E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */,
-				E9C771CE23BA276800D2BCB2 /* SetDetailsViewController.swift */,
-				E9C771C623BA18DC00D2BCB2 /* SetPartsTableViewController.swift */,
-				E9C771C823BA191200D2BCB2 /* SetPartsTableViewCell.swift */,
-			);
-			path = Set;
-			sourceTree = "<group>";
-		};
-		E9B5254D2396F64300C50B5E /* Sets */ = {
-			isa = PBXGroup;
-			children = (
-				E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */,
-				E988FF67239852F0006272FD /* SetsTableViewController.swift */,
-				E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */,
-				E9DF836B23BE7349003D28A6 /* SearchTableViewCell.swift */,
-			);
-			path = Sets;
 			sourceTree = "<group>";
 		};
 		E9CF82FE239C013400DB309F /* Models */ = {
@@ -312,7 +323,6 @@
 			isa = PBXGroup;
 			children = (
 				E9510D8623AFBF7B0092E487 /* UISetDelegate.swift */,
-				E9D79D3623A8238100046B41 /* SetsViewModelDelegate.swift */,
 				E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */,
 			);
 			path = Protocols;
@@ -537,13 +547,11 @@
 				E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */,
 				E977053923C09DD000B5E002 /* InfoViewController.swift in Sources */,
 				E9C771C723BA18DC00D2BCB2 /* SetPartsTableViewController.swift in Sources */,
-				E9D79D3923A823B100046B41 /* SetsViewModelDelegateExtension.swift in Sources */,
 				E977053E23C51FEE00B5E002 /* SetPartCell.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
 				E9C771DF23BDD22D00D2BCB2 /* SearchTableViewController.swift in Sources */,
 				E9510D8723AFBF7B0092E487 /* UISetDelegate.swift in Sources */,
 				E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */,
-				E9D79D3723A8238100046B41 /* SetsViewModelDelegate.swift in Sources */,
 				E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */,
 				E97620362177B1A4009257E8 /* AppDelegate.swift in Sources */,
 				E9960AD623A2714D00E2FE18 /* SetTabBarViewController.swift in Sources */,

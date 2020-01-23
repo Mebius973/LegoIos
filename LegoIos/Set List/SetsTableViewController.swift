@@ -9,7 +9,7 @@
 import UIKit
 
 class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefetching, UITabBarControllerDelegate {
-    private var viewModel: SetsViewModelDelegate = SetsViewModel()
+    private var viewModel: SetsViewModel = SetsViewModel()
     private let bottomActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
     private var tabBarItemClickedOnce = true
 
