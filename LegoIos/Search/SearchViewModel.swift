@@ -12,7 +12,9 @@ class SearchViewModel {
     var count: Int {
         return _searchResults.count
     }
+
     private var _searchResults = [SetCell]()
+    private var _searchTask: URLSessionDataTask?
 
     func searchResultAt(index: Int) -> SetCell {
         return _searchResults[index]
@@ -41,6 +43,9 @@ class SearchViewModel {
     }
 
     private func search(itemQuantity: Int?, _ query: String, _ closure: (() -> Void)?) {
+        if _searchTask != nil {
+            _searchTask!.cancel()
+        }
         _searchResults.removeAll()
         let authorization = "key=\(AppConfig.LegoApiKey)"
         let baseUrl = "\(Constants.ApiBaseURL)\(Constants.SetsEndPoint)"
@@ -54,7 +59,7 @@ class SearchViewModel {
         let url: URL = URL(string: request)!
 
         let session = URLSession.shared
-        let task = session.dataTask(with: url) { (data, response, error) in
+        _searchTask = session.dataTask(with: url) { (data, response, error) in
             do {
                 if (response as? HTTPURLResponse)!.statusCode != 200 {
                     throw GarbageErrors.httpBadResult
@@ -72,6 +77,6 @@ class SearchViewModel {
                 print("error: \(error)")
             }
         }
-        task.resume()
+        _searchTask!.resume()
     }
 }

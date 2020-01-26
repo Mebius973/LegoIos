@@ -38,8 +38,10 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
             withIdentifier: "SearchResult",
             for: indexPath) as? SearchTableViewCell)!
 
-        let searchResult = _viewModel.searchResultAt(index: indexPath.row)
-        cell.configure(with: searchResult)
+        if _viewModel.count > 0 {
+            let searchResult = _viewModel.searchResultAt(index: indexPath.row)
+            cell.configure(with: searchResult)
+        }
 
         return cell
     }
