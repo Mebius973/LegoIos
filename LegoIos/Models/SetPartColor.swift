@@ -23,9 +23,9 @@ struct SetPartColor: Codable {
 }
 
 struct ColorExternalIDS: Codable {
-    let brickLink, brickOwl, lego: BrickLink
-    let peeron: Peeron
-    let lDraw: BrickLink
+    let brickLink, brickOwl, lego: BrickLink?
+    let peeron: Peeron?
+    let lDraw: BrickLink?
 
     enum CodingKeys: String, CodingKey {
         case brickLink = "BrickLink"
@@ -47,7 +47,7 @@ struct BrickLink: Codable {
 }
 
 struct Peeron: Codable {
-    let extIDS: [String?]
+    let extIDS: [JSONNull?]
     let extDescrs: [[String]]?
 
     enum CodingKeys: String, CodingKey {

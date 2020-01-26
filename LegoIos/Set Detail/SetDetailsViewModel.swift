@@ -25,11 +25,15 @@ class SetDetailsViewModel {
     }
 
     private func setImageUpdated() {
-        _viewController!.setImageUpdated()
+        if _viewController != nil {
+            _viewController!.setImageUpdated()
+        }
     }
 
     private func setCategoryUpdated() {
-        _viewController!.setCategoryUpdated()
+        if _viewController != nil {
+            _viewController!.setCategoryUpdated()
+        }
     }
 
     private func retrieveImage() {
