@@ -12,6 +12,8 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
     private var viewModel: SetsViewModel = SetsViewModel()
     private let bottomActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
     private var tabBarItemClickedOnce = true
+    private var firstTimePrefetch = true
+    private var dataReloading = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +54,17 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
     }
 
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        if viewModel.isRefreshed {
-            viewModel.fetchSetCells(range: indexPaths.count) {
-                self.setsUpdated()
+        if !firstTimePrefetch && !dataReloading {
+            if viewModel.isRefreshed {
+                viewModel.fetchSetCells(range: indexPaths.count) {
+                    self.setsUpdated()
+                }
+            } else {
+                bottomActivityIndicator.startAnimating()
             }
         } else {
-            bottomActivityIndicator.startAnimating()
+            firstTimePrefetch = false
+            dataReloading = false
         }
     }
     // MARK: - Navigation
@@ -104,7 +111,8 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
     private func setsUpdated() {
         DispatchQueue.main.async {
             if self.refreshControl != nil && self.refreshControl!.isRefreshing { self.refreshControl!.endRefreshing() }
-            self.bottomActivityIndicator.startAnimating()
+            self.bottomActivityIndicator.stopAnimating()
+            self.dataReloading = true
             self.tableView.reloadData()
         }
     }

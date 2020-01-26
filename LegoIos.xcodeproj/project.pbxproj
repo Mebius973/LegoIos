@@ -21,6 +21,7 @@
 		E977053923C09DD000B5E002 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977053823C09DD000B5E002 /* InfoViewController.swift */; };
 		E977053C23C51C4100B5E002 /* SetPartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977053B23C51C4100B5E002 /* SetPartViewModel.swift */; };
 		E977053E23C51FEE00B5E002 /* SetPartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977053D23C51FEE00B5E002 /* SetPartCell.swift */; };
+		E97CD4B123DD80E1001A3361 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD4B023DD80E1001A3361 /* TestHelpers.swift */; };
 		E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF67239852F0006272FD /* SetsTableViewController.swift */; };
 		E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF72239A2BFF006272FD /* UIImageExtension.swift */; };
 		E9960ACF23A26E0800E2FE18 /* SetDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */; };
@@ -94,6 +95,7 @@
 		E977053823C09DD000B5E002 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		E977053B23C51C4100B5E002 /* SetPartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartViewModel.swift; sourceTree = "<group>"; };
 		E977053D23C51FEE00B5E002 /* SetPartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartCell.swift; sourceTree = "<group>"; };
+		E97CD4B023DD80E1001A3361 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		E988FF67239852F0006272FD /* SetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewController.swift; sourceTree = "<group>"; };
 		E988FF72239A2BFF006272FD /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetDetails.storyboard; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				E97620572177B1A7009257E8 /* LegoIosUITests.swift */,
 				E97620592177B1A7009257E8 /* Info.plist */,
+				E97CD4B023DD80E1001A3361 /* TestHelpers.swift */,
 			);
 			path = LegoIosUITests;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E97620582177B1A7009257E8 /* LegoIosUITests.swift in Sources */,
+				E97CD4B123DD80E1001A3361 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

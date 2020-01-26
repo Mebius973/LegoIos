@@ -95,11 +95,11 @@ class Fastlane: XCTestCase {
     }
 
     private func checkNoElementOfType(_ element: XCUIElementQuery) -> Bool {
-           let predicate = NSPredicate(format: "count == 0")
-           let expectation = XCTNSPredicateExpectation(predicate: predicate,
-                                                       object: element)
+       let predicate = NSPredicate(format: "count == 0")
+       let expectation = XCTNSPredicateExpectation(predicate: predicate,
+                                                   object: element)
 
-           let result = XCTWaiter().wait(for: [expectation], timeout: 30)
-           return result == .completed
-       }
+       let result = XCTWaiter().wait(for: [expectation], timeout: 30)
+       return result == .completed
+    }
 }
