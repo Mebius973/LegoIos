@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/Mebius973/LegoIos.svg?branch=develop)](https://travis-ci.com/Mebius973/LegoIos)
+![CI](https://github.com/Mebius973/LegoIos/workflows/CI/badge.svg?branch=master)
+[![codecov](https://codecov.io/gh/Mebius973/LegoIos/branch/master/graph/badge.svg)](https://codecov.io/gh/Mebius973/LegoIos)
+
 # LegoIos
  Swift app to access the Lego catalog
 

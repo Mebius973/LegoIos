@@ -1,0 +1,60 @@
+{
+	"count": 6,
+	"next": null,
+	"previous": null,
+	"results": [{
+		"set_num": "11915-1",
+		"name": "Ninjago: Build Your Own Adventure: Greatest Ninja Battles",
+		"year": 2018,
+		"theme_id": 497,
+		"num_parts": 72,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/11915-1/ninjago-build-your-own-adventure-greatest-ninja-battles/",
+		"last_modified_dt": "2019-02-15T04:00:39.240533Z"
+	}, {
+		"set_num": "3067-1",
+		"name": "Test Shuttle",
+		"year": 1999,
+		"theme_id": 93,
+		"num_parts": 21,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/3067-1/test-shuttle/",
+		"last_modified_dt": "2016-04-23T11:33:19.727477Z"
+	}, {
+		"set_num": "60225-1",
+		"name": "Rover Testing Drive",
+		"year": 2019,
+		"theme_id": 679,
+		"num_parts": 202,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/60225-1/rover-testing-drive/",
+		"last_modified_dt": "2019-05-16T13:47:51.204821Z"
+	}, {
+		"set_num": "70822-1",
+		"name": "Unikitty's Sweetest Friends EVER!",
+		"year": 2019,
+		"theme_id": 670,
+		"num_parts": 76,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/70822-1/unikittys-sweetest-friends-ever/",
+		"last_modified_dt": "2019-02-20T20:07:16.010375Z"
+	}, {
+		"set_num": "8865-1",
+		"name": "Test Car",
+		"year": 1988,
+		"theme_id": 15,
+		"num_parts": 900,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/8865-1/test-car/",
+		"last_modified_dt": "2018-10-06T12:02:15.484934Z"
+	}, {
+		"set_num": "test-1",
+		"name": "Test Set (DO NOT USE)",
+		"year": 2018,
+		"theme_id": 301,
+		"num_parts": 7,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/test-1/test-set-do-not-use/",
+		"last_modified_dt": "2018-04-13T18:27:39.394115Z"
+	}]
+}

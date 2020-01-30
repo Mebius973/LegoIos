@@ -1,0 +1,48 @@
+name: beta
+
+on:
+  create:
+    tags:
+      - 'rc*'
+
+jobs:
+  build:
+    runs-on: macos
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref:  'master'
+      - name: Bump build number
+        run: bundle exec fastlane run increment_build_number
+      - name: Force Xcode 11
+        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+      - name: Install gpg
+        run: brew install gnupg
+      - name: Setup provisioning profile
+        run: ./.github/secrets/decrypt_secrets.sh
+        env:
+          IOS_PROFILE_KEY: ${{ secrets.IOS_PROFILE_KEY }}
+          PROVISIONING: ${{ secrets.PROVISIONING }}
+          CERTIFICATE: ${{ secrets.CERTIFICATE }}
+      - name: Add Api Key
+        run: echo "import Foundation; class AppConfig { static let LegoApiKey = \"${{ secrets.API_KEY }}\"}" >> LegoIos/AppConfig.swift
+      - name: Archive App
+        run: 'xcodebuild archive -project LegoIos.xcodeproj -scheme LegoIos -sdk iphoneos13.2 -configuration Release -archivePath $PWD/build/LegoIos.xcarchive IPHONEOS_DEPLOYMENT_TARGET=13.3 PROVISIONING_PROFILE="mebius.LegoIos AppStore" CODE_SIGN_IDENTITY="Apple Distribution: David Geoffroy (868NW64LNM)"'
+      - name: Build IPA
+        run: xcodebuild -exportArchive -archivePath $PWD/build/LegoIos.xcarchive -exportOptionsPlist $PWD/ci.plist -exportPath $PWD/build
+      - name: Publish IPA
+        env:
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          PILOT_SKIP_WAITING_FOR_BUILD_PROCESSING: true
+        run: 'cd build && bundle exec fastlane run upload_to_testflight username:"viddafroygeo@hotmail.com" skip_waiting_for_build_processing:true apple_id:1491964365'
+      - name: Commit build version
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "Version Bump"
+      - name: Push back build version
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,96 @@
+{
+	"count": 36,
+	"next": "https://rebrickable.com/api/v3/lego/sets/?key=314942f6edd0c3b65a8fd8e8c52a6715&page=2&page_size=10&search=harry",
+	"previous": null,
+	"results": [{
+		"set_num": "0756692571-1",
+		"name": "Harry Potter Characters of the Magical World",
+		"year": 2012,
+		"theme_id": 497,
+		"num_parts": 4,
+		"set_img_url": "https://cdn.rebrickable.com/media/sets/0756692571-1/17359.jpg",
+		"set_url": "https://rebrickable.com/sets/0756692571-1/harry-potter-characters-of-the-magical-world/",
+		"last_modified_dt": "2019-04-14T21:04:51.614366Z"
+	}, {
+		"set_num": "2855127-1",
+		"name": "LEGO Harry Potter: Years 1-4 Video Game",
+		"year": 2010,
+		"theme_id": 501,
+		"num_parts": 0,
+		"set_img_url": "https://cdn.rebrickable.com/media/sets/2855127-1/9495.jpg",
+		"set_url": "https://rebrickable.com/sets/2855127-1/lego-harry-potter-years-1-4-video-game/",
+		"last_modified_dt": "2013-05-01T08:58:06.484830Z"
+	}, {
+		"set_num": "30407-1",
+		"name": "Harry's Journey to Hogwarts",
+		"year": 2018,
+		"theme_id": 246,
+		"num_parts": 40,
+		"set_img_url": "https://cdn.rebrickable.com/media/sets/30407-1/14822.jpg",
+		"set_url": "https://rebrickable.com/sets/30407-1/harrys-journey-to-hogwarts/",
+		"last_modified_dt": "2019-08-17T18:23:58.074032Z"
+	}, {
+		"set_num": "41615-1",
+		"name": "Harry Potter & Hedwig",
+		"year": 2018,
+		"theme_id": 610,
+		"num_parts": 180,
+		"set_img_url": "https://cdn.rebrickable.com/media/sets/41615-1/9589.jpg",
+		"set_url": "https://rebrickable.com/sets/41615-1/harry-potter-hedwig/",
+		"last_modified_dt": "2018-07-22T19:27:03.063141Z"
+	}, {
+		"set_num": "4751-1",
+		"name": "Harry and the Marauder's Map",
+		"year": 2004,
+		"theme_id": 246,
+		"num_parts": 108,
+		"set_img_url": "https://cdn.rebrickable.com/media/sets/4751-1/31156.jpg",
+		"set_url": "https://rebrickable.com/sets/4751-1/harry-and-the-marauders-map/",
+		"last_modified_dt": "2019-11-06T02:41:55.162511Z"
+	}, {
+		"set_num": "4767-1",
+		"name": "Harry and the Hungarian Horntail",
+		"year": 2005,
+		"theme_id": 246,
+		"num_parts": 265,
+		"set_img_url": "https://cdn.rebrickable.com/media/sets/4767-1/863.jpg",
+		"set_url": "https://rebrickable.com/sets/4767-1/harry-and-the-hungarian-horntail/",
+		"last_modified_dt": "2019-11-05T23:18:55.756745Z"
+	}, {
+		"set_num": "5000068-1",
+		"name": "Harry Potter Classic Kit",
+		"year": 2011,
+		"theme_id": 246,
+		"num_parts": 3,
+		"set_img_url": "https://cdn.rebrickable.com/media/sets/5000068-1/17092.jpg",
+		"set_url": "https://rebrickable.com/sets/5000068-1/harry-potter-classic-kit/",
+		"last_modified_dt": "2012-04-10T10:27:32.366953Z"
+	}, {
+		"set_num": "5000215-1",
+		"name": "Harry Potter: Building the Magical World",
+		"year": 2011,
+		"theme_id": 497,
+		"num_parts": 4,
+		"set_img_url": "https://cdn.rebrickable.com/media/sets/5000215-1/4369.jpg",
+		"set_url": "https://rebrickable.com/sets/5000215-1/harry-potter-building-the-magical-world/",
+		"last_modified_dt": "2018-09-09T11:54:56.123558Z"
+	}, {
+		"set_num": "5005254-1",
+		"name": "Collectible Minifigures - Harry Potter",
+		"year": 2018,
+		"theme_id": 535,
+		"num_parts": 25,
+		"set_img_url": "https://cdn.rebrickable.com/media/sets/5005254-1/11396.jpg",
+		"set_url": "https://rebrickable.com/sets/5005254-1/collectible-minifigures-harry-potter/",
+		"last_modified_dt": "2019-01-07T22:36:58.525886Z"
+	}, {
+		"set_num": "6268521-1",
+		"name": "Harry Potter Mosaic",
+		"year": 2018,
+		"theme_id": 246,
+		"num_parts": 2305,
+		"set_img_url": "https://cdn.rebrickable.com/media/sets/6268521-1/15453.jpg",
+		"set_url": "https://rebrickable.com/sets/6268521-1/harry-potter-mosaic/",
+		"last_modified_dt": "2019-06-06T08:48:45.119673Z"
+	}]
+}

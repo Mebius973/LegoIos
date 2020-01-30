@@ -1,0 +1,1132 @@
+{
+	"count": 19,
+	"next": null,
+	"previous": null,
+	"results": [{
+		"id": 3646691,
+		"inv_part_id": 3646691,
+		"part": {
+			"part_num": "3004",
+			"name": "Brick 1 x 2",
+			"part_cat_id": 11,
+			"part_url": "https://rebrickable.com/parts/3004/brick-1-x-2/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["442413"],
+				"LDraw": ["93792"],
+				"LEGO": ["93792"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 0,
+			"name": "Black",
+			"rgb": "05131D",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [11],
+					"ext_descrs": [
+						["Black"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [38],
+					"ext_descrs": [
+						["Black"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [26, 149, 1012],
+					"ext_descrs": [
+						["Black", "BLACK"],
+						["Metallic Black", "MET.BLACK"],
+						["CONDUCT. BLACK"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["black"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [0, 256],
+					"ext_descrs": [
+						["Black"],
+						["Rubber_Black"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "300426",
+		"num_sets": 1369
+	}, {
+		"id": 3646685,
+		"inv_part_id": 3646685,
+		"part": {
+			"part_num": "2458",
+			"name": "Brick Special 1 x 2 with Pin",
+			"part_cat_id": 5,
+			"part_url": "https://rebrickable.com/parts/2458/brick-special-1-x-2-with-pin/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["496432"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 0,
+			"name": "Black",
+			"rgb": "05131D",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [11],
+					"ext_descrs": [
+						["Black"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [38],
+					"ext_descrs": [
+						["Black"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [26, 149, 1012],
+					"ext_descrs": [
+						["Black", "BLACK"],
+						["Metallic Black", "MET.BLACK"],
+						["CONDUCT. BLACK"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["black"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [0, 256],
+					"ext_descrs": [
+						["Black"],
+						["Rubber_Black"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "6116990",
+		"num_sets": 36
+	}, {
+		"id": 3646686,
+		"inv_part_id": 3646686,
+		"part": {
+			"part_num": "2479",
+			"name": "Propeller 4 Blade 5 Diameter with Rounded Ends",
+			"part_cat_id": 35,
+			"part_url": "https://rebrickable.com/parts/2479/propeller-4-blade-5-diameter-with-rounded-ends/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["251556"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 0,
+			"name": "Black",
+			"rgb": "05131D",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [11],
+					"ext_descrs": [
+						["Black"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [38],
+					"ext_descrs": [
+						["Black"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [26, 149, 1012],
+					"ext_descrs": [
+						["Black", "BLACK"],
+						["Metallic Black", "MET.BLACK"],
+						["CONDUCT. BLACK"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["black"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [0, 256],
+					"ext_descrs": [
+						["Black"],
+						["Rubber_Black"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "247926",
+		"num_sets": 186
+	}, {
+		"id": 3646687,
+		"inv_part_id": 3646687,
+		"part": {
+			"part_num": "4286",
+			"name": "Slope 33° 3 x 1",
+			"part_cat_id": 3,
+			"part_url": "https://rebrickable.com/parts/4286/slope-33-3-x-1/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["226993"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 0,
+			"name": "Black",
+			"rgb": "05131D",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [11],
+					"ext_descrs": [
+						["Black"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [38],
+					"ext_descrs": [
+						["Black"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [26, 149, 1012],
+					"ext_descrs": [
+						["Black", "BLACK"],
+						["Metallic Black", "MET.BLACK"],
+						["CONDUCT. BLACK"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["black"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [0, 256],
+					"ext_descrs": [
+						["Black"],
+						["Rubber_Black"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 2,
+		"is_spare": false,
+		"element_id": "428626",
+		"num_sets": 292
+	}, {
+		"id": 3646695,
+		"inv_part_id": 3646695,
+		"part": {
+			"part_num": "3043",
+			"name": "Slope 45° 2 x 2 Double",
+			"part_cat_id": 3,
+			"part_url": "https://rebrickable.com/parts/3043/slope-45-2-x-2-double/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["528318"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 0,
+			"name": "Black",
+			"rgb": "05131D",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [11],
+					"ext_descrs": [
+						["Black"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [38],
+					"ext_descrs": [
+						["Black"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [26, 149, 1012],
+					"ext_descrs": [
+						["Black", "BLACK"],
+						["Metallic Black", "MET.BLACK"],
+						["CONDUCT. BLACK"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["black"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [0, 256],
+					"ext_descrs": [
+						["Black"],
+						["Rubber_Black"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "4163373",
+		"num_sets": 54
+	}, {
+		"id": 3646682,
+		"inv_part_id": 3646682,
+		"part": {
+			"part_num": "32607",
+			"name": "Plant, Plate 1 x 1 Round with 3 Leaves",
+			"part_cat_id": 28,
+			"part_url": "https://rebrickable.com/parts/32607/plant-plate-1-x-1-round-with-3-leaves/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["885757"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 10,
+			"name": "Bright Green",
+			"rgb": "4B9F4A",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [36],
+					"ext_descrs": [
+						["Bright Green"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [41],
+					"ext_descrs": [
+						["Bright Green"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [37],
+					"ext_descrs": [
+						["Bright Green", "BR.GREEN"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["btgreen"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [10],
+					"ext_descrs": [
+						["Bright_Green"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "6182261",
+		"num_sets": 96
+	}, {
+		"id": 3646677,
+		"inv_part_id": 3646677,
+		"part": {
+			"part_num": "3031",
+			"name": "Plate 4 x 4",
+			"part_cat_id": 14,
+			"part_url": "https://rebrickable.com/parts/3031/plate-4-x-4/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["163746"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 10,
+			"name": "Bright Green",
+			"rgb": "4B9F4A",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [36],
+					"ext_descrs": [
+						["Bright Green"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [41],
+					"ext_descrs": [
+						["Bright Green"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [37],
+					"ext_descrs": [
+						["Bright Green", "BR.GREEN"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["btgreen"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [10],
+					"ext_descrs": [
+						["Bright_Green"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "4617799",
+		"num_sets": 28
+	}, {
+		"id": 3646681,
+		"inv_part_id": 3646681,
+		"part": {
+			"part_num": "24866",
+			"name": "Plant, Flower 1 x 1",
+			"part_cat_id": 28,
+			"part_url": "https://rebrickable.com/parts/24866/plant-flower-1-x-1/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["225859"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 212,
+			"name": "Bright Light Blue",
+			"rgb": "9FC3E9",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [105],
+					"ext_descrs": [
+						["Bright Light Blue"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [42],
+					"ext_descrs": [
+						["Bright Light Blue"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [212],
+					"ext_descrs": [
+						["Light Royal blue", "LGH. ROY. BLUE"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null, null],
+					"ext_descrs": [
+						["ltroyalblue"],
+						["btltblue"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [212],
+					"ext_descrs": [
+						["Bright_Light_Blue"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "6209683",
+		"num_sets": 19
+	}, {
+		"id": 3646692,
+		"inv_part_id": 3646692,
+		"part": {
+			"part_num": "3023",
+			"name": "Plate 1 x 2",
+			"part_cat_id": 14,
+			"part_url": "https://rebrickable.com/parts/3023/plate-1-x-2/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["44980"],
+				"Brickset": ["28653", "3023", "6225"],
+				"LDraw": ["28653", "3023"],
+				"LEGO": ["28653", "3023", "6225"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 321,
+			"name": "Dark Azure",
+			"rgb": "078BC9",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [153],
+					"ext_descrs": [
+						["Dark Azure"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [47],
+					"ext_descrs": [
+						["Dark Azure"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [321],
+					"ext_descrs": [
+						["Dark Azur"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["dkazure"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [321],
+					"ext_descrs": [
+						["Dark_Azure"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "4653988",
+		"num_sets": 68
+	}, {
+		"id": 3646683,
+		"inv_part_id": 3646683,
+		"part": {
+			"part_num": "32607",
+			"name": "Plant, Plate 1 x 1 Round with 3 Leaves",
+			"part_cat_id": 28,
+			"part_url": "https://rebrickable.com/parts/32607/plant-plate-1-x-1-round-with-3-leaves/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["885757"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 2,
+			"name": "Green",
+			"rgb": "237841",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [6],
+					"ext_descrs": [
+						["Green"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [61],
+					"ext_descrs": [
+						["Green"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [28, 186],
+					"ext_descrs": [
+						["Dark green", "DK.GREEN"],
+						["Metallic Dark Green", "MET. DK. GREEN"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["green"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [2, 186],
+					"ext_descrs": [
+						["Green"],
+						["Metallic_Dark_Green"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "6229130",
+		"num_sets": 26
+	}, {
+		"id": 3646679,
+		"inv_part_id": 3646679,
+		"part": {
+			"part_num": "3022",
+			"name": "Plate 2 x 2",
+			"part_cat_id": 14,
+			"part_url": "https://rebrickable.com/parts/3022/plate-2-x-2/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["566026"],
+				"LDraw": ["94148"],
+				"LEGO": ["94148"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 2,
+			"name": "Green",
+			"rgb": "237841",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [6],
+					"ext_descrs": [
+						["Green"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [61],
+					"ext_descrs": [
+						["Green"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [28, 186],
+					"ext_descrs": [
+						["Dark green", "DK.GREEN"],
+						["Metallic Dark Green", "MET. DK. GREEN"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["green"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [2, 186],
+					"ext_descrs": [
+						["Green"],
+						["Metallic_Dark_Green"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "302228",
+		"num_sets": 333
+	}, {
+		"id": 3646693,
+		"inv_part_id": 3646693,
+		"part": {
+			"part_num": "3004",
+			"name": "Brick 1 x 2",
+			"part_cat_id": 11,
+			"part_url": "https://rebrickable.com/parts/3004/brick-1-x-2/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["442413"],
+				"LDraw": ["93792"],
+				"LEGO": ["93792"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 25,
+			"name": "Orange",
+			"rgb": "FE8A18",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [4],
+					"ext_descrs": [
+						["Orange"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [80],
+					"ext_descrs": [
+						["Orange"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [106],
+					"ext_descrs": [
+						["Bright orange", "BR.ORANGE"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["orange"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [25],
+					"ext_descrs": [
+						["Orange"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "4613981",
+		"num_sets": 228
+	}, {
+		"id": 3646680,
+		"inv_part_id": 3646680,
+		"part": {
+			"part_num": "24866",
+			"name": "Plant, Flower 1 x 1",
+			"part_cat_id": 28,
+			"part_url": "https://rebrickable.com/parts/24866/plant-flower-1-x-1/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["225859"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 4,
+			"name": "Red",
+			"rgb": "C91A09",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [5],
+					"ext_descrs": [
+						["Red"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [81],
+					"ext_descrs": [
+						["Red"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [21, 184],
+					"ext_descrs": [
+						["Bright red", "BR.RED"],
+						["Metallic Bright Red", "MET. BR. RED"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["red"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [4, 184],
+					"ext_descrs": [
+						["Red"],
+						["Metallic_Bright_Red"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "6206148",
+		"num_sets": 70
+	}, {
+		"id": 3646694,
+		"inv_part_id": 3646694,
+		"part": {
+			"part_num": "15571",
+			"name": "Slope 45° 2 x 1 Triple with Inside Stud Holder",
+			"part_cat_id": 3,
+			"part_url": "https://rebrickable.com/parts/15571/slope-45-2-x-1-triple-with-inside-stud-holder/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["533110"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 4,
+			"name": "Red",
+			"rgb": "C91A09",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [5],
+					"ext_descrs": [
+						["Red"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [81],
+					"ext_descrs": [
+						["Red"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [21, 184],
+					"ext_descrs": [
+						["Bright red", "BR.RED"],
+						["Metallic Bright Red", "MET. BR. RED"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["red"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [4, 184],
+					"ext_descrs": [
+						["Red"],
+						["Metallic_Bright_Red"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "6075074",
+		"num_sets": 20
+	}, {
+		"id": 3646678,
+		"inv_part_id": 3646678,
+		"part": {
+			"part_num": "3245c",
+			"name": "Brick 1 x 2 x 2 with Inside Stud Holder",
+			"part_cat_id": 11,
+			"part_url": "https://rebrickable.com/parts/3245c/brick-1-x-2-x-2-with-inside-stud-holder/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickLink": ["3245c"],
+				"BrickOwl": ["978353"],
+				"LEGO": ["3245"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 70,
+			"name": "Reddish Brown",
+			"rgb": "582A12",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [88],
+					"ext_descrs": [
+						["Reddish Brown"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [82],
+					"ext_descrs": [
+						["Reddish Brown"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [192],
+					"ext_descrs": [
+						["Reddish Brown", "RED. BROWN"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["redbrown"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [70],
+					"ext_descrs": [
+						["Reddish_Brown"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 2,
+		"is_spare": false,
+		"element_id": "6172808",
+		"num_sets": 17
+	}, {
+		"id": 3646689,
+		"inv_part_id": 3646689,
+		"part": {
+			"part_num": "3022",
+			"name": "Plate 2 x 2",
+			"part_cat_id": 14,
+			"part_url": "https://rebrickable.com/parts/3022/plate-2-x-2/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["566026"],
+				"LDraw": ["94148"],
+				"LEGO": ["94148"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 15,
+			"name": "White",
+			"rgb": "FFFFFF",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [1],
+					"ext_descrs": [
+						["White"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [92],
+					"ext_descrs": [
+						["White"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [1],
+					"ext_descrs": [
+						["White"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["white"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [15],
+					"ext_descrs": [
+						["White"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "4613976",
+		"num_sets": 1048
+	}, {
+		"id": 3646688,
+		"inv_part_id": 3646688,
+		"part": {
+			"part_num": "3678b",
+			"name": "Slope 65° 2 x 2 x 2 with Bottom Tube",
+			"part_cat_id": 3,
+			"part_url": "https://rebrickable.com/parts/3678b/slope-65-2-x-2-x-2-with-bottom-tube/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["806527"],
+				"LEGO": ["3678"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 15,
+			"name": "White",
+			"rgb": "FFFFFF",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [1],
+					"ext_descrs": [
+						["White"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [92],
+					"ext_descrs": [
+						["White"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [1],
+					"ext_descrs": [
+						["White"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["white"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [15],
+					"ext_descrs": [
+						["White"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "4234525",
+		"num_sets": 74
+	}, {
+		"id": 3646684,
+		"inv_part_id": 3646684,
+		"part": {
+			"part_num": "3941",
+			"name": "Brick Round 2 x 2 with Axle Hole",
+			"part_cat_id": 20,
+			"part_url": "https://rebrickable.com/parts/3941/brick-round-2-x-2-with-axle-hole/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["997602"],
+				"LDraw": ["3941", "6143"],
+				"LEGO": ["39223", "6116", "6143"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 14,
+			"name": "Yellow",
+			"rgb": "F2CD37",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [3],
+					"ext_descrs": [
+						["Yellow"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [93],
+					"ext_descrs": [
+						["Yellow"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [24],
+					"ext_descrs": [
+						["Bright yellow", "BR.YEL"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["yellow"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [14],
+					"ext_descrs": [
+						["Yellow"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 1,
+		"is_spare": false,
+		"element_id": "614324",
+		"num_sets": 194
+	}, {
+		"id": 3646690,
+		"inv_part_id": 3646690,
+		"part": {
+			"part_num": "4070",
+			"name": "Brick Special 1 x 1 with Headlight and No Slot",
+			"part_cat_id": 5,
+			"part_url": "https://rebrickable.com/parts/4070/brick-special-1-x-1-with-headlight-and-no-slot/",
+			"part_img_url": null,
+			"external_ids": {
+				"BrickOwl": ["475629"],
+				"Brickset": ["35388", "4070"],
+				"LDraw": ["30069"],
+				"LEGO": ["30069", "35388", "4070"]
+			},
+			"print_of": null
+		},
+		"color": {
+			"id": 14,
+			"name": "Yellow",
+			"rgb": "F2CD37",
+			"is_trans": false,
+			"external_ids": {
+				"BrickLink": {
+					"ext_ids": [3],
+					"ext_descrs": [
+						["Yellow"]
+					]
+				},
+				"BrickOwl": {
+					"ext_ids": [93],
+					"ext_descrs": [
+						["Yellow"]
+					]
+				},
+				"LEGO": {
+					"ext_ids": [24],
+					"ext_descrs": [
+						["Bright yellow", "BR.YEL"]
+					]
+				},
+				"Peeron": {
+					"ext_ids": [null],
+					"ext_descrs": [
+						["yellow"]
+					]
+				},
+				"LDraw": {
+					"ext_ids": [14],
+					"ext_descrs": [
+						["Yellow"]
+					]
+				}
+			}
+		},
+		"set_num": "TOUCAN2020-1",
+		"quantity": 2,
+		"is_spare": false,
+		"element_id": "407024",
+		"num_sets": 235
+	}]
+}

@@ -16,7 +16,9 @@ class SetsTableViewCell: UITableViewCell, UISetDelegate {
     private var _setCell: SetCell? {
         didSet {
             mainLabel.text = _setCell!.set!.name
-            mainImage.image = _setCell!.image
+            if _setCell!.image != nil {
+                mainImage.image = _setCell!.image
+            }
         }
     }
 
@@ -26,7 +28,6 @@ class SetsTableViewCell: UITableViewCell, UISetDelegate {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func configure(with setCell: SetCell) {

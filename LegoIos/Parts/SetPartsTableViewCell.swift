@@ -15,9 +15,9 @@ class SetPartsTableViewCell: UITableViewCell {
     @IBOutlet weak var partsQuantity: UILabel!
     @IBOutlet weak var partsCategory: UILabel!
     @IBOutlet weak var partsNum: UILabel!
-    @IBOutlet weak var partsImageSpinner: UIActivityIndicatorView!
-    @IBOutlet weak var partsCategorySpinner: UIActivityIndicatorView!
 
+    private var partsImageSpinner = UIActivityIndicatorView()
+    private var partsCategorySpinner = UIActivityIndicatorView()
     private var _setPart: SetPartCell?
     private var _viewModel: SetPartViewModel?
     private var isInitialized = false
@@ -41,7 +41,10 @@ class SetPartsTableViewCell: UITableViewCell {
         DispatchQueue.main.async {
             self.partsImageSpinner.stopAnimating()
             self._setPart = self._viewModel!.getSetPart
-            self.partsImage.image = self._setPart!.image
+            if self._setPart!.image != nil {
+                self.partsImage.image = self._setPart!.image
+            }
+            self.partsImage.isHidden = false
         }
     }
 
@@ -56,9 +59,17 @@ class SetPartsTableViewCell: UITableViewCell {
 
     private func addSpinners() {
         partsImageSpinner.hidesWhenStopped = true
+        partsImageSpinner.backgroundColor = .white
+        partsImageSpinner.style = .large
+        partsImage.addSubview(partsImageSpinner)
+        partsImageSpinner.center = partsImage.center
         partsImageSpinner.startAnimating()
-        partsCategory.isHidden = true
         partsCategorySpinner.hidesWhenStopped = true
+        partsCategorySpinner.backgroundColor = .white
+        partsCategory.addSubview(partsCategorySpinner)
+        partsCategorySpinner.center.x = partsCategory.bounds.minX + 10
+        partsCategorySpinner.center.y = partsCategory.center.y
+        partsCategorySpinner.accessibilityLabel = "partsCategorySpinner"
         partsCategorySpinner.startAnimating()
     }
 

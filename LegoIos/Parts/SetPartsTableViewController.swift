@@ -59,7 +59,7 @@ class SetPartsTableViewController: UITableViewController, UISetDelegate {
         return cell
     }
 
-    func setPartsUpdated() {
+   private func setPartsUpdated() {
         DispatchQueue.main.async {
             self._spinner.stopAnimating()
             if self._viewModel.count == 0 {

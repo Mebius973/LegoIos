@@ -9,7 +9,14 @@
 import Foundation
 
 class Constants {
-    static let ApiBaseURL = "https://rebrickable.com/api/v3/lego/"
+
+    static var ApiBaseURL: String {
+        if CommandLine.arguments.contains("-runlocal") {
+            return "http://localhost:9999/api/v3/lego/"
+        } else {
+            return "https://rebrickable.com/api/v3/lego/"
+        }
+    }
     static let ColorsEndPoint = "colors/"
     static let ElementsEndPoint = "elements/"
     static let MocsEndPoint = "mocs/"

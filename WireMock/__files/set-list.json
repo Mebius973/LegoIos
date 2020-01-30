@@ -1,0 +1,141 @@
+{
+	"count": 15597,
+	"next": "https://rebrickable.com/api/v3/lego/sets/?key=314942f6edd0c3b65a8fd8e8c52a6715&ordering=-year%2C-set_num&page=2&page_size=15",
+	"previous": null,
+	"results": [{
+		"set_num": "VALENTINEBEAR-1",
+		"name": "Valentine's Bear",
+		"year": 2020,
+		"theme_id": 232,
+		"num_parts": 0,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/VALENTINEBEAR-1/valentines-bear/",
+		"last_modified_dt": "2020-01-26T12:16:08.775227Z"
+	}, {
+		"set_num": "TOUCAN2020-1",
+		"name": "Toucan",
+		"year": 2020,
+		"theme_id": 621,
+		"num_parts": 22,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/TOUCAN2020-1/toucan/",
+		"last_modified_dt": "2020-01-23T16:43:30.285810Z"
+	}, {
+		"set_num": "RAT-1",
+		"name": "Easy Build Building Happening Rat x 1",
+		"year": 2020,
+		"theme_id": 206,
+		"num_parts": 754,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/RAT-1/easy-build-building-happening-rat-x-1/",
+		"last_modified_dt": "2020-01-27T08:50:52.358388Z"
+	}, {
+		"set_num": "PENGUIN-1",
+		"name": "Penguin",
+		"year": 2020,
+		"theme_id": 621,
+		"num_parts": 24,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/PENGUIN-1/penguin/",
+		"last_modified_dt": "2020-01-23T16:42:48.427932Z"
+	}, {
+		"set_num": "NEWSSTAND-1",
+		"name": "Newsstand",
+		"year": 2020,
+		"theme_id": 155,
+		"num_parts": 155,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/NEWSSTAND-1/newsstand/",
+		"last_modified_dt": "2020-01-09T13:04:34.355348Z"
+	}, {
+		"set_num": "LUNARNEWYEAR-1",
+		"name": "Lunar New Year Bundle",
+		"year": 2020,
+		"theme_id": 686,
+		"num_parts": 0,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/LUNARNEWYEAR-1/lunar-new-year-bundle/",
+		"last_modified_dt": "2019-12-31T01:35:44.366210Z"
+	}, {
+		"set_num": "9781338613667-1",
+		"name": "Harry Potter: Witches, Wizards, Creatures, and More! UPDATED Character Handbook",
+		"year": 2020,
+		"theme_id": 497,
+		"num_parts": 6,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/9781338613667-1/harry-potter-witches-wizards-creatures-and-more-updated-character-handbook/",
+		"last_modified_dt": "2020-01-08T08:47:27.156091Z"
+	}, {
+		"set_num": "9781338581898-1",
+		"name": "Harry Potter: A Magical Search and Find Adventure",
+		"year": 2020,
+		"theme_id": 497,
+		"num_parts": 6,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/9781338581898-1/harry-potter-a-magical-search-and-find-adventure/",
+		"last_modified_dt": "2019-12-17T15:04:15.386879Z"
+	}, {
+		"set_num": "952002-1",
+		"name": "Bobby Brenner with Extinguishing Drone",
+		"year": 2020,
+		"theme_id": 58,
+		"num_parts": 17,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/952002-1/bobby-brenner-with-extinguishing-drone/",
+		"last_modified_dt": "2020-02-11T18:55:29.914141Z"
+	}, {
+		"set_num": "952001-1",
+		"name": "Motorcycle Cop",
+		"year": 2020,
+		"theme_id": 61,
+		"num_parts": 15,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/952001-1/motorcycle-cop/",
+		"last_modified_dt": "2020-01-14T08:55:02.141968Z"
+	}, {
+		"set_num": "912056-1",
+		"name": "TIE Striker",
+		"year": 2020,
+		"theme_id": 158,
+		"num_parts": 28,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/912056-1/tie-striker/",
+		"last_modified_dt": "2020-01-27T08:34:41.717916Z"
+	}, {
+		"set_num": "912055-1",
+		"name": "Snowspeeder",
+		"year": 2020,
+		"theme_id": 158,
+		"num_parts": 28,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/912055-1/snowspeeder/",
+		"last_modified_dt": "2020-01-04T23:57:05.858988Z"
+	}, {
+		"set_num": "892059-1",
+		"name": "Kai",
+		"year": 2020,
+		"theme_id": 435,
+		"num_parts": 6,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/892059-1/kai/",
+		"last_modified_dt": "2020-01-21T17:13:56.041709Z"
+	}, {
+		"set_num": "854021-1",
+		"name": "Creative Bag Charm",
+		"year": 2020,
+		"theme_id": 503,
+		"num_parts": 17,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/854021-1/creative-bag-charm/",
+		"last_modified_dt": "2019-12-23T14:24:59.235681Z"
+	}, {
+		"set_num": "854005-1",
+		"name": "Duke DeTain Key Chain",
+		"year": 2020,
+		"theme_id": 503,
+		"num_parts": 0,
+		"set_img_url": null,
+		"set_url": "https://rebrickable.com/sets/854005-1/duke-detain-key-chain/",
+		"last_modified_dt": "2020-01-23T16:51:19.802089Z"
+	}]
+}

@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "BCE56516-EE9C-4980-8C78-8C26D5DA3D19",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "commandLineArgumentEntries" : [
+
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:LegoIos.xcodeproj",
+      "identifier" : "E97620312177B1A4009257E8",
+      "name" : "LegoIos"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:LegoIos.xcodeproj",
+        "identifier" : "E97620472177B1A7009257E8",
+        "name" : "LegoIosTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:LegoIos.xcodeproj",
+        "identifier" : "E97620522177B1A7009257E8",
+        "name" : "LegoIosUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

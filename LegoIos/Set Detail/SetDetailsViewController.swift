@@ -38,7 +38,9 @@ class SetDetailsViewController: UIViewController, UISetDelegate {
         DispatchQueue.main.async {
             self.setImageSpinner.stopAnimating()
             self._setCell = self._viewModel!.getSetCell
-            self.image.image = self._setCell!.image
+            if self._setCell!.image != nil {
+                self.image.image = self._setCell!.image
+            }
         }
     }
 

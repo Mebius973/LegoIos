@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  build:
+    runs-on: macos
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Force Xcode 11
+        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+      - name: Add Api Key
+        run: echo "import Foundation; class AppConfig { static let LegoApiKey = \"${{ secrets.API_KEY }}\"}" >> LegoIos/AppConfig.swift
+      - name: Start Mock API
+        run: java -jar WireMock/wiremock.jar --root-dir WireMock --port 9999 &
+      - name: Run tests
+        run: xcodebuild clean test -project "LegoIos.xcodeproj" -scheme "LegoIos" -destination "platform=iOS Simulator,name=iPhone 8,OS=latest"
+      - name: Kill Mock Api
+        run: pkill -f 'wiremock'
+      - name: Build App
+        run: xcodebuild -project "LegoIos.xcodeproj" -scheme "LegoIos" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
+      - name: Compute Code Coverage
+        run: gem install slather; slather; bash <(curl -s https://codecov.io/bash) -f cobertura.xml -X coveragepy -X gcov -X xcode -t ${{ secrets.CODECOV_TOKEN }}

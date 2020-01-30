@@ -1,0 +1,24 @@
+name: deliver
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+
+    runs-on: macos
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Force Xcode 11
+        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+      - name: Add Api Key
+        run: echo "import Foundation; class AppConfig { static let LegoApiKey = \"${{ secrets.API_KEY }}\"}" >> LegoIos/AppConfig.swift
+      - name: Run tests
+        run: xcodebuild clean test -project "LegoIos.xcodeproj" -scheme "LegoIos" -destination "platform=iOS Simulator,name=iPhone 8,OS=latest"
+      - name: Build App
+        run: xcodebuild -project "LegoIos.xcodeproj" -scheme "LegoIos" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
+      - name: Compute Code Coverage
+        run: bash <(curl -s https://codecov.io/bash) -t ${{ secrets.CODECOV_TOKEN }}

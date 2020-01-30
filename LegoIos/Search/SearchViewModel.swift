@@ -15,68 +15,55 @@ class SearchViewModel {
 
     private var _searchResults = [SetCell]()
     private var _searchTask: URLSessionDataTask?
+    private var _api: APIDelegate
+
+    init() {
+        _api = API()
+    }
+
+    init(api: APIDelegate) {
+        _api = api
+    }
 
     func searchResultAt(index: Int) -> SetCell {
         return _searchResults[index]
     }
 
     func searchHint(_ query: String?, _ closure: (() -> Void)?) {
-        if query == nil || query!.count == 0 {
+        if _searchTask != nil {
+            _searchTask!.cancel()
+        }
+        if query == nil || query!.isEmpty {
             self._searchResults.removeAll()
             if closure != nil {
                 closure!()
             }
         } else {
-            search(itemQuantity: 10, query!, closure)
+            _searchTask = _api.search(itemQuantity: 10, query!) { searchResults in
+                self._searchResults = searchResults
+                if closure != nil {
+                    closure!()
+                }
+            }
         }
     }
 
     func searchFull(_ query: String?, _ closure: (() -> Void)?) {
-        if query == nil || query!.count == 0 {
+        if _searchTask != nil {
+            _searchTask!.cancel()
+        }
+        if query == nil || query!.isEmpty {
             self._searchResults.removeAll()
             if closure != nil {
                 closure!()
             }
         } else {
-            search(itemQuantity: nil, query!, closure)
-        }
-    }
-
-    private func search(itemQuantity: Int?, _ query: String, _ closure: (() -> Void)?) {
-        if _searchTask != nil {
-            _searchTask!.cancel()
-        }
-        _searchResults.removeAll()
-        let authorization = "key=\(AppConfig.LegoApiKey)"
-        let baseUrl = "\(Constants.ApiBaseURL)\(Constants.SetsEndPoint)"
-        let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        var params = "?search=\(encodedQuery)&\(authorization)"
-        if let itemsPerPage = itemQuantity {
-            params = "\(params)&page_size=\(itemsPerPage)"
-        }
-
-        let request = "\(baseUrl)\(params)"
-        let url: URL = URL(string: request)!
-
-        let session = URLSession.shared
-        _searchTask = session.dataTask(with: url) { (data, response, error) in
-            do {
-                if (response as? HTTPURLResponse)!.statusCode != 200 {
-                    throw GarbageErrors.httpBadResult
-                }
-                let data = data!
-                let jsonDecoder = JSONDecoder()
-                let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
-                for set in setsQueryResult.results! {
-                    self._searchResults.append(SetCell(set: set, image: nil))
-                }
+            _searchTask = _api.search(itemQuantity: nil, query!) { searchResults in
+                self._searchResults = searchResults
                 if closure != nil {
-                   closure!()
-               }
-            } catch {
-                print("error: \(error)")
+                    closure!()
+                }
             }
         }
-        _searchTask!.resume()
     }
 }

@@ -1,0 +1,10 @@
+{
+  "request": {
+      "method": "GET",
+      "urlPattern": "\/api\/v3\/lego\/part_categories\/\\d+\/\\?key=[a-zA-Z0-9]*"
+  },
+  "response": {
+      "status": 200,
+      "bodyFileName": "toucan_part_cat.json"
+  }
+}

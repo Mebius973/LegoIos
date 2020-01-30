@@ -1,0 +1,5 @@
+coverage_service: cobertura_xml
+xcodeproj: LegoIos.xcodeproj
+scheme: LegoIos
+source_directory: LegoIos
+output_directory: .

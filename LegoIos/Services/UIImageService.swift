@@ -15,12 +15,12 @@ class UIImageService: UIImageServiceDelegate {
             if let url = URL(string: urlString) {
                 if let data = try? Data(contentsOf: url) {
                     image = UIImage(data: data)?
-                        .resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit)
+                        .resizeWithScaleAspectFitMode(to: 200)
                 }
             }
         } else {
             image = UIImage(named: "no_image_available")?
-                .resizeWithScaleAspectFitMode(to: 200, resizeFramework: .uikit)
+                .resizeWithScaleAspectFitMode(to: 200)
         }
         return image
     }

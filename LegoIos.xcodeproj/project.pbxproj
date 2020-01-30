@@ -7,29 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9023EF423F5E71F0099EFEE /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9023EF323F5E71F0099EFEE /* ArrayExtension.swift */; };
 		E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9047CAC23A80900005183AB /* SetsViewModel.swift */; };
 		E9510D8723AFBF7B0092E487 /* UISetDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9510D8623AFBF7B0092E487 /* UISetDelegate.swift */; };
 		E951C2E0239830AD00EF90CC /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2DF239830AD00EF90CC /* Set.swift */; };
 		E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */; };
 		E96B541C23AC161E00EC5416 /* SetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B541B23AC161E00EC5416 /* SetCell.swift */; };
+		E97022D523E9F0E4005D7E79 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97022D423E9F0E4005D7E79 /* AppConfig.swift */; };
 		E97620362177B1A4009257E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97620352177B1A4009257E8 /* AppDelegate.swift */; };
 		E976203D2177B1A4009257E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E976203B2177B1A4009257E8 /* Main.storyboard */; };
 		E976203F2177B1A7009257E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E976203E2177B1A7009257E8 /* Assets.xcassets */; };
 		E97620422177B1A7009257E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97620402177B1A7009257E8 /* LaunchScreen.storyboard */; };
 		E976204D2177B1A7009257E8 /* LegoIosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976204C2177B1A7009257E8 /* LegoIosTests.swift */; };
-		E97620582177B1A7009257E8 /* LegoIosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97620572177B1A7009257E8 /* LegoIosUITests.swift */; };
+		E97620582177B1A7009257E8 /* SetListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97620572177B1A7009257E8 /* SetListTests.swift */; };
 		E977053923C09DD000B5E002 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977053823C09DD000B5E002 /* InfoViewController.swift */; };
 		E977053C23C51C4100B5E002 /* SetPartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977053B23C51C4100B5E002 /* SetPartViewModel.swift */; };
 		E977053E23C51FEE00B5E002 /* SetPartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977053D23C51FEE00B5E002 /* SetPartCell.swift */; };
-		E97CD4B123DD80E1001A3361 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD4B023DD80E1001A3361 /* TestHelpers.swift */; };
 		E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF67239852F0006272FD /* SetsTableViewController.swift */; };
 		E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FF72239A2BFF006272FD /* UIImageExtension.swift */; };
 		E9960ACF23A26E0800E2FE18 /* SetDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */; };
 		E9960AD623A2714D00E2FE18 /* SetTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */; };
+		E99F4AC323F36CF5008DE7A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E99F4AC223F36CF5008DE7A4 /* Default-568h@2x.png */; };
 		E9A85A6223B55BFA005A5A35 /* SetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6123B55BFA005A5A35 /* SetDetailsViewModel.swift */; };
 		E9A85A6823B5E456005A5A35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6723B5E456005A5A35 /* Constants.swift */; };
 		E9A85A6A23B74867005A5A35 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A85A6923B74867005A5A35 /* Theme.swift */; };
-		E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BACB5421DB899300F1D3B6 /* AppConfig.swift */; };
 		E9C771C723BA18DC00D2BCB2 /* SetPartsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771C623BA18DC00D2BCB2 /* SetPartsTableViewController.swift */; };
 		E9C771C923BA191200D2BCB2 /* SetPartsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771C823BA191200D2BCB2 /* SetPartsTableViewCell.swift */; };
 		E9C771CB23BA223400D2BCB2 /* SetPartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771CA23BA223400D2BCB2 /* SetPartsViewModel.swift */; };
@@ -40,6 +41,17 @@
 		E9C771D723BA2DB600D2BCB2 /* SetPartColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771D623BA2DB500D2BCB2 /* SetPartColor.swift */; };
 		E9C771DB23BA89DE00D2BCB2 /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771DA23BA89DE00D2BCB2 /* JSONNull.swift */; };
 		E9C771DF23BDD22D00D2BCB2 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */; };
+		E9CD517323ECC3D400C36D15 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD4B023DD80E1001A3361 /* TestHelpers.swift */; };
+		E9CD517623ECC55600C36D15 /* TabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD517523ECC55600C36D15 /* TabBarTests.swift */; };
+		E9CD517823ECC58E00C36D15 /* PartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD517723ECC58E00C36D15 /* PartsTests.swift */; };
+		E9CD517A23ECC5B200C36D15 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD517923ECC5B200C36D15 /* SearchTests.swift */; };
+		E9CD517C23ECC5CA00C36D15 /* SetDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD517B23ECC5CA00C36D15 /* SetDetailTests.swift */; };
+		E9CD517E23ECC5E200C36D15 /* PoliciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD517D23ECC5E200C36D15 /* PoliciesTests.swift */; };
+		E9CD518123F1E1EE00C36D15 /* SetPartsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD518023F1E1EE00C36D15 /* SetPartsViewModelTests.swift */; };
+		E9CD518523F1E8E700C36D15 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD518423F1E8E700C36D15 /* API.swift */; };
+		E9CD518723F1E94800C36D15 /* APIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD518623F1E94800C36D15 /* APIDelegate.swift */; };
+		E9CD518923F21A4D00C36D15 /* UIImageExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD518823F21A4D00C36D15 /* UIImageExtensionTests.swift */; };
+		E9CD518B23F21CC700C36D15 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CD518A23F21CC700C36D15 /* Media.xcassets */; };
 		E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */; };
 		E9D79D3D23A8C16600046B41 /* UIImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3C23A8C16600046B41 /* UIImageService.swift */; };
 		E9D79D3F23A8C27000046B41 /* UIImageServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */; };
@@ -47,6 +59,7 @@
 		E9D79D5123A9525200046B41 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D79D5023A9525200046B41 /* SnapshotHelper.swift */; };
 		E9DF836A23BDD7B9003D28A6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF836923BDD7B9003D28A6 /* SearchViewModel.swift */; };
 		E9DF836C23BE7349003D28A6 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF836B23BE7349003D28A6 /* SearchTableViewCell.swift */; };
+		E9F741BE23F372FE00FA1805 /* LaunchArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F741BD23F372FE00FA1805 /* LaunchArguments.swift */; };
 		E9FBC1C523A360EB003D96C1 /* LegoIos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC1C323A360EB003D96C1 /* LegoIos.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -75,11 +88,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9023EF323F5E71F0099EFEE /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		E9047CAC23A80900005183AB /* SetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModel.swift; sourceTree = "<group>"; };
+		E91134F823F34ED4009C23E2 /* LegoIos.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LegoIos.xctestplan; sourceTree = "<group>"; };
 		E9510D8623AFBF7B0092E487 /* UISetDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetDelegate.swift; sourceTree = "<group>"; };
 		E951C2DF239830AD00EF90CC /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		E951C2E12398310D00EF90CC /* SetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewCell.swift; sourceTree = "<group>"; };
 		E96B541B23AC161E00EC5416 /* SetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCell.swift; sourceTree = "<group>"; };
+		E97022D423E9F0E4005D7E79 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E97620322177B1A4009257E8 /* LegoIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97620352177B1A4009257E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E976203C2177B1A4009257E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,7 +106,7 @@
 		E976204C2177B1A7009257E8 /* LegoIosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoIosTests.swift; sourceTree = "<group>"; };
 		E976204E2177B1A7009257E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E97620532177B1A7009257E8 /* LegoIosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoIosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E97620572177B1A7009257E8 /* LegoIosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoIosUITests.swift; sourceTree = "<group>"; };
+		E97620572177B1A7009257E8 /* SetListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetListTests.swift; sourceTree = "<group>"; };
 		E97620592177B1A7009257E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E977053823C09DD000B5E002 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		E977053B23C51C4100B5E002 /* SetPartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartViewModel.swift; sourceTree = "<group>"; };
@@ -100,10 +116,10 @@
 		E988FF72239A2BFF006272FD /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetDetails.storyboard; sourceTree = "<group>"; };
 		E9960AD523A2714D00E2FE18 /* SetTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTabBarViewController.swift; sourceTree = "<group>"; };
+		E99F4AC223F36CF5008DE7A4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E9A85A6123B55BFA005A5A35 /* SetDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetailsViewModel.swift; sourceTree = "<group>"; };
 		E9A85A6723B5E456005A5A35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9A85A6923B74867005A5A35 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		E9BACB5421DB899300F1D3B6 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E9C771C623BA18DC00D2BCB2 /* SetPartsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartsTableViewController.swift; sourceTree = "<group>"; };
 		E9C771C823BA191200D2BCB2 /* SetPartsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartsTableViewCell.swift; sourceTree = "<group>"; };
 		E9C771CA23BA223400D2BCB2 /* SetPartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartsViewModel.swift; sourceTree = "<group>"; };
@@ -114,6 +130,16 @@
 		E9C771D623BA2DB500D2BCB2 /* SetPartColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartColor.swift; sourceTree = "<group>"; };
 		E9C771DA23BA89DE00D2BCB2 /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
 		E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		E9CD517523ECC55600C36D15 /* TabBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTests.swift; sourceTree = "<group>"; };
+		E9CD517723ECC58E00C36D15 /* PartsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsTests.swift; sourceTree = "<group>"; };
+		E9CD517923ECC5B200C36D15 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
+		E9CD517B23ECC5CA00C36D15 /* SetDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetailTests.swift; sourceTree = "<group>"; };
+		E9CD517D23ECC5E200C36D15 /* PoliciesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesTests.swift; sourceTree = "<group>"; };
+		E9CD518023F1E1EE00C36D15 /* SetPartsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartsViewModelTests.swift; sourceTree = "<group>"; };
+		E9CD518423F1E8E700C36D15 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E9CD518623F1E94800C36D15 /* APIDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDelegate.swift; sourceTree = "<group>"; };
+		E9CD518823F21A4D00C36D15 /* UIImageExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensionTests.swift; sourceTree = "<group>"; };
+		E9CD518A23F21CC700C36D15 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E9CF82FF239C01DA00DB309F /* SetsQueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsQueryResult.swift; sourceTree = "<group>"; };
 		E9D79D3C23A8C16600046B41 /* UIImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageService.swift; sourceTree = "<group>"; };
 		E9D79D3E23A8C27000046B41 /* UIImageServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageServiceDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +149,7 @@
 		E9D79D5023A9525200046B41 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		E9DF836923BDD7B9003D28A6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		E9DF836B23BE7349003D28A6 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		E9F741BD23F372FE00FA1805 /* LaunchArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchArguments.swift; sourceTree = "<group>"; };
 		E9FBC1C423A360EB003D96C1 /* LegoIos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LegoIos.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +188,7 @@
 		E97620292177B1A4009257E8 = {
 			isa = PBXGroup;
 			children = (
+				E99F4AC223F36CF5008DE7A4 /* Default-568h@2x.png */,
 				E97620342177B1A4009257E8 /* LegoIos */,
 				E976204B2177B1A7009257E8 /* LegoIosTests */,
 				E97620562177B1A7009257E8 /* LegoIosUITests */,
@@ -183,6 +211,7 @@
 		E97620342177B1A4009257E8 /* LegoIos */ = {
 			isa = PBXGroup;
 			children = (
+				E9CD518323F1E89A00C36D15 /* Network */,
 				E97CD4AF23DA38A5001A3361 /* Navigation */,
 				E97CD4AC23DA32C8001A3361 /* Parts */,
 				E97CD4AA23DA329D001A3361 /* Set List */,
@@ -194,10 +223,10 @@
 				E9D79D3523A8235B00046B41 /* Protocols */,
 				E988FF71239A2BDC006272FD /* Extensions */,
 				E9960ACB23A26DBE00E2FE18 /* StoryBoards */,
+				E97022D423E9F0E4005D7E79 /* AppConfig.swift */,
 				E97620352177B1A4009257E8 /* AppDelegate.swift */,
 				E976203E2177B1A7009257E8 /* Assets.xcassets */,
 				E97620432177B1A7009257E8 /* Info.plist */,
-				E9BACB5421DB899300F1D3B6 /* AppConfig.swift */,
 				E9FBC1C323A360EB003D96C1 /* LegoIos.xcdatamodeld */,
 				E9A85A6723B5E456005A5A35 /* Constants.swift */,
 			);
@@ -207,8 +236,11 @@
 		E976204B2177B1A7009257E8 /* LegoIosTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9CD518023F1E1EE00C36D15 /* SetPartsViewModelTests.swift */,
 				E976204C2177B1A7009257E8 /* LegoIosTests.swift */,
 				E976204E2177B1A7009257E8 /* Info.plist */,
+				E9CD518823F21A4D00C36D15 /* UIImageExtensionTests.swift */,
+				E9CD518A23F21CC700C36D15 /* Media.xcassets */,
 			);
 			path = LegoIosTests;
 			sourceTree = "<group>";
@@ -216,9 +248,16 @@
 		E97620562177B1A7009257E8 /* LegoIosUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E97620572177B1A7009257E8 /* LegoIosUITests.swift */,
-				E97620592177B1A7009257E8 /* Info.plist */,
+				E91134F823F34ED4009C23E2 /* LegoIos.xctestplan */,
+				E9F741BD23F372FE00FA1805 /* LaunchArguments.swift */,
 				E97CD4B023DD80E1001A3361 /* TestHelpers.swift */,
+				E97620592177B1A7009257E8 /* Info.plist */,
+				E9CD517723ECC58E00C36D15 /* PartsTests.swift */,
+				E9CD517D23ECC5E200C36D15 /* PoliciesTests.swift */,
+				E9CD517923ECC5B200C36D15 /* SearchTests.swift */,
+				E9CD517B23ECC5CA00C36D15 /* SetDetailTests.swift */,
+				E97620572177B1A7009257E8 /* SetListTests.swift */,
+				E9CD517523ECC55600C36D15 /* TabBarTests.swift */,
 			);
 			path = LegoIosUITests;
 			sourceTree = "<group>";
@@ -283,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				E988FF72239A2BFF006272FD /* UIImageExtension.swift */,
+				E9023EF323F5E71F0099EFEE /* ArrayExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,6 +335,15 @@
 				E9960ACE23A26E0800E2FE18 /* SetDetails.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		E9CD518323F1E89A00C36D15 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E9CD518423F1E8E700C36D15 /* API.swift */,
+				E9CD518623F1E94800C36D15 /* APIDelegate.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		E9CF82FE239C013400DB309F /* Models */ = {
@@ -475,6 +524,7 @@
 				E97620422177B1A7009257E8 /* LaunchScreen.storyboard in Resources */,
 				E976203F2177B1A7009257E8 /* Assets.xcassets in Resources */,
 				E976203D2177B1A4009257E8 /* Main.storyboard in Resources */,
+				E99F4AC323F36CF5008DE7A4 /* Default-568h@2x.png in Resources */,
 				E9960ACF23A26E0800E2FE18 /* SetDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CD518B23F21CC700C36D15 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A85A6823B5E456005A5A35 /* Constants.swift in Sources */,
+				E97022D523E9F0E4005D7E79 /* AppConfig.swift in Sources */,
 				E9D79D3D23A8C16600046B41 /* UIImageService.swift in Sources */,
 				E9A85A6A23B74867005A5A35 /* Theme.swift in Sources */,
 				E9CF8300239C01DA00DB309F /* SetsQueryResult.swift in Sources */,
@@ -545,15 +597,17 @@
 				E977053C23C51C4100B5E002 /* SetPartViewModel.swift in Sources */,
 				E9C771D523BA2BEC00D2BCB2 /* SetPart.swift in Sources */,
 				E9A85A6223B55BFA005A5A35 /* SetDetailsViewModel.swift in Sources */,
-				E9BACB5521DB899300F1D3B6 /* AppConfig.swift in Sources */,
 				E96B541C23AC161E00EC5416 /* SetCell.swift in Sources */,
 				E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */,
 				E977053923C09DD000B5E002 /* InfoViewController.swift in Sources */,
 				E9C771C723BA18DC00D2BCB2 /* SetPartsTableViewController.swift in Sources */,
+				E9CD518523F1E8E700C36D15 /* API.swift in Sources */,
 				E977053E23C51FEE00B5E002 /* SetPartCell.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
+				E9023EF423F5E71F0099EFEE /* ArrayExtension.swift in Sources */,
 				E9C771DF23BDD22D00D2BCB2 /* SearchTableViewController.swift in Sources */,
 				E9510D8723AFBF7B0092E487 /* UISetDelegate.swift in Sources */,
+				E9CD518723F1E94800C36D15 /* APIDelegate.swift in Sources */,
 				E988FF73239A2BFF006272FD /* UIImageExtension.swift in Sources */,
 				E988FF68239852F0006272FD /* SetsTableViewController.swift in Sources */,
 				E97620362177B1A4009257E8 /* AppDelegate.swift in Sources */,
@@ -568,6 +622,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E976204D2177B1A7009257E8 /* LegoIosTests.swift in Sources */,
+				E9CD518923F21A4D00C36D15 /* UIImageExtensionTests.swift in Sources */,
+				E9CD518123F1E1EE00C36D15 /* SetPartsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,8 +631,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E97620582177B1A7009257E8 /* LegoIosUITests.swift in Sources */,
-				E97CD4B123DD80E1001A3361 /* TestHelpers.swift in Sources */,
+				E9CD517823ECC58E00C36D15 /* PartsTests.swift in Sources */,
+				E9F741BE23F372FE00FA1805 /* LaunchArguments.swift in Sources */,
+				E9CD517623ECC55600C36D15 /* TabBarTests.swift in Sources */,
+				E9CD517A23ECC5B200C36D15 /* SearchTests.swift in Sources */,
+				E9CD517E23ECC5E200C36D15 /* PoliciesTests.swift in Sources */,
+				E9CD517C23ECC5CA00C36D15 /* SetDetailTests.swift in Sources */,
+				E97620582177B1A7009257E8 /* SetListTests.swift in Sources */,
+				E9CD517323ECC3D400C36D15 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,9 +811,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -761,7 +823,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mebius.LegoIos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "mebius.LegoIos AppStore";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -772,9 +834,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -784,7 +846,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mebius.LegoIos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "mebius.LegoIos AppStore";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -848,6 +910,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-DTESTING";
 				PRODUCT_BUNDLE_IDENTIFIER = mebius.LegoIosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -869,6 +932,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-DTESTING";
 				PRODUCT_BUNDLE_IDENTIFIER = mebius.LegoIosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -99,7 +99,7 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
 
     private func setupPullToRefreshUI() {
         self.refreshControl = UIRefreshControl()
-        self.refreshControl!.addTarget(self, action: #selector(refreshSets(_:)), for: .valueChanged)
+        self.refreshControl!.addTarget(self, action: #selector(self.refreshSets(_:)), for: .valueChanged)
     }
 
     @objc private func refreshSets(_ sender: Any) {
@@ -110,7 +110,8 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
 
     private func setsUpdated() {
         DispatchQueue.main.async {
-            if self.refreshControl != nil && self.refreshControl!.isRefreshing { self.refreshControl!.endRefreshing() }
+            if self.refreshControl != nil && self.refreshControl!.isRefreshing { self.refreshControl!.endRefreshing()
+            }
             self.bottomActivityIndicator.stopAnimating()
             self.dataReloading = true
             self.tableView.reloadData()

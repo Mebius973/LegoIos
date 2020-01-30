@@ -8,7 +8,15 @@
 
 import Foundation
 
-class Set: Codable {
+class Set: Codable, Hashable {
+    static func == (lhs: Set, rhs: Set) -> Bool {
+        return lhs.setNum == rhs.setNum
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.setNum)
+    }
+
     let lastModifiedDt: String?
     let name: String?
     let numParts: Int?

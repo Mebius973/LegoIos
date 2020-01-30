@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZEg-B2-WJo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZEg-B2-WJo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xOY-gJ-DCr">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="No_Image_Available" translatesAutoresizingMaskIntoConstraints="NO" id="xOY-gJ-DCr">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
@@ -204,23 +204,16 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZJ-8c-k29" userLabel="Image">
                                             <rect key="frame" x="10" y="45" width="90" height="90"/>
                                             <subviews>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Lds-mI-vQl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                                </activityIndicatorView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JjT-wb-HgC" userLabel="Parts Image">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No_Image_Available" translatesAutoresizingMaskIntoConstraints="NO" id="JjT-wb-HgC" userLabel="Parts Image">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstItem="JjT-wb-HgC" firstAttribute="trailing" secondItem="Lds-mI-vQl" secondAttribute="trailing" id="7b3-yM-OLU"/>
-                                                <constraint firstItem="Lds-mI-vQl" firstAttribute="top" secondItem="JjT-wb-HgC" secondAttribute="top" id="Qi3-Ad-3Ex"/>
-                                                <constraint firstItem="JjT-wb-HgC" firstAttribute="bottom" secondItem="Lds-mI-vQl" secondAttribute="bottom" id="RYA-Q5-FpM"/>
-                                                <constraint firstItem="Lds-mI-vQl" firstAttribute="centerX" secondItem="4ZJ-8c-k29" secondAttribute="centerX" id="bUd-aP-TT9"/>
-                                                <constraint firstItem="JjT-wb-HgC" firstAttribute="leading" secondItem="Lds-mI-vQl" secondAttribute="leading" id="dt9-K4-THo"/>
-                                                <constraint firstItem="Lds-mI-vQl" firstAttribute="centerY" secondItem="4ZJ-8c-k29" secondAttribute="centerY" id="q4B-6W-I2X"/>
-                                                <constraint firstItem="JjT-wb-HgC" firstAttribute="top" secondItem="4ZJ-8c-k29" secondAttribute="top" id="qQP-rT-8uD"/>
-                                                <constraint firstItem="Lds-mI-vQl" firstAttribute="leading" secondItem="4ZJ-8c-k29" secondAttribute="leading" id="rVV-KL-i4P"/>
+                                                <constraint firstItem="JjT-wb-HgC" firstAttribute="centerX" secondItem="4ZJ-8c-k29" secondAttribute="centerX" id="4TH-ru-rCQ"/>
+                                                <constraint firstItem="JjT-wb-HgC" firstAttribute="top" secondItem="4ZJ-8c-k29" secondAttribute="top" id="JDq-xJ-Ode"/>
+                                                <constraint firstItem="JjT-wb-HgC" firstAttribute="leading" secondItem="4ZJ-8c-k29" secondAttribute="leading" id="gRc-Ox-bWh"/>
+                                                <constraint firstItem="JjT-wb-HgC" firstAttribute="centerY" secondItem="4ZJ-8c-k29" secondAttribute="centerY" id="vRe-59-s0s"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hie-kw-om1" userLabel="Name">
@@ -325,43 +318,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxR-4M-ufx">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Q7-cA-PlF">
                                                     <rect key="frame" x="65" y="0.0" width="225" height="30"/>
-                                                    <subviews>
-                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Hec-cH-gMm">
-                                                            <rect key="frame" x="-5" y="0.0" width="30" height="30"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="30" id="hXH-qJ-Wg3"/>
-                                                            </constraints>
-                                                        </activityIndicatorView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Q7-cA-PlF">
-                                                            <rect key="frame" x="0.0" y="0.0" width="225" height="30"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="2Q7-cA-PlF" firstAttribute="centerY" secondItem="ZxR-4M-ufx" secondAttribute="centerY" id="Gnt-CL-dbY"/>
-                                                        <constraint firstItem="2Q7-cA-PlF" firstAttribute="top" secondItem="ZxR-4M-ufx" secondAttribute="top" id="Klf-6n-Ict"/>
-                                                        <constraint firstItem="2Q7-cA-PlF" firstAttribute="centerX" secondItem="ZxR-4M-ufx" secondAttribute="centerX" id="So8-Lg-GLc"/>
-                                                        <constraint firstItem="Hec-cH-gMm" firstAttribute="leading" secondItem="ZxR-4M-ufx" secondAttribute="leading" constant="-5" id="X2e-0g-yaa"/>
-                                                        <constraint firstItem="2Q7-cA-PlF" firstAttribute="leading" secondItem="ZxR-4M-ufx" secondAttribute="leading" id="aop-jG-UN8"/>
-                                                        <constraint firstItem="Hec-cH-gMm" firstAttribute="top" secondItem="2Q7-cA-PlF" secondAttribute="top" id="bGa-3w-eiQ"/>
-                                                        <constraint firstItem="Hec-cH-gMm" firstAttribute="bottom" secondItem="2Q7-cA-PlF" secondAttribute="bottom" id="q9d-c2-Kn2"/>
-                                                    </constraints>
-                                                </view>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstItem="6dm-7g-Sxh" firstAttribute="top" secondItem="ZxR-4M-ufx" secondAttribute="top" id="6fO-1R-dNN"/>
-                                                <constraint firstAttribute="trailing" secondItem="ZxR-4M-ufx" secondAttribute="trailing" constant="-1" id="AlC-2m-NFe"/>
                                                 <constraint firstItem="6dm-7g-Sxh" firstAttribute="centerY" secondItem="2nT-pI-o2p" secondAttribute="centerY" id="MHd-Pr-sJe"/>
                                                 <constraint firstItem="6dm-7g-Sxh" firstAttribute="leading" secondItem="2nT-pI-o2p" secondAttribute="leading" id="br1-uP-uMS"/>
-                                                <constraint firstItem="ZxR-4M-ufx" firstAttribute="leading" secondItem="6dm-7g-Sxh" secondAttribute="trailing" constant="-5" id="gqF-wo-1I2"/>
-                                                <constraint firstItem="6dm-7g-Sxh" firstAttribute="bottom" secondItem="ZxR-4M-ufx" secondAttribute="bottom" id="k29-f5-f1L"/>
                                                 <constraint firstItem="6dm-7g-Sxh" firstAttribute="top" secondItem="2nT-pI-o2p" secondAttribute="top" id="pIE-N1-5ne"/>
+                                                <constraint firstAttribute="trailing" secondItem="2Q7-cA-PlF" secondAttribute="trailing" constant="-1" id="w9K-Ji-8TX"/>
+                                                <constraint firstItem="2Q7-cA-PlF" firstAttribute="leading" secondItem="2nT-pI-o2p" secondAttribute="leading" constant="65" id="wgL-6n-aNp"/>
+                                                <constraint firstItem="2Q7-cA-PlF" firstAttribute="baseline" secondItem="6dm-7g-Sxh" secondAttribute="baseline" id="yxv-P0-vth"/>
+                                                <constraint firstItem="2Q7-cA-PlF" firstAttribute="firstBaseline" secondItem="6dm-7g-Sxh" secondAttribute="firstBaseline" id="zKC-K6-pcO"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJr-hj-LjB" userLabel="Part Num">
@@ -424,10 +396,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="partsCategory" destination="2Q7-cA-PlF" id="pAC-gQ-KQm"/>
-                                    <outlet property="partsCategorySpinner" destination="Hec-cH-gMm" id="TJr-3Q-90W"/>
                                     <outlet property="partsColor" destination="qJ8-WW-bHi" id="AnU-BZ-AFD"/>
                                     <outlet property="partsImage" destination="JjT-wb-HgC" id="3H4-rB-DMp"/>
-                                    <outlet property="partsImageSpinner" destination="Lds-mI-vQl" id="YBv-97-w75"/>
                                     <outlet property="partsName" destination="uhg-NE-Wak" id="Clz-l1-7Be"/>
                                     <outlet property="partsNum" destination="azK-zR-NfJ" id="7Ik-lQ-Fk3"/>
                                     <outlet property="partsQuantity" destination="Jj1-cA-a6L" id="Opx-Rj-Axy"/>
@@ -446,4 +416,7 @@
             <point key="canvasLocation" x="92.753623188405811" y="323.4375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="No_Image_Available" width="450" height="313"/>
+    </resources>
 </document>

@@ -12,10 +12,23 @@ class SetPartViewModel {
 
     private weak var _viewController: SetPartsTableViewCell?
     private var _setPart: SetPartCell
+    private var _api: APIDelegate
 
-    init(viewController: SetPartsTableViewCell, setPart: SetPartCell) {
+    init(viewController: SetPartsTableViewCell, setPart: SetPartCell, api: APIDelegate) {
+        _api = api
         _viewController = viewController
         _setPart = setPart
+        commonConfig()
+    }
+
+    init(viewController: SetPartsTableViewCell, setPart: SetPartCell) {
+        _api = API()
+        _viewController = viewController
+        _setPart = setPart
+        commonConfig()
+    }
+
+    private func commonConfig() {
         retrieveImage()
         retrieveCategory()
     }
@@ -30,37 +43,18 @@ class SetPartViewModel {
         _viewController!.partsCategoryUpdated()
     }
 
+    private func retrieveCategory() {
+        DispatchQueue.main.async {
+            self._api.retrieveCategoryFor(setPart: self._setPart) { category in
+                self._setPart.category = category
+            }
+        }
+    }
+
     private func retrieveImage() {
         DispatchQueue.main.async {
             self._setPart.image = UIImageService.retrieveImage(for: self._setPart.setPart!.part!.partImgURL)
             self.partImageUpdated()
-        }
-    }
-
-    private func retrieveCategory() {
-        if let categoryId = _setPart.setPart!.part!.partCatID {
-            let authorization = "key=\(AppConfig.LegoApiKey)"
-            let baseUrl = "\(Constants.ApiBaseURL)\(Constants.PartCategoriesEndPoint)\(categoryId)/"
-            let params = "?\(authorization)"
-            let request = "\(baseUrl)\(params)"
-            let url: URL = URL(string: request)!
-            let session = URLSession.shared
-            let task = session.dataTask(with: url) { (data, response, error) in
-                do {
-                    if response is HTTPURLResponse {
-                        let httprep = (response as? HTTPURLResponse)!
-                        if httprep.statusCode == 200 {
-                            let data = data!
-                            let jsonDecoder = JSONDecoder()
-                            self._setPart.category = (try jsonDecoder.decode(Theme.self, from: data)).name
-                            self.partCategoryUpdated()
-                        }
-                    }
-                } catch {
-                    print("error: \(error)")
-                }
-            }
-            task.resume()
         }
     }
 }
