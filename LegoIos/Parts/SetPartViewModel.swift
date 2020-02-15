@@ -47,6 +47,7 @@ class SetPartViewModel {
         DispatchQueue.main.async {
             self._api.retrieveCategoryFor(setPart: self._setPart) { category in
                 self._setPart.category = category
+                self.partCategoryUpdated()
             }
         }
     }

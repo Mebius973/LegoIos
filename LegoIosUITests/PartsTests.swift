@@ -36,4 +36,11 @@ class PartsTests: XCTestCase {
         XCTAssert(app.buttons["Parts"].isHittable)
         XCTAssert(app.buttons["Parts"].isSelected)
     }
+
+    func testUIShouldNotContainPlaceholder() {
+        XCTAssert(TestHelpers.waitForAtLeast1ElementToAppear(app.cells))
+        app.staticTexts["Toucan"].tap()
+        app.buttons["Parts"].tap()
+        XCTAssert(!app.staticTexts["Label"].exists)
+    }
 }

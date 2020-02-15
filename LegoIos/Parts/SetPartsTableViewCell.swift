@@ -64,6 +64,7 @@ class SetPartsTableViewCell: UITableViewCell {
         partsImage.addSubview(partsImageSpinner)
         partsImageSpinner.center = partsImage.center
         partsImageSpinner.startAnimating()
+        self.partsCategory.isHidden = true
         partsCategorySpinner.hidesWhenStopped = true
         partsCategorySpinner.backgroundColor = .white
         partsCategory.addSubview(partsCategorySpinner)
