@@ -31,6 +31,11 @@ Generate new localized screenshots
 fastlane ios beta
 ```
 Push app to beta
+### ios get_current_build_number
+```
+fastlane ios get_current_build_number
+```
+Setup Build Number
 
 ----
 

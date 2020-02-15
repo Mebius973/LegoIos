@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E9023EF423F5E71F0099EFEE /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9023EF323F5E71F0099EFEE /* ArrayExtension.swift */; };
 		E9047CAD23A80900005183AB /* SetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9047CAC23A80900005183AB /* SetsViewModel.swift */; };
 		E9510D8723AFBF7B0092E487 /* UISetDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9510D8623AFBF7B0092E487 /* UISetDelegate.swift */; };
 		E951C2E0239830AD00EF90CC /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C2DF239830AD00EF90CC /* Set.swift */; };
@@ -88,7 +87,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E9023EF323F5E71F0099EFEE /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		E9047CAC23A80900005183AB /* SetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewModel.swift; sourceTree = "<group>"; };
 		E91134F823F34ED4009C23E2 /* LegoIos.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LegoIos.xctestplan; sourceTree = "<group>"; };
 		E9510D8623AFBF7B0092E487 /* UISetDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetDelegate.swift; sourceTree = "<group>"; };
@@ -322,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				E988FF72239A2BFF006272FD /* UIImageExtension.swift */,
-				E9023EF323F5E71F0099EFEE /* ArrayExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -604,7 +601,6 @@
 				E9CD518523F1E8E700C36D15 /* API.swift in Sources */,
 				E977053E23C51FEE00B5E002 /* SetPartCell.swift in Sources */,
 				E951C2E22398310D00EF90CC /* SetsTableViewCell.swift in Sources */,
-				E9023EF423F5E71F0099EFEE /* ArrayExtension.swift in Sources */,
 				E9C771DF23BDD22D00D2BCB2 /* SearchTableViewController.swift in Sources */,
 				E9510D8723AFBF7B0092E487 /* UISetDelegate.swift in Sources */,
 				E9CD518723F1E94800C36D15 /* APIDelegate.swift in Sources */,
@@ -813,7 +809,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -836,7 +832,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = 868NW64LNM;
 				INFOPLIST_FILE = LegoIos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;

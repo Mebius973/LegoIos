@@ -60,8 +60,9 @@ class SetsViewModel {
         _api.retrieveSetCells(range: range, itemsPerPage: _itemsPerPage, initPage: _page) { refreshed, setCells in
             self.isRefreshed = refreshed
 
-            self._setCells.append(contentsOf: setCells)
-            self._setCells.distinct()
+            let setNums = self._setCells.map({ $0.set!.setNum })
+            self._setCells.append(contentsOf: setCells.filter({ !setNums.contains($0.set!.setNum) }))
+
             if closure != nil {
                 closure!()
             }
