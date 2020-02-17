@@ -25,8 +25,7 @@ class API: APIDelegate {
         let request = "\(baseUrl)\(params)"
         let url: URL = URL(string: request)!
 
-        let session = URLSession.shared
-        let searchTask = session.dataTask(with: url) { (data, response, error) in
+        let searchTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard response != nil else { return }
             do {
                 if response != nil && (response as? HTTPURLResponse)!.statusCode != 200 {
@@ -54,8 +53,8 @@ class API: APIDelegate {
             let params = "?\(authorization)"
             let request = "\(baseUrl)\(params)"
             let url: URL = URL(string: request)!
-            let session = URLSession.shared
-            let task = session.dataTask(with: url) { (data, response, error) in
+
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 do {
                     if response is HTTPURLResponse {
                         let httprep = (response as? HTTPURLResponse)!
@@ -81,8 +80,8 @@ class API: APIDelegate {
             let params = "?\(authorization)"
             let request = "\(baseUrl)\(params)"
             let url: URL = URL(string: request)!
-            let session = URLSession.shared
-            let task = session.dataTask(with: url) { (data, response, error) in
+
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 do {
                     if response is HTTPURLResponse {
                         let httprep = (response as? HTTPURLResponse)!
@@ -114,8 +113,8 @@ class API: APIDelegate {
             let params = "?\(authorization)"
             let request = "\(baseUrl)\(params)"
             let url: URL = URL(string: request)!
-            let session = URLSession.shared
-            let task = session.dataTask(with: url) { (data, response, error) in
+
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 do {
                     if response is HTTPURLResponse {
                         let httprep = (response as? HTTPURLResponse)!
@@ -137,7 +136,7 @@ class API: APIDelegate {
     func retrieveSetCells(range: Int?,
                           itemsPerPage: Int,
                           initPage: Int,
-                          _ closure: @escaping ((Bool, [SetCell]) -> Void)) {
+                          _ closure: @escaping ((Bool, Int, [SetCell]) -> Void)) {
         var currentPage = initPage
         let pages = computePagination(range, itemsPerPage) + currentPage
         let authorization = "key=\(AppConfig.LegoApiKey)"
@@ -151,8 +150,7 @@ class API: APIDelegate {
             let request = "\(baseUrl)\(params)"
             let url: URL = URL(string: request)!
 
-            let session = URLSession.shared
-            let task = session.dataTask(with: url) { (data, response, error) in
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 do {
                     if response is HTTPURLResponse {
                         let httprep = (response as? HTTPURLResponse)!
@@ -170,7 +168,7 @@ class API: APIDelegate {
                             }
                             if page == pages {
                                 isRefreshed = true
-                                closure(isRefreshed, setCells)
+                                closure(isRefreshed, pages, setCells)
                             }
                             currentPage += 1
                         }
@@ -201,8 +199,7 @@ class API: APIDelegate {
             let request = "\(baseUrl)\(params)"
             let url: URL = URL(string: request)!
 
-            let session = URLSession.shared
-            let task = session.dataTask(with: url) { (data, response, error) in
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 do {
                     if (response as? HTTPURLResponse)!.statusCode != 200 {
                         throw GarbageErrors.httpBadResult

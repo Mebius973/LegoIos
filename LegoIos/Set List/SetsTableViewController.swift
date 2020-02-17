@@ -56,7 +56,7 @@ class SetsTableViewController: UITableViewController, UITableViewDataSourcePrefe
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         if !firstTimePrefetch && !dataReloading {
             if viewModel.isRefreshed {
-                viewModel.fetchSetCells(range: indexPaths.count) {
+                viewModel.fetchSetCells(range: indexPaths[0].row) {
                     self.setsUpdated()
                 }
             } else {

@@ -18,7 +18,7 @@ protocol APIDelegate: class {
     func retrieveSetCells(range: Int?,
                           itemsPerPage: Int,
                           initPage: Int,
-                          _ closure: @escaping ((Bool, [SetCell]) -> Void))
+                          _ closure: @escaping ((Bool, Int, [SetCell]) -> Void))
     func retrieveNewSetCells(itemsPerPage: Int,
                              count: Int,
                              initSetCells: [SetCell],

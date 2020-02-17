@@ -2,8 +2,8 @@ name: beta
 
 on:
   create:
-    tags:
-      - 'rc*'
+    branches:
+      - 'release*'
 
 jobs:
   build:
@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          ref:  'master'
       - name: Bump build number
         run: bundle exec fastlane run increment_build_number
       - name: Force Xcode 11
@@ -37,3 +35,13 @@ jobs:
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           PILOT_SKIP_WAITING_FOR_BUILD_PROCESSING: true
         run: 'cd build && bundle exec fastlane run upload_to_testflight username:"viddafroygeo@hotmail.com" skip_waiting_for_build_processing:true apple_id:1491964365'
+      - name: Commit build version
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "Version Bump"
+      - name: Push back build version
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

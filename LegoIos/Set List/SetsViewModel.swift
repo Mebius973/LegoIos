@@ -46,8 +46,9 @@ class SetsViewModel {
 
     func initializeSetCells(_ closure: (() -> Void)? = nil) {
         isRefreshed = false
-        _api.retrieveSetCells(range: nil, itemsPerPage: _itemsPerPage, initPage: _page) { refreshed, setCells in
+        _api.retrieveSetCells(range: nil, itemsPerPage: _itemsPerPage, initPage: _page) { refreshed, page, setCells in
             self.isRefreshed = refreshed
+            self._page = page
             self._setCells = setCells
             if closure != nil {
                 closure!()
@@ -57,12 +58,11 @@ class SetsViewModel {
 
     func fetchSetCells(range: Int, _ closure: (() -> Void)?) {
         isRefreshed = false
-        _api.retrieveSetCells(range: range, itemsPerPage: _itemsPerPage, initPage: _page) { refreshed, setCells in
+        _api.retrieveSetCells(range: range, itemsPerPage: _itemsPerPage, initPage: _page) { refreshed, page, setCells in
             self.isRefreshed = refreshed
-
+            self._page = page
             let setNums = self._setCells.map({ $0.set!.setNum })
             self._setCells.append(contentsOf: setCells.filter({ !setNums.contains($0.set!.setNum) }))
-
             if closure != nil {
                 closure!()
             }
