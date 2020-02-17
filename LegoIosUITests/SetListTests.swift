@@ -33,14 +33,11 @@ class SetListTests: XCTestCase {
         XCTAssert(TestHelpers.waitForAtLeast1ElementToAppear(app.cells))
     }
 
-//    func testSetsShouldHavePullToRefresh() {
-//        if TestHelpers.waitForAtLeast1ElementToAppear(app.cells) {
-//            XCTAssert(app.activityIndicators.count == 0)
-//            app.cells.firstMatch.press(forDuration: 0, thenDragTo: app.tabBars.firstMatch)
-//            XCTAssert(app.activityIndicators.count == 1)
-//            XCTAssert(TestHelpers.waitForElementToDisAppear(app.activityIndicators.firstMatch))
-//        }
-//    }
+    func testSetsShouldHavePullToRefresh() {
+        XCTAssert(TestHelpers.waitForAtLeast1ElementToAppear(app.cells))
+        XCTAssert(app.activityIndicators.count == 0)
+        app.cells.firstMatch.press(forDuration: 0, thenDragTo: app.tabBars.firstMatch)
+    }
 
     func testSetsShouldHaveInfiniteScroll() {
         XCTAssert(TestHelpers.waitForAtLeast1ElementToAppear(app.cells))

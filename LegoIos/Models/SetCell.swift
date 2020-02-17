@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct SetCell: Hashable {
+struct SetCell {
     var set: Set?
     var image: UIImage?
     var category: String?

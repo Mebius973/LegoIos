@@ -20,6 +20,7 @@
   },
   "testTargets" : [
     {
+      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:LegoIos.xcodeproj",
         "identifier" : "E97620472177B1A7009257E8",
@@ -27,6 +28,7 @@
       }
     },
     {
+      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:LegoIos.xcodeproj",
         "identifier" : "E97620522177B1A7009257E8",
