@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/Mebius973/LegoIos.svg?branch=develop)](https://travis-ci.com/Mebius973/LegoIos)
-![CI](https://github.com/Mebius973/LegoIos/workflows/CI/badge.svg?branch=master)
+![CI](https://github.com/Mebius973/LegoIos/workflows/CI/badge.svg?branch=master)(https://github.com/Mebius973/LegoIos/actions)
 [![codecov](https://codecov.io/gh/Mebius973/LegoIos/branch/master/graph/badge.svg)](https://codecov.io/gh/Mebius973/LegoIos)
 
 # LegoIos
