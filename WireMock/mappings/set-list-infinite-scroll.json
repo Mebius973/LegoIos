@@ -1,7 +1,7 @@
 {
   "request": {
       "method": "GET",
-      "urlPattern": "\/api\/v3\/lego\/sets\/\\?ordering=-year%2C-set_num&page_size=15&page=2&key=[a-zA-Z0-9]*"
+      "urlPattern": "\/api\/v3\/lego\/sets\/\\?ordering=-year%2C-set_num&page_size=15&page=[2-9]&key=[a-zA-Z0-9]*"
   },
   "response": {
       "status": 200,
