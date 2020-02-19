@@ -17,5 +17,6 @@ class ContantsTests: XCTestCase {
     func testApiBaseURlWithArgsReturnsLocalURL() {
         CommandLine.arguments.append("-runlocal")
         XCTAssert(Constants.ApiBaseURL.contains("localhost"))
+        CommandLine.arguments = CommandLine.arguments.filter { $0 != "-runlocal" }
     }
 }
