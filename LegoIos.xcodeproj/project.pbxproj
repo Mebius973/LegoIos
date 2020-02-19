@@ -17,7 +17,6 @@
 		E976203D2177B1A4009257E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E976203B2177B1A4009257E8 /* Main.storyboard */; };
 		E976203F2177B1A7009257E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E976203E2177B1A7009257E8 /* Assets.xcassets */; };
 		E97620422177B1A7009257E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97620402177B1A7009257E8 /* LaunchScreen.storyboard */; };
-		E976204D2177B1A7009257E8 /* LegoIosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976204C2177B1A7009257E8 /* LegoIosTests.swift */; };
 		E97620582177B1A7009257E8 /* SetListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97620572177B1A7009257E8 /* SetListTests.swift */; };
 		E977053923C09DD000B5E002 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977053823C09DD000B5E002 /* InfoViewController.swift */; };
 		E977053C23C51C4100B5E002 /* SetPartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977053B23C51C4100B5E002 /* SetPartViewModel.swift */; };
@@ -39,6 +38,7 @@
 		E9C771D523BA2BEC00D2BCB2 /* SetPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771D423BA2BEC00D2BCB2 /* SetPart.swift */; };
 		E9C771D723BA2DB600D2BCB2 /* SetPartColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771D623BA2DB500D2BCB2 /* SetPartColor.swift */; };
 		E9C771DF23BDD22D00D2BCB2 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */; };
+		E9C9D50C23FD1E920084331E /* ContantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9D50B23FD1E920084331E /* ContantsTests.swift */; };
 		E9CD517323ECC3D400C36D15 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD4B023DD80E1001A3361 /* TestHelpers.swift */; };
 		E9CD517623ECC55600C36D15 /* TabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD517523ECC55600C36D15 /* TabBarTests.swift */; };
 		E9CD517823ECC58E00C36D15 /* PartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD517723ECC58E00C36D15 /* PartsTests.swift */; };
@@ -100,7 +100,6 @@
 		E97620412177B1A7009257E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E97620432177B1A7009257E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E97620482177B1A7009257E8 /* LegoIosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoIosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E976204C2177B1A7009257E8 /* LegoIosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoIosTests.swift; sourceTree = "<group>"; };
 		E976204E2177B1A7009257E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E97620532177B1A7009257E8 /* LegoIosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoIosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97620572177B1A7009257E8 /* SetListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetListTests.swift; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		E9C771D423BA2BEC00D2BCB2 /* SetPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPart.swift; sourceTree = "<group>"; };
 		E9C771D623BA2DB500D2BCB2 /* SetPartColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPartColor.swift; sourceTree = "<group>"; };
 		E9C771DE23BDD22D00D2BCB2 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		E9C9D50B23FD1E920084331E /* ContantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContantsTests.swift; sourceTree = "<group>"; };
 		E9CD517523ECC55600C36D15 /* TabBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTests.swift; sourceTree = "<group>"; };
 		E9CD517723ECC58E00C36D15 /* PartsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsTests.swift; sourceTree = "<group>"; };
 		E9CD517923ECC5B200C36D15 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
@@ -233,10 +233,10 @@
 			isa = PBXGroup;
 			children = (
 				E9CD518023F1E1EE00C36D15 /* SetPartsViewModelTests.swift */,
-				E976204C2177B1A7009257E8 /* LegoIosTests.swift */,
 				E976204E2177B1A7009257E8 /* Info.plist */,
 				E9CD518823F21A4D00C36D15 /* UIImageExtensionTests.swift */,
 				E9CD518A23F21CC700C36D15 /* Media.xcassets */,
+				E9C9D50B23FD1E920084331E /* ContantsTests.swift */,
 			);
 			path = LegoIosTests;
 			sourceTree = "<group>";
@@ -613,9 +613,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E976204D2177B1A7009257E8 /* LegoIosTests.swift in Sources */,
 				E9CD518923F21A4D00C36D15 /* UIImageExtensionTests.swift in Sources */,
 				E9CD518123F1E1EE00C36D15 /* SetPartsViewModelTests.swift in Sources */,
+				E9C9D50C23FD1E920084331E /* ContantsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
