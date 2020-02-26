@@ -64,12 +64,8 @@ class SetDetailsViewController: UIViewController, UISetDelegate {
     private func updateUIElements() {
         if let set = _setCell!.set {
             setNameLabel.text = set.name
-            if let year = set.year {
-                setYearLabel.text = String(year)
-            }
-            if let numParts = set.numParts {
-                setPartsLabel.text = String(numParts)
-            }
+            setYearLabel.text = String(set.year)
+            setPartsLabel.text = String(set.numParts)
             setSetNumLabel.text = set.setNum
         }
     }

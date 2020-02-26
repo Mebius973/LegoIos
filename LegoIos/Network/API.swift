@@ -9,6 +9,13 @@
 import Foundation
 
 class API: APIDelegate {
+    private var _cache = Cache()
+    private var _decoder = JSONDecoder()
+
+    init() {
+        _cache.load()
+        _decoder.userInfo[CodingUserInfoKey.context!] = _cache.managedObjectContext
+    }
 
     func search(itemQuantity: Int?,
                 _ query: String,
@@ -32,11 +39,11 @@ class API: APIDelegate {
                     throw GarbageErrors.httpBadResult
                 }
                 let data = data!
-                let jsonDecoder = JSONDecoder()
-                let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
+                let setsQueryResult = try self._decoder.decode(SetsQueryResult.self, from: data)
                 for set in setsQueryResult.results! {
                     searchResults.append(SetCell(set: set, image: nil))
                 }
+                self._cache.save()
                 closure(searchResults)
             } catch {
                 print("error: \(error)")
@@ -47,7 +54,8 @@ class API: APIDelegate {
     }
 
     func retrieveCategory(setCell: SetCell, _ closure: @escaping ((String?) -> Void)) {
-        if let categoryId = setCell.set!.themeId {
+        if let set = setCell.set {
+            let categoryId = set.themeId
             let authorization = "key=\(AppConfig.LegoApiKey)"
             let baseUrl = "\(Constants.ApiBaseURL)\(Constants.ThemesEndPoint)\(categoryId)/"
             let params = "?\(authorization)"
@@ -60,8 +68,8 @@ class API: APIDelegate {
                         let httprep = (response as? HTTPURLResponse)!
                         if httprep.statusCode == 200 {
                             let data = data!
-                            let jsonDecoder = JSONDecoder()
-                            closure((try jsonDecoder.decode(Theme.self, from: data)).name)
+                            self._cache.save()
+                            closure((try self._decoder.decode(Theme.self, from: data)).name)
                         }
                     }
                 } catch {
@@ -87,14 +95,14 @@ class API: APIDelegate {
                         let httprep = (response as? HTTPURLResponse)!
                         if httprep.statusCode == 200 {
                             let data = data!
-                            let jsonDecoder = JSONDecoder()
-                            let setPartsQueryResult = try jsonDecoder.decode(SetPartsQueryResult.self, from: data)
+                            let setPartsQueryResult = try self._decoder.decode(SetPartsQueryResult.self, from: data)
                             let parts = setPartsQueryResult.results!
                             for part in parts {
                                 let partCell = SetPartCell()
                                 partCell.setPart = part
                                 setParts.append(partCell)
                             }
+                            self._cache.save()
                            closure(setParts)
                         }
                     }
@@ -120,8 +128,8 @@ class API: APIDelegate {
                         let httprep = (response as? HTTPURLResponse)!
                         if httprep.statusCode == 200 {
                             let data = data!
-                            let jsonDecoder = JSONDecoder()
-                            let category = (try jsonDecoder.decode(Theme.self, from: data)).name
+                            let category = (try self._decoder.decode(Theme.self, from: data)).name
+                            self._cache.save()
                             closure(category)
                         }
                     }
@@ -156,8 +164,7 @@ class API: APIDelegate {
                         let httprep = (response as? HTTPURLResponse)!
                         if httprep.statusCode == 200 {
                             let data = data!
-                            let jsonDecoder = JSONDecoder()
-                            let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
+                            let setsQueryResult = try self._decoder.decode(SetsQueryResult.self, from: data)
                             for set in setsQueryResult.results! {
                                 setCells.append(
                                     SetCell(
@@ -168,6 +175,7 @@ class API: APIDelegate {
                             }
                             if page == pages {
                                 isRefreshed = true
+                                self._cache.save()
                                 closure(isRefreshed, pages, setCells)
                             }
                             currentPage += 1
@@ -205,8 +213,7 @@ class API: APIDelegate {
                         throw GarbageErrors.httpBadResult
                     }
                     let data = data!
-                    let jsonDecoder = JSONDecoder()
-                    let setsQueryResult = try jsonDecoder.decode(SetsQueryResult.self, from: data)
+                    let setsQueryResult = try self._decoder.decode(SetsQueryResult.self, from: data)
                     var setNumArray = setCells.map { $0.set!.setNum }
                     for set in setsQueryResult.results! {
                         if !setNumArray.contains(set.setNum) {
@@ -217,6 +224,7 @@ class API: APIDelegate {
                             duplicated = true
                             let page = count / itemsPerPage + 1
                             isRefreshed = true
+                            self._cache.save()
                             closure(isRefreshed, page, setCells)
                         }
                     }

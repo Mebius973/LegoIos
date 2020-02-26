@@ -7,16 +7,55 @@
 //
 
 import Foundation
+import CoreData
 
-class Set: Codable {
-    let lastModifiedDt: String?
-    let name: String?
-    let numParts: Int?
-    let setImgUrl: String?
-    let setNum: String?
-    let setUrl: String?
-    let themeId: Int?
-    let year: Int?
+@objc(Set)
+public class Set: NSManagedObject, Codable {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Set> {
+        return NSFetchRequest<Set>(entityName: "Set")
+    }
+
+    @NSManaged var lastModifiedDt: String?
+    @NSManaged var name: String?
+    @NSManaged var numParts: Double
+    @NSManaged var setImgUrl: String?
+    @NSManaged var setNum: String?
+    @NSManaged var setUrl: String?
+    @NSManaged var themeId: Double
+    @NSManaged var year: Double
+
+    required convenience public init(from decoder: Decoder) throws {
+
+        guard let context = decoder.userInfo[CodingUserInfoKey.context!] as? NSManagedObjectContext
+            else { fatalError() }
+        guard let entity = NSEntityDescription.entity(forEntityName: "Set", in: context)
+            else { fatalError() }
+
+        self.init(entity: entity, insertInto: context)
+
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        lastModifiedDt = try? container.decode(String.self, forKey: .lastModifiedDt)
+        name = try? container.decode(String.self, forKey: .name)
+        numParts = try container.decode(Double.self, forKey: .numParts)
+        setImgUrl = try? container.decode(String.self, forKey: .setImgUrl)
+        setNum = try? container.decode(String.self, forKey: .setNum)
+        setUrl = try? container.decode(String.self, forKey: .setUrl)
+        themeId = try container.decode(Double.self, forKey: .themeId)
+        year = try container.decode(Double.self, forKey: .year)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(lastModifiedDt, forKey: .lastModifiedDt)
+        try container.encode(name, forKey: .name)
+        try container.encode(numParts, forKey: .numParts)
+        try container.encode(setImgUrl, forKey: .setImgUrl)
+        try container.encode(setNum, forKey: .setNum)
+        try container.encode(setUrl, forKey: .setUrl)
+        try container.encode(themeId, forKey: .themeId)
+        try container.encode(year, forKey: .year)
+    }
 
     enum CodingKeys: String, CodingKey {
         case name, year
