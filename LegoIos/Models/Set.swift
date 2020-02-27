@@ -18,12 +18,24 @@ public class Set: NSManagedObject, Codable {
 
     @NSManaged var lastModifiedDt: String?
     @NSManaged var name: String?
-    @NSManaged var numParts: Double
+    @NSManaged var rawNumParts: Int32
+    var numParts: Int {
+        get { return Int(rawNumParts) }
+        set { rawNumParts = Int32(newValue) }
+    }
     @NSManaged var setImgUrl: String?
     @NSManaged var setNum: String?
     @NSManaged var setUrl: String?
-    @NSManaged var themeId: Double
-    @NSManaged var year: Double
+    @NSManaged var rawThemeId: Int32
+    var themeId: Int {
+        get { return Int(rawThemeId) }
+        set { rawThemeId = Int32(newValue) }
+    }
+    @NSManaged var rawYear: Int32
+    var year: Int {
+        get { return Int(rawYear) }
+        set { rawYear = Int32(newValue) }
+    }
 
     required convenience public init(from decoder: Decoder) throws {
 
@@ -37,12 +49,12 @@ public class Set: NSManagedObject, Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         lastModifiedDt = try? container.decode(String.self, forKey: .lastModifiedDt)
         name = try? container.decode(String.self, forKey: .name)
-        numParts = try container.decode(Double.self, forKey: .numParts)
+        numParts = try container.decode(Int.self, forKey: .numParts)
         setImgUrl = try? container.decode(String.self, forKey: .setImgUrl)
         setNum = try? container.decode(String.self, forKey: .setNum)
         setUrl = try? container.decode(String.self, forKey: .setUrl)
-        themeId = try container.decode(Double.self, forKey: .themeId)
-        year = try container.decode(Double.self, forKey: .year)
+        themeId = try container.decode(Int.self, forKey: .themeId)
+        year = try container.decode(Int.self, forKey: .year)
     }
 
     public func encode(to encoder: Encoder) throws {
